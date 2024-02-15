@@ -77,3 +77,58 @@
 2024-02-15T22:43:32.226Z [info]: Sending a post request to register manager
 2024-02-15T22:43:32.227Z [info]: Account already exists
 2024-02-15T22:43:36.876Z [info]: Displaying List
+2024-02-15T23:06:23.219Z [info]: Started the server on Port 3000
+2024-02-15T23:06:48.394Z [info]: Sending a post request to register employee
+2024-02-15T23:06:48.394Z [info]: Successfully added the account
+2024-02-15T23:06:49.667Z [info]: Sending a post request to register employee
+2024-02-15T23:06:49.667Z [info]: Successfully added the account
+2024-02-15T23:07:08.974Z [info]: Started the server on Port 3000
+2024-02-15T23:07:12.247Z [info]: Sending a post request to register employee
+2024-02-15T23:07:12.248Z [info]: Successfully added the account
+2024-02-15T23:07:15.525Z [info]: Sending a post request to register employee
+2024-02-15T23:07:15.526Z [info]: Successfully added the account
+2024-02-15T23:08:05.419Z [info]: Started the server on Port 3000
+2024-02-15T23:08:07.216Z [info]: Sending a post request to register employee
+2024-02-15T23:08:07.218Z [info]: Successfully added the account
+2024-02-15T23:08:08.875Z [info]: Sending a post request to register employee
+2024-02-15T23:08:08.876Z [info]: Successfully added the account
+2024-02-15T23:09:23.513Z [info]: Started the server on Port 3000
+2024-02-15T23:09:25.191Z [info]: Sending a post request to register employee
+2024-02-15T23:09:25.192Z [info]: Successfully added the account
+2024-02-15T23:09:26.765Z [info]: Sending a post request to register employee
+2024-02-15T23:09:26.767Z [info]: Successfully added the account
+2024-02-15T23:09:37.088Z [info]: Sending a post request to register employee
+2024-02-15T23:09:37.089Z [info]: Successfully added the account
+2024-02-15T23:10:41.088Z [info]: Started the server on Port 3000
+2024-02-15T23:10:43.781Z [info]: Sending a post request to register employee
+2024-02-15T23:10:43.783Z [info]: Successfully added the account
+2024-02-15T23:10:45.061Z [info]: Sending a post request to register employee
+2024-02-15T23:10:45.062Z [info]: Successfully added the account
+2024-02-15T23:13:50.437Z [info]: Started the server on Port 3000
+2024-02-15T23:13:52.374Z [info]: Sending a post request to register employee
+2024-02-15T23:13:52.375Z [info]: Successfully added the account
+2024-02-15T23:13:53.915Z [info]: Sending a post request to register employee
+2024-02-15T23:13:53.916Z [info]: Successfully added the account
+2024-02-15T23:14:26.887Z [info]: Started the server on Port 3000
+2024-02-15T23:14:29.664Z [info]: Sending a post request to register employee
+2024-02-15T23:14:29.665Z [info]: Successfully added the account
+2024-02-15T23:14:30.584Z [info]: Sending a post request to register employee
+2024-02-15T23:14:30.585Z [info]: Account already exists
+2024-02-15T23:15:37.736Z [info]: Started the server on Port 3000
+2024-02-15T23:15:41.925Z [info]: Sending a post request to register employee
+2024-02-15T23:15:41.926Z [info]: Successfully added the account
+2024-02-15T23:15:43.145Z [info]: Sending a post request to register employee
+2024-02-15T23:15:43.145Z [info]: Account already exists
+2024-02-15T23:15:46.025Z [info]: Displaying List
+2024-02-15T23:15:50.485Z [info]: Sending a post request to register manager
+2024-02-15T23:15:50.486Z [info]: Successfully added the account
+2024-02-15T23:15:51.947Z [info]: Sending a post request to register manager
+2024-02-15T23:15:51.948Z [info]: Account already exists
+2024-02-15T23:15:54.327Z [info]: Displaying List
+2024-02-15T23:19:23.255Z [info]: Started the server on Port 3000
+2024-02-15T23:19:32.301Z [info]: Sending a post request to register employee
+2024-02-15T23:19:32.301Z [info]: Successfully added the account
+2024-02-15T23:19:57.835Z [info]: Displaying List
+2024-02-15T23:20:02.642Z [info]: Attempting to Login as Employee
+2024-02-15T23:20:02.643Z [info]: Successfully logged in the account
+2024-02-15T23:20:05.663Z [info]: Displaying List

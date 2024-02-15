@@ -2,7 +2,9 @@
 const express = require('express');
 const { createLogger, transports, format } = require("winston");
 const { registerEmployeeAccount, registerManagerAccount } = require('./business_logic/Registration_Feature');
-const { employeeList, managerList } = require('./business_logic/Users') //list of users
+const { loginEmployee, loginManager } = require('./business_logic/Login_Feature');
+const { employeeList, managerList } = require('./business_logic/Users')
+
 //Winston
 const logger = createLogger({
   level: "info", //means to log only messages with level 'info' and above
@@ -56,9 +58,30 @@ app.post('/managerRegister', (req, res) => {
 });
 
 //POST Request: Employee Login
-
+app.post('/employeeLogin', (req, res) => {
+    logger.info("Attempting to Login as Employee")
+    const data = req.body;
+    if(loginEmployee(data)) {
+        logger.info("Successfully logged in the account");
+        res.json(`Successfully logged in ${data.username}`);
+    } else {
+        logger.info("Unsuccessful Login");
+        res.json(`Unsuccessful Login`);
+    }
+})
 
 //POST Request: Manager Login
+app.post('/employeeLogin', (req, res) => {
+    logger.info("Attempting to Login as Manager")
+    const data = req.body;
+    if(loginManager(data)) {
+        logger.info("Successfully logged in the account");
+        res.json(`Successfully logged in ${data.username}`);
+    } else {
+        logger.info("Unsuccessful Login");
+        res.json(`Unsuccessful Login`);
+    }
+})
 
 //GET Lists for debugging purposes
 app.get('/employeeList', (req, res) => {

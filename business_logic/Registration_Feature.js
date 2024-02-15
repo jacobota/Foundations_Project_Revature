@@ -5,13 +5,8 @@ const { employeeList, managerList } = require('./Users') //list of users
 //function to register an employee account
 function registerEmployeeAccount(data) {
     //see if the username is already registered in the system
-    let isExists = false;
-    employeeList.forEach((user) => {
-        if(user.username === data.username) {
-            isExists = true;
-        }
-    });
-    if(isExists) {
+    const idx = employeeList.findIndex( user => user.username === data.username );
+    if(idx != -1) {
         return false;
     }
     else {
@@ -20,7 +15,8 @@ function registerEmployeeAccount(data) {
         let newEmployee = {
             username: data.username,
             password: data.password,
-            role: "Employee"
+            role: "Employee",
+            loggedIn: false
         };
 
         //push that employee object
@@ -32,13 +28,9 @@ function registerEmployeeAccount(data) {
 //function to register a manager account
 function registerManagerAccount(data) {
     //see if the username is already registered in the system
-    let isExists = false;
-    managerList.forEach((user) => {
-        if(user.username === data.username) {
-            isExists = true;
-        }
-    });
-    if(isExists) {
+    let idx;
+    idx = managerList.findIndex( user => user.username === data.username );
+    if(idx != -1) {
         return false;
     }
     else {
@@ -47,7 +39,8 @@ function registerManagerAccount(data) {
         let newManager = {
             username: data.username,
             password: data.password,
-            role: "Manager"
+            role: "Manager",
+            loggedIn: false
         };
 
         //push that employee object
