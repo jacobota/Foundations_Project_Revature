@@ -1,5 +1,7 @@
-const userList = [];
+const employeeList = [];
+const managerList = [];
 
-export default {
-    userList
+module.exports = {
+    employeeList: employeeList,
+    managerList: managerList
 }
