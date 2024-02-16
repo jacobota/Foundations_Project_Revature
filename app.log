@@ -166,3 +166,65 @@
 2024-02-16T20:12:34.437Z [info]: Sending a post request to register manager
 2024-02-16T20:12:34.438Z [info]: Successfully added the account
 2024-02-16T20:12:37.590Z [info]: Displaying List
+2024-02-16T21:16:11.928Z [info]: Started the server on Port 3000
+2024-02-16T21:16:23.802Z [info]: Sending a post request to register employee
+2024-02-16T21:16:23.803Z [info]: Successfully added the account
+2024-02-16T21:16:26.944Z [info]: Displaying List
+2024-02-16T21:16:29.525Z [info]: Sending a post request to register employee
+2024-02-16T21:16:29.526Z [info]: Account already exists
+2024-02-16T21:16:32.355Z [info]: Displaying List
+2024-02-16T21:16:36.907Z [info]: Sending a post request to register manager
+2024-02-16T21:16:36.908Z [info]: Successfully added the account
+2024-02-16T21:16:39.460Z [info]: Displaying List
+2024-02-16T21:16:44.173Z [info]: Attempting to Login as Employee
+2024-02-16T21:16:44.174Z [info]: Successfully logged in the account
+2024-02-16T21:16:46.812Z [info]: Displaying List
+2024-02-16T21:16:49.956Z [info]: Attempting to Login as Manager
+2024-02-16T21:16:49.957Z [info]: Successfully logged in the account
+2024-02-16T21:16:55.423Z [info]: Displaying List
+2024-02-16T21:48:35.631Z [info]: Started the server on Port 3000
+2024-02-16T21:48:41.936Z [info]: Sending a post request to register employee
+2024-02-16T21:48:41.937Z [info]: Successfully added the account
+2024-02-16T21:48:44.656Z [info]: Displaying Employee List
+2024-02-16T21:48:48.022Z [info]: Sending a post request to register manager
+2024-02-16T21:48:48.023Z [info]: Successfully added the account
+2024-02-16T21:48:50.080Z [info]: Displaying Manager List
+2024-02-16T21:50:04.845Z [info]: Attempting to Login as Employee
+2024-02-16T21:50:04.846Z [info]: Successfully logged in the account
+2024-02-16T21:50:07.749Z [info]: Displaying Current User
+2024-02-16T21:50:11.727Z [info]: Attempting to Login as Manager
+2024-02-16T21:50:11.728Z [info]: Successfully logged in the account
+2024-02-16T21:50:15.111Z [info]: Displaying Current User
+2024-02-16T21:50:18.946Z [info]: Displaying Manager List
+2024-02-16T21:50:23.742Z [info]: Displaying Employee List
+2024-02-16T21:51:21.521Z [info]: Attempting to Login as Manager
+2024-02-16T21:51:21.521Z [info]: Successfully logged in the account
+2024-02-16T21:51:23.747Z [info]: Displaying Current User
+2024-02-16T22:07:28.507Z [info]: Started the server on Port 3000
+2024-02-16T22:07:35.545Z [info]: Displaying Employee List
+2024-02-16T22:07:37.748Z [info]: Sending a post request to register employee
+2024-02-16T22:07:37.748Z [info]: Successfully added the account
+2024-02-16T22:07:41.328Z [info]: Displaying Employee List
+2024-02-16T22:07:46.499Z [info]: Sending a post request to register manager
+2024-02-16T22:07:46.500Z [info]: Successfully added the account
+2024-02-16T22:07:48.864Z [info]: Displaying Manager List
+2024-02-16T22:07:54.863Z [info]: Attempting to Login as Employee
+2024-02-16T22:07:54.864Z [info]: Successfully logged in the account
+2024-02-16T22:07:57.490Z [info]: Displaying Current User
+2024-02-16T22:08:01.078Z [info]: Displaying Employee List
+2024-02-16T22:08:03.811Z [info]: Attempting to Login as Manager
+2024-02-16T22:08:03.812Z [info]: Successfully logged in the account
+2024-02-16T22:08:05.844Z [info]: Displaying Current User
+2024-02-16T22:08:08.925Z [info]: Displaying Employee List
+2024-02-16T22:08:17.697Z [info]: Sending a post request to register employee
+2024-02-16T22:08:17.698Z [info]: Successfully added the account
+2024-02-16T22:08:19.826Z [info]: Displaying Employee List
+2024-02-16T22:08:28.398Z [info]: Sending a post request to register manager
+2024-02-16T22:08:28.398Z [info]: Successfully added the account
+2024-02-16T22:08:30.565Z [info]: Displaying Manager List
+2024-02-16T22:08:40.097Z [info]: Attempting to Login as Manager
+2024-02-16T22:08:40.097Z [info]: Unsuccessful Login
+2024-02-16T22:08:43.710Z [info]: Attempting to Login as Manager
+2024-02-16T22:08:43.710Z [info]: Successfully logged in the account
+2024-02-16T22:08:46.183Z [info]: Displaying Current User
+2024-02-16T22:08:50.157Z [info]: Displaying Manager List

@@ -1,5 +1,5 @@
 //imports
-const { employeeList, managerList } = require('./Users') //list of users
+const { employeeList, managerList, currentUser } = require('./Users') //list of users
 
 
 //function to register an employee account
@@ -58,6 +58,14 @@ function loginEmployee(data) {
         //if it is present from the check above then:
         //say the employee is logged in
         employeeList[idx].loggedIn = true;
+        //mark employee as currentUser
+        if(!currentUser.length) {
+            currentUser[0] = employeeList[idx];
+        } else {
+            let data = currentUser.pop();
+            logoutOnNewLogin(data);
+            currentUser[0] = employeeList[idx];
+        }
         return true;
     }
     else {
@@ -73,10 +81,29 @@ function loginManager(data) {
         //if it is present from the check above then:
         //say the employee is logged in
         managerList[idx].loggedIn = true;
+        //mark manager as currentUser
+        if(!currentUser.length) {
+            currentUser[0] = managerList[idx];
+        } else {
+            let data = currentUser.pop();
+            logoutOnNewLogin(data);
+            currentUser[0] = managerList[idx];
+        }
         return true;
     }
     else {
         return false;
+    }
+}
+
+//function logout on new login
+function logoutOnNewLogin(data) {
+    if(data.role === "Employee") {
+        let idx = employeeList.findIndex( user => user.username === data.username );
+        employeeList[idx].loggedIn = false;
+    } else {
+        let idx = managerList.findIndex( user => user.username === data.username );
+        managerList[idx].loggedIn = false;
     }
 }
 
