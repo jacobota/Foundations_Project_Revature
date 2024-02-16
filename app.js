@@ -1,9 +1,8 @@
 //imports
 const express = require('express');
 const { createLogger, transports, format } = require("winston");
-const { registerEmployeeAccount, registerManagerAccount } = require('./business_logic/Registration_Feature');
-const { loginEmployee, loginManager } = require('./business_logic/Login_Feature');
-const { employeeList, managerList } = require('./business_logic/Users')
+const { registerEmployeeAccount, registerManagerAccount, loginEmployee, loginManager } = require('./business_logic/Registration_Login_Feature');
+const { employeeList, managerList } = require('./business_logic/Users');
 
 //Winston
 const logger = createLogger({
@@ -71,7 +70,7 @@ app.post('/employeeLogin', (req, res) => {
 })
 
 //POST Request: Manager Login
-app.post('/employeeLogin', (req, res) => {
+app.post('/managerLogin', (req, res) => {
     logger.info("Attempting to Login as Manager")
     const data = req.body;
     if(loginManager(data)) {

@@ -132,3 +132,37 @@
 2024-02-15T23:20:02.642Z [info]: Attempting to Login as Employee
 2024-02-15T23:20:02.643Z [info]: Successfully logged in the account
 2024-02-15T23:20:05.663Z [info]: Displaying List
+2024-02-16T20:09:32.397Z [info]: Started the server on Port 3000
+2024-02-16T20:09:47.211Z [info]: Sending a post request to register employee
+2024-02-16T20:09:47.211Z [info]: Successfully added the account
+2024-02-16T20:09:48.756Z [info]: Sending a post request to register employee
+2024-02-16T20:09:48.757Z [info]: Account already exists
+2024-02-16T20:09:51.829Z [info]: Displaying List
+2024-02-16T20:09:57.379Z [info]: Sending a post request to register manager
+2024-02-16T20:09:57.380Z [info]: Successfully added the account
+2024-02-16T20:09:58.483Z [info]: Sending a post request to register manager
+2024-02-16T20:09:58.484Z [info]: Account already exists
+2024-02-16T20:10:00.890Z [info]: Displaying List
+2024-02-16T20:10:06.701Z [info]: Attempting to Login as Employee
+2024-02-16T20:10:06.701Z [info]: Successfully logged in the account
+2024-02-16T20:10:10.505Z [info]: Displaying List
+2024-02-16T20:11:42.274Z [info]: Started the server on Port 3000
+2024-02-16T20:11:52.610Z [info]: Attempting to Login as Manager
+2024-02-16T20:11:52.611Z [info]: Unsuccessful Login
+2024-02-16T20:12:00.538Z [info]: Sending a post request to register employee
+2024-02-16T20:12:00.539Z [info]: Successfully added the account
+2024-02-16T20:12:04.095Z [info]: Attempting to Login as Manager
+2024-02-16T20:12:04.097Z [info]: Unsuccessful Login
+2024-02-16T20:12:07.891Z [info]: Attempting to Login as Employee
+2024-02-16T20:12:07.892Z [info]: Successfully logged in the account
+2024-02-16T20:12:11.025Z [info]: Displaying List
+2024-02-16T20:12:14.002Z [info]: Displaying List
+2024-02-16T20:12:16.961Z [info]: Sending a post request to register manager
+2024-02-16T20:12:16.962Z [info]: Successfully added the account
+2024-02-16T20:12:19.403Z [info]: Displaying List
+2024-02-16T20:12:22.510Z [info]: Attempting to Login as Manager
+2024-02-16T20:12:22.510Z [info]: Successfully logged in the account
+2024-02-16T20:12:25.432Z [info]: Displaying List
+2024-02-16T20:12:34.437Z [info]: Sending a post request to register manager
+2024-02-16T20:12:34.438Z [info]: Successfully added the account
+2024-02-16T20:12:37.590Z [info]: Displaying List
