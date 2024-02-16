@@ -1,5 +1,5 @@
 //imports
-const { employeeList, managerList, currentUser } = require('./Users') //list of users
+const { employeeList, managerList, currentUser } = require('../storage/Users') //list of users
 
 
 //function to register an employee account

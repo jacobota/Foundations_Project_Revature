@@ -1,8 +1,9 @@
 //imports
 const express = require('express');
 const { logger } = require("./src/util/logger");
-const { registerEmployeeAccount, registerManagerAccount, loginEmployee, loginManager } = require('./src/Registration_Login_Feature');
-const { employeeList, managerList, currentUser } = require('./src/Users');
+const { registerEmployeeAccount, registerManagerAccount, loginEmployee, loginManager } = require('./src/features/Registration_Login_Feature');
+const { employeeList, managerList, currentUser } = require('./src/storage/Users');
+const { submitTicket } = require('./src/features/Ticket_Submit_Feature');
 
 //create the server on PORT 3000
 const app = express();
@@ -24,14 +25,14 @@ app.post('/employeeRegister', (req, res) => {
     //Check if user did not enter a username or password
     if(!data.username || !data.password) {
         logger.error("No username or password entered.");
-        res.json(`Please Enter a Username and Password`);
+        res.json(`Please Enter a Username and/or Password`);
     }
     else {
         if(registerEmployeeAccount(data)) {
             logger.info("Successfully added the account");
             res.json(`Successfully registered ${data.username}`);
         } else {
-            logger.info("Account already exists");
+            logger.error("Account already exists");
             res.json(`Account with username ${data.username} already exists`);
         }
     }
@@ -44,13 +45,13 @@ app.post('/managerRegister', (req, res) => {
     //Check if user did not enter a username or password
     if(!data.username || !data.password) {
         logger.error("No username or password entered.");
-        res.json(`Please Enter a Username and Password`);
+        res.json(`Please Enter a Username and/or Password`);
     } else {
         if(registerManagerAccount(data)) {
             logger.info("Successfully added the account");
             res.json(`Successfully registered ${data.username}`);
         } else {
-            logger.info("Account already exists");
+            logger.error("Account already exists");
             res.json(`Account with username ${data.username} already exists`);
         }
     }
@@ -63,13 +64,13 @@ app.post('/employeeLogin', (req, res) => {
     //Check if user did not enter a username or password
     if(!data.username || !data.password) {
         logger.error("No username or password entered.");
-        res.json(`Please Enter a Username and Password`);
+        res.json(`Please Enter a Username and/or Password`);
     } else {
         if(loginEmployee(data)) {
             logger.info("Successfully logged in the account");
             res.json(`Employee: ${data.username} successfully logged in!`);
         } else {
-            logger.info("Unsuccessful Login");
+            logger.error("Unsuccessful Login");
             res.json(`Unsuccessful Login`);
         }
     }
@@ -82,19 +83,37 @@ app.post('/managerLogin', (req, res) => {
     //Check if user did not enter a username or password
     if(!data.username || !data.password) {
         logger.error("No username or password entered.");
-        res.json(`Please Enter a Username and Password`);
+        res.json(`Please Enter a Username and/or Password`);
     } else {
         if(loginManager(data)) {
             logger.info("Successfully logged in the account");
             res.json(`Manager: ${data.username} successfully logged in!`);
         } else {
-            logger.info("Unsuccessful Login");
+            logger.error("Unsuccessful Login");
             res.json(`Unsuccessful Login`);
         }
     }
 })
 
 // ========= Ticket Submission Feature =========
+
+app.post('/submitTicket', (req, res) => {
+    logger.info("Attempting to Submit a Ticket");
+    const data = req.body;
+    //Check if any of the data is missing
+    if(!data.description || !data.amount) {
+        logger.error("No description or amount given");
+        res.json(`Please Enter a Amount and/or Description`);
+    } else {
+        if(submitTicket(data)) {
+            logger.info("Successfully submitted ticket");
+            res.json(`Successfully submitted ticket`)
+        } else {
+            logger.error("Tried to submit ticket as Manager");
+            res.json(`Cannot submit ticket as a Manager`);
+        }
+    }
+})
 
 
 // ========= DEBUG GET REQUESTS =========

@@ -228,3 +228,51 @@
 2024-02-16T22:08:43.710Z [info]: Successfully logged in the account
 2024-02-16T22:08:46.183Z [info]: Displaying Current User
 2024-02-16T22:08:50.157Z [info]: Displaying Manager List
+2024-02-16T22:58:47.375Z [info]: Started the server on Port 3000
+2024-02-16T22:58:53.702Z [info]: Attempting to Submit a Ticket
+2024-02-16T22:59:39.223Z [info]: Started the server on Port 3000
+2024-02-16T22:59:45.071Z [info]: Attempting to Submit a Ticket
+2024-02-16T22:59:45.071Z [error]: Tried to submit ticket as Manager
+2024-02-16T22:59:56.624Z [info]: Sending a post request to register employee
+2024-02-16T22:59:56.625Z [info]: Successfully added the account
+2024-02-16T23:00:00.155Z [info]: Attempting to Login as Employee
+2024-02-16T23:00:00.156Z [info]: Successfully logged in the account
+2024-02-16T23:00:07.431Z [info]: Displaying Current User
+2024-02-16T23:00:12.009Z [info]: Attempting to Submit a Ticket
+2024-02-16T23:00:12.009Z [error]: Tried to submit ticket as Manager
+2024-02-16T23:00:17.933Z [info]: Displaying Current User
+2024-02-16T23:00:22.288Z [info]: Attempting to Submit a Ticket
+2024-02-16T23:00:22.288Z [error]: Tried to submit ticket as Manager
+2024-02-16T23:00:41.362Z [info]: Started the server on Port 3000
+2024-02-16T23:00:48.235Z [info]: Sending a post request to register employee
+2024-02-16T23:00:48.236Z [info]: Successfully added the account
+2024-02-16T23:00:50.876Z [info]: Attempting to Login as Employee
+2024-02-16T23:00:50.877Z [info]: Successfully logged in the account
+2024-02-16T23:00:52.426Z [info]: Displaying Current User
+2024-02-16T23:00:55.919Z [info]: Attempting to Submit a Ticket
+2024-02-16T23:00:55.923Z [error]: Tried to submit ticket as Manager
+2024-02-16T23:01:25.643Z [info]: Started the server on Port 3000
+2024-02-16T23:01:30.299Z [info]: Sending a post request to register employee
+2024-02-16T23:01:30.300Z [info]: Successfully added the account
+2024-02-16T23:01:32.630Z [info]: Attempting to Login as Employee
+2024-02-16T23:01:32.631Z [info]: Successfully logged in the account
+2024-02-16T23:01:35.537Z [info]: Displaying Current User
+2024-02-16T23:01:37.828Z [info]: Attempting to Submit a Ticket
+2024-02-16T23:01:37.829Z [error]: Tried to submit ticket as Manager
+2024-02-16T23:02:27.399Z [info]: Started the server on Port 3000
+2024-02-16T23:02:32.516Z [info]: Sending a post request to register employee
+2024-02-16T23:02:32.517Z [info]: Successfully added the account
+2024-02-16T23:02:34.707Z [info]: Attempting to Login as Employee
+2024-02-16T23:02:34.707Z [info]: Successfully logged in the account
+2024-02-16T23:02:36.859Z [info]: Displaying Current User
+2024-02-16T23:02:39.891Z [info]: Attempting to Submit a Ticket
+2024-02-16T23:02:39.891Z [info]: Successfully submitted ticket
+2024-02-16T23:02:51.089Z [info]: Sending a post request to register manager
+2024-02-16T23:02:51.090Z [info]: Successfully added the account
+2024-02-16T23:02:55.073Z [info]: Attempting to Login as Manager
+2024-02-16T23:02:55.073Z [info]: Successfully logged in the account
+2024-02-16T23:02:58.723Z [info]: Displaying Current User
+2024-02-16T23:03:04.296Z [info]: Displaying Employee List
+2024-02-16T23:03:06.756Z [info]: Displaying Manager List
+2024-02-16T23:03:09.165Z [info]: Attempting to Submit a Ticket
+2024-02-16T23:03:09.166Z [error]: Tried to submit ticket as Manager
