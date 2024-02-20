@@ -2,10 +2,10 @@
 const express = require('express');
 const { logger } = require("./src/util/logger");
 //Methods for the Features to be called through HTTP Requests
-const { registerEmployeeAccount, registerManagerAccount, loginUser } = require('./src/features/Registration_Login_Feature');
+const { registerEmployeeAccount, registerManagerAccount, loginUser, currentUser} = require('./src/features/Registration_Login_Feature');
 const { submitTicket } = require('./src/features/Ticket_Submit_Feature');
 //DynamoDB debugging methods
-const { getEmployees, getManagers, getCurrentUser } = require('./src/DAO/DebugDAO');
+const { getEmployees, getManagers } = require('./src/DAO/DebugDAO');
 
 //create the server on PORT 3000
 const app = express();
@@ -30,7 +30,7 @@ app.post('/employeeRegister', async (req, res) => {
         res.json(`Please Enter a Username and/or Password`);
     }
     else {
-        let registeredAccount = await registerManagerAccount(data);
+        let registeredAccount = await registerEmployeeAccount(data);
         if(registeredAccount) {
             logger.info("Successfully added the account");
             res.json(`Successfully registered ${data.username}`);
@@ -62,7 +62,7 @@ app.post('/managerRegister', async (req, res) => {
 });
 
 //POST Request: Employee Login
-app.post('/employeeLogin', (req, res) => {
+app.post('/employeeLogin', async (req, res) => {
     logger.info("Attempting to Login as Employee")
     const data = req.body;
     //Check if user did not enter a username or password
@@ -70,7 +70,8 @@ app.post('/employeeLogin', (req, res) => {
         logger.error("No username or password entered.");
         res.json(`Please Enter a Username and/or Password`);
     } else {
-        if(loginUser(data)) {
+        let loginAccount = await loginUser(data);
+        if(loginAccount) {
             logger.info("Successfully logged in the account");
             res.json(`Employee: ${data.username} successfully logged in!`);
         } else {
@@ -81,7 +82,7 @@ app.post('/employeeLogin', (req, res) => {
 })
 
 //POST Request: Manager Login
-app.post('/managerLogin', (req, res) => {
+app.post('/managerLogin', async (req, res) => {
     logger.info("Attempting to Login as Manager")
     const data = req.body;
     //Check if user did not enter a username or password
@@ -89,7 +90,8 @@ app.post('/managerLogin', (req, res) => {
         logger.error("No username or password entered.");
         res.json(`Please Enter a Username and/or Password`);
     } else {
-        if(loginUser(data)) {
+        let loginAccount = await loginUser(data);
+        if(loginAccount) {
             logger.info("Successfully logged in the account");
             res.json(`Manager: ${data.username} successfully logged in!`);
         } else {
@@ -137,5 +139,6 @@ app.get('/managerList', async (req, res) => {
 //GET Request: Current User for debugging purposes
 app.get('/currentUser', async (req, res) => {
     logger.info("Displaying Current User");
-    res.json(await getCurrentUser());
+    //TODO: Get current User working
+    res.json();
 })

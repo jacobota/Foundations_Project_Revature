@@ -49,27 +49,7 @@ async function getManagers() {
     }
 }
 
-//Get all the Managers from the DB (Useful for Debugging Purposes)
-async function getCurrentUser() {
-    //scan command to get the whole table
-    const scanCommand = new ScanCommand({
-        TableName: 'FP_Users',
-        FilterExpression: 'loggedIn = :value',
-        ExpressionAttributeValues: {
-            ':value': true
-        }
-    });
-
-    try {
-        const data = await documentClient.send(scanCommand);
-        return data.Items;
-    } catch(err) {
-        return err;
-    }
-}
-
 module.exports = {
     getEmployees: getEmployees,
-    getManagers: getManagers,
-    getCurrentUser: getCurrentUser
+    getManagers: getManagers
 }

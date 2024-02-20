@@ -459,3 +459,117 @@
 2024-02-20T22:25:00.564Z [info]: Successfully added the account
 2024-02-20T22:25:02.317Z [info]: Sending a post request to register employee
 2024-02-20T22:25:02.318Z [info]: Successfully added the account
+2024-02-20T22:25:51.818Z [info]: Started the server on Port 3000
+2024-02-20T22:25:55.425Z [info]: Sending a post request to register employee
+2024-02-20T22:25:55.631Z [error]: Account already exists
+2024-02-20T22:26:02.685Z [info]: Sending a post request to register employee
+2024-02-20T22:26:02.771Z [info]: Successfully added the account
+2024-02-20T22:26:10.389Z [info]: Sending a post request to register employee
+2024-02-20T22:26:10.431Z [error]: Account already exists
+2024-02-20T22:27:42.734Z [info]: Displaying Employee List
+2024-02-20T22:27:46.800Z [info]: Displaying Manager List
+2024-02-20T22:38:59.402Z [info]: Started the server on Port 3000
+2024-02-20T22:39:06.392Z [info]: Sending a post request to register employee
+2024-02-20T22:39:06.600Z [error]: Account already exists
+2024-02-20T22:39:11.483Z [info]: Sending a post request to register employee
+2024-02-20T22:39:11.582Z [info]: Successfully added the account
+2024-02-20T22:45:13.915Z [info]: Started the server on Port 3000
+2024-02-20T22:45:16.205Z [info]: Attempting to Login as Employee
+2024-02-20T22:45:16.207Z [info]: Successfully logged in the account
+2024-02-20T22:45:34.753Z [info]: Attempting to Login as Employee
+2024-02-20T22:45:34.754Z [info]: Successfully logged in the account
+2024-02-20T22:46:32.469Z [info]: Started the server on Port 3000
+2024-02-20T22:46:37.384Z [info]: Attempting to Login as Employee
+2024-02-20T22:46:37.604Z [info]: Successfully logged in the account
+2024-02-20T22:46:52.355Z [info]: Started the server on Port 3000
+2024-02-20T22:46:53.843Z [info]: Attempting to Login as Employee
+2024-02-20T22:46:54.051Z [info]: Successfully logged in the account
+2024-02-20T22:47:40.894Z [info]: Started the server on Port 3000
+2024-02-20T22:47:44.799Z [info]: Attempting to Login as Employee
+2024-02-20T22:47:44.997Z [info]: Successfully logged in the account
+2024-02-20T22:48:05.227Z [info]: Started the server on Port 3000
+2024-02-20T22:48:07.195Z [info]: Attempting to Login as Employee
+2024-02-20T22:48:07.455Z [info]: Successfully logged in the account
+2024-02-20T22:48:27.944Z [info]: Started the server on Port 3000
+2024-02-20T22:48:30.113Z [info]: Attempting to Login as Employee
+2024-02-20T22:48:30.355Z [info]: Successfully logged in the account
+2024-02-20T22:51:32.915Z [info]: Started the server on Port 3000
+2024-02-20T22:51:34.987Z [info]: Attempting to Login as Employee
+2024-02-20T22:51:35.186Z [info]: Successfully logged in the account
+2024-02-20T22:52:12.109Z [info]: Attempting to Login as Manager
+2024-02-20T22:52:12.148Z [info]: Successfully logged in the account
+2024-02-20T22:52:30.749Z [info]: Attempting to Login as Manager
+2024-02-20T22:52:30.790Z [error]: Unsuccessful Login
+2024-02-20T22:52:39.215Z [info]: Attempting to Login as Manager
+2024-02-20T22:52:39.259Z [info]: Successfully logged in the account
+2024-02-20T22:58:45.671Z [info]: Started the server on Port 3000
+2024-02-20T22:58:50.758Z [info]: Attempting to Login as Manager
+2024-02-20T22:58:50.961Z [info]: Successfully logged in the account
+2024-02-20T22:59:06.248Z [info]: Displaying Manager List
+2024-02-20T22:59:26.895Z [info]: Started the server on Port 3000
+2024-02-20T22:59:28.303Z [info]: Attempting to Login as Employee
+2024-02-20T22:59:28.645Z [info]: Successfully logged in the account
+2024-02-20T23:00:48.779Z [info]: Sending a post request to register employee
+2024-02-20T23:00:49.055Z [info]: Successfully added the account
+2024-02-20T23:01:15.278Z [info]: Started the server on Port 3000
+2024-02-20T23:01:21.921Z [info]: Displaying Manager List
+2024-02-20T23:01:30.529Z [info]: Attempting to Login as Manager
+2024-02-20T23:01:30.688Z [info]: Successfully logged in the account
+2024-02-20T23:01:58.429Z [info]: Started the server on Port 3000
+2024-02-20T23:02:00.258Z [info]: Displaying Manager List
+2024-02-20T23:02:03.135Z [info]: Attempting to Login as Manager
+2024-02-20T23:02:03.310Z [info]: Successfully logged in the account
+2024-02-20T23:02:54.477Z [info]: Started the server on Port 3000
+2024-02-20T23:02:56.251Z [info]: Attempting to Login as Manager
+2024-02-20T23:02:56.470Z [info]: Successfully logged in the account
+2024-02-20T23:03:24.630Z [info]: Started the server on Port 3000
+2024-02-20T23:03:26.320Z [info]: Attempting to Login as Manager
+2024-02-20T23:03:26.512Z [info]: Successfully logged in the account
+2024-02-20T23:03:50.867Z [info]: Started the server on Port 3000
+2024-02-20T23:03:52.166Z [info]: Attempting to Login as Manager
+2024-02-20T23:03:52.420Z [info]: Successfully logged in the account
+2024-02-20T23:04:11.246Z [info]: Started the server on Port 3000
+2024-02-20T23:04:12.762Z [info]: Attempting to Login as Manager
+2024-02-20T23:04:12.980Z [info]: Successfully logged in the account
+2024-02-20T23:04:29.859Z [info]: Sending a post request to register employee
+2024-02-20T23:04:29.903Z [error]: Account already exists
+2024-02-20T23:04:30.750Z [info]: Sending a post request to register employee
+2024-02-20T23:04:30.791Z [error]: Account already exists
+2024-02-20T23:04:37.754Z [info]: Sending a post request to register employee
+2024-02-20T23:04:38.094Z [info]: Successfully added the account
+2024-02-20T23:04:44.947Z [info]: Attempting to Login as Employee
+2024-02-20T23:04:44.985Z [info]: Successfully logged in the account
+2024-02-20T23:09:54.330Z [info]: Started the server on Port 3000
+2024-02-20T23:09:59.086Z [info]: Sending a post request to register employee
+2024-02-20T23:09:59.348Z [info]: Successfully added the account
+2024-02-20T23:10:08.742Z [info]: Sending a post request to register manager
+2024-02-20T23:10:08.833Z [info]: Successfully added the account
+2024-02-20T23:10:23.288Z [info]: Attempting to Login as Employee
+2024-02-20T23:10:23.328Z [info]: Successfully logged in the account
+2024-02-20T23:10:37.734Z [info]: Displaying Current User
+2024-02-20T23:11:23.003Z [info]: Started the server on Port 3000
+2024-02-20T23:11:25.968Z [info]: Sending a post request to register employee
+2024-02-20T23:11:26.253Z [info]: Successfully added the account
+2024-02-20T23:11:28.225Z [info]: Sending a post request to register manager
+2024-02-20T23:11:28.316Z [info]: Successfully added the account
+2024-02-20T23:11:28.947Z [info]: Sending a post request to register manager
+2024-02-20T23:11:28.992Z [error]: Account already exists
+2024-02-20T23:11:32.273Z [info]: Attempting to Login as Employee
+2024-02-20T23:11:32.321Z [info]: Successfully logged in the account
+2024-02-20T23:11:34.957Z [info]: Displaying Current User
+2024-02-20T23:11:49.931Z [info]: Started the server on Port 3000
+2024-02-20T23:12:07.990Z [info]: Sending a post request to register employee
+2024-02-20T23:12:08.313Z [info]: Successfully added the account
+2024-02-20T23:12:10.133Z [info]: Sending a post request to register manager
+2024-02-20T23:12:10.380Z [info]: Successfully added the account
+2024-02-20T23:12:12.178Z [info]: Attempting to Login as Employee
+2024-02-20T23:12:12.222Z [info]: Successfully logged in the account
+2024-02-20T23:12:18.234Z [info]: Displaying Current User
+2024-02-20T23:12:35.237Z [info]: Started the server on Port 3000
+2024-02-20T23:12:48.436Z [info]: Sending a post request to register employee
+2024-02-20T23:12:48.805Z [info]: Successfully added the account
+2024-02-20T23:12:50.908Z [info]: Sending a post request to register manager
+2024-02-20T23:12:50.988Z [info]: Successfully added the account
+2024-02-20T23:12:53.482Z [info]: Attempting to Login as Employee
+2024-02-20T23:12:53.521Z [info]: Successfully logged in the account
+2024-02-20T23:12:55.872Z [info]: Displaying Current User

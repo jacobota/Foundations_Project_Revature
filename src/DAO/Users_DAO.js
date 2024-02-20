@@ -2,19 +2,23 @@ const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { fromIni } = require('@aws-sdk/credential-provider-ini');
 const { v4 } = require('uuid');
 
-const { DynamoDBDocumentClient, PutCommand, QueryCommand } = require('@aws-sdk/lib-dynamodb');
+const { DynamoDBDocumentClient, PutCommand, QueryCommand, UpdateCommand } = require('@aws-sdk/lib-dynamodb');
 
 const client = new DynamoDBClient({
     region: "us-west-1",
     credentials: fromIni({profile: "user1"})
 });
 
+//Hold the current user here
+const currentUser = [];
+
 //getting the documentClient
 const documentClient = DynamoDBDocumentClient.from(client);
 
+// READ (Also READS are located in Debug.DAO)
 //check if username exists (Registration Check)
 async function checkUsername(username) {
-    //scan command to get the whole table
+    //query command to get the whole table
     const command = new QueryCommand({
         TableName: 'FP_Users',
         IndexName: 'username-index',
@@ -28,7 +32,7 @@ async function checkUsername(username) {
     });
 
     try {
-        const data = await client.send(command);
+        const data = await documentClient.send(command);
         //return true if there does exist account with same username
         return data.Count > 0
     } catch(err) {
@@ -37,8 +41,10 @@ async function checkUsername(username) {
     }
 }
 
-//function to register a user account to Dynamo
+// CREATE
+// function to register a user account to Dynamo
 async function registerUser(item) {
+    // put command to put the item into the FP_Users table
     const command = new PutCommand({
         TableName: 'FP_Users',
         Item: item,
@@ -52,12 +58,15 @@ async function registerUser(item) {
     }
 }
 
-//function to login a user account to Dynamo
+// UPDATE
+// function to login a user account to Dynamo
 async function loginUser(data) {
-    //scan command to get the whole table
+    //query command to get the whole table
     const command = new QueryCommand({
         TableName: 'FP_Users',
-        KeyConditionExpression: 'username = :value AND password = :pass',
+        IndexName: 'username-index',
+        KeyConditionExpression: 'username = :value',
+        FilterExpression: 'password = :pass',
         ExpressionAttributeValues: {
             ':value': data.username,
             ':pass' : data.password
@@ -68,7 +77,10 @@ async function loginUser(data) {
         const data = await documentClient.send(command);
         //return true if there does exist account with same username
         if(data.Count == 1) {
-            //TODO: Update loggedIn to true
+            //Have helper function set user to logged in and push to current user
+            helperLogin(data);
+            currentUser.push(data.Items[0]);
+            console.log(currentUser);
             return true;
         } else {
             return false;
@@ -78,8 +90,30 @@ async function loginUser(data) {
     }
 }
 
+// UPDATE Helper Function for Login
+async function helperLogin(data) {
+    //update command to update the value of LoggedIn
+    const command = new UpdateCommand({
+        TableName: 'FP_Users',
+        Key: {'user_id' : data.Items[0].user_id},
+        UpdateExpression: "SET loggedIn = :val",
+        ExpressionAttributeValues: {
+            ':val' : true
+        }
+    })
+
+    try {
+        const data = await documentClient.send(command);
+        return data;
+    } catch (err) {
+        console.log(err);
+        return err;
+    }
+}
+
 module.exports = {
     checkUsername: checkUsername,
     registerUser: registerUser,
-    loginUser: loginUser
+    loginUser: loginUser,
+    currentUser: currentUser
 }
