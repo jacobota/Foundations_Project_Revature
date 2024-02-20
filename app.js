@@ -1,9 +1,11 @@
 //imports
 const express = require('express');
 const { logger } = require("./src/util/logger");
-const { registerEmployeeAccount, registerManagerAccount, loginEmployee, loginManager } = require('./src/features/Registration_Login_Feature');
-const { employeeList, managerList, currentUser } = require('./src/storage/Users');
+//Methods for the Features to be called through HTTP Requests
+const { registerEmployeeAccount, registerManagerAccount, loginUser } = require('./src/features/Registration_Login_Feature');
 const { submitTicket } = require('./src/features/Ticket_Submit_Feature');
+//DynamoDB debugging methods
+const { getEmployees, getManagers, getCurrentUser } = require('./src/DAO/DebugDAO');
 
 //create the server on PORT 3000
 const app = express();
@@ -19,7 +21,7 @@ app.listen(PORT, () => {
 // ========= Register and Login Features =========
 
 //POST Request: Employee Registration
-app.post('/employeeRegister', (req, res) => {
+app.post('/employeeRegister', async (req, res) => {
     logger.info("Sending a post request to register employee");
     const data = req.body;
     //Check if user did not enter a username or password
@@ -28,7 +30,8 @@ app.post('/employeeRegister', (req, res) => {
         res.json(`Please Enter a Username and/or Password`);
     }
     else {
-        if(registerEmployeeAccount(data)) {
+        let registeredAccount = await registerManagerAccount(data);
+        if(registeredAccount) {
             logger.info("Successfully added the account");
             res.json(`Successfully registered ${data.username}`);
         } else {
@@ -39,7 +42,7 @@ app.post('/employeeRegister', (req, res) => {
 });
 
 //POST Request: Manager Registration
-app.post('/managerRegister', (req, res) => {
+app.post('/managerRegister', async (req, res) => {
     logger.info("Sending a post request to register manager");
     const data = req.body;
     //Check if user did not enter a username or password
@@ -47,7 +50,8 @@ app.post('/managerRegister', (req, res) => {
         logger.error("No username or password entered.");
         res.json(`Please Enter a Username and/or Password`);
     } else {
-        if(registerManagerAccount(data)) {
+        let registeredAccount = await registerManagerAccount(data);
+        if(registeredAccount) {
             logger.info("Successfully added the account");
             res.json(`Successfully registered ${data.username}`);
         } else {
@@ -66,7 +70,7 @@ app.post('/employeeLogin', (req, res) => {
         logger.error("No username or password entered.");
         res.json(`Please Enter a Username and/or Password`);
     } else {
-        if(loginEmployee(data)) {
+        if(loginUser(data)) {
             logger.info("Successfully logged in the account");
             res.json(`Employee: ${data.username} successfully logged in!`);
         } else {
@@ -85,7 +89,7 @@ app.post('/managerLogin', (req, res) => {
         logger.error("No username or password entered.");
         res.json(`Please Enter a Username and/or Password`);
     } else {
-        if(loginManager(data)) {
+        if(loginUser(data)) {
             logger.info("Successfully logged in the account");
             res.json(`Manager: ${data.username} successfully logged in!`);
         } else {
@@ -119,19 +123,19 @@ app.post('/submitTicket', (req, res) => {
 // ========= DEBUG GET REQUESTS =========
 
 //GET Request: Employee List for debugging purposes
-app.get('/employeeList', (req, res) => {
+app.get('/employeeList', async (req, res) => {
     logger.info("Displaying Employee List");
-    res.json(employeeList);
+    res.json(await getEmployees());
 });
 
 //GET Request: Manager List for debugging purposes
-app.get('/managerList', (req, res) => {
+app.get('/managerList', async (req, res) => {
     logger.info("Displaying Manager List");
-    res.json(managerList);
+    res.json(await getManagers());
 });
 
 //GET Request: Current User for debugging purposes
-app.get('/currentUser', (req, res) => {
+app.get('/currentUser', async (req, res) => {
     logger.info("Displaying Current User");
-    res.json(currentUser);
+    res.json(await getCurrentUser());
 })

@@ -1,109 +1,70 @@
-//imports
-const { employeeList, managerList, currentUser } = require('../storage/Users') //list of users
-
+const dao = require('../DAO/Users_DAO');
+const { v4 } = require('uuid');
 
 //function to register an employee account
-function registerEmployeeAccount(data) {
+async function registerEmployeeAccount(data) {
     //see if the username is already registered in the system
-    const idx = employeeList.findIndex( user => user.username === data.username );
-    if(idx != -1) {
+    if(await dao.checkUsername(data.username)) {
         return false;
     }
     else {
         //if it is not present from the check above then:
         //create an employee object
+        let uuid = v4();
+
         let newEmployee = {
+            user_id: uuid,
             username: data.username,
             password: data.password,
-            role: "Employee",
+            userRole: "Employee",
             loggedIn: false
         };
 
-        //push that employee object
-        employeeList.push(newEmployee);
-        return true;
+        //push that employee item
+        if(await dao.registerUser(newEmployee)) {
+            return true;
+        }else {
+            return false;
+        }
     }
 }
 
 //function to register a manager account
-function registerManagerAccount(data) {
+ async function registerManagerAccount(data) {
     //see if the username is already registered in the system
-    let idx;
-    idx = managerList.findIndex( user => user.username === data.username );
-    if(idx != -1) {
+    if(await dao.checkUsername(data.username)) {
         return false;
     }
     else {
         //if it is not present from the check above then:
         //create an employee object
+        let uuid = v4();
+
         let newManager = {
+            user_id: uuid,
             username: data.username,
             password: data.password,
-            role: "Manager",
+            userRole: "Manager",
             loggedIn: false
         };
 
-        //push that employee object
-        managerList.push(newManager);
-        return true;
+        //push that manager item
+        if(await dao.registerUser(newManager)) {
+            return true;
+        }else {
+            return false;
+        }
     }
 }
 
-//function to login as a employee
-function loginEmployee(data) {
-    //check for the password and username in the list
-    let idx;
-    idx = employeeList.findIndex( user => user.username === data.username && user.password === data.password );
-    if(idx != -1) {
-        //if it is present from the check above then:
-        //say the employee is logged in
-        employeeList[idx].loggedIn = true;
-        //mark employee as currentUser
-        if(!currentUser.length) {
-            currentUser[0] = employeeList[idx];
-        } else {
-            let data = currentUser.pop();
-            logoutOnNewLogin(data);
-            currentUser[0] = employeeList[idx];
-        }
-        return true;
-    }
-    else {
-        return false;
-    }
-}
 
 //function to login as a manager
-function loginManager(data) {
-    let idx;
-    idx = managerList.findIndex( user => user.username === data.username && user.password === data.password );
-    if(idx != -1) {
-        //if it is present from the check above then:
-        //say the employee is logged in
-        managerList[idx].loggedIn = true;
-        //mark manager as currentUser
-        if(!currentUser.length) {
-            currentUser[0] = managerList[idx];
-        } else {
-            let data = currentUser.pop();
-            logoutOnNewLogin(data);
-            currentUser[0] = managerList[idx];
-        }
+async function loginUser(data) {
+    if(await dao.loginUser(data)) {
         return true;
     }
     else {
         return false;
-    }
-}
-
-//function logout on new login
-function logoutOnNewLogin(data) {
-    if(data.role === "Employee") {
-        let idx = employeeList.findIndex( user => user.username === data.username );
-        employeeList[idx].loggedIn = false;
-    } else {
-        let idx = managerList.findIndex( user => user.username === data.username );
-        managerList[idx].loggedIn = false;
     }
 }
 
@@ -111,6 +72,5 @@ function logoutOnNewLogin(data) {
 module.exports = {
     registerEmployeeAccount: registerEmployeeAccount,
     registerManagerAccount: registerManagerAccount,
-    loginEmployee: loginEmployee,
-    loginManager: loginManager
+    loginUser: loginUser
 }

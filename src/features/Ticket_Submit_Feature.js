@@ -1,6 +1,3 @@
-const { ticketList } = require('../storage/Tickets');
-const { currentUser } = require('../storage/Users')
-
 //function to submit a ticket
 function submitTicket(data) {
     if(currentUser[0].role === "Employee") {
