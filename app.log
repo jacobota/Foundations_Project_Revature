@@ -894,3 +894,32 @@
 2024-02-21T21:37:16.025Z [info]: Incoming GET: /view/currentUser
 2024-02-21T21:37:16.026Z [info]: Displaying Current User
 2024-02-21T21:37:18.738Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:43:55.432Z [info]: Started the server on Port 3000
+2024-02-21T21:44:06.645Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:44:06.940Z [info]: Successfully added the account
+2024-02-21T21:44:09.964Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:44:10.003Z [error]: No user has been logged in yet!
+2024-02-21T21:44:10.045Z [info]: Successfully logged in the account
+2024-02-21T21:44:13.118Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:44:13.119Z [error]: documentClient is not a function
+2024-02-21T21:45:02.387Z [info]: Started the server on Port 3000
+2024-02-21T21:45:17.029Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:45:17.302Z [info]: Successfully added the account
+2024-02-21T21:45:19.485Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:45:19.523Z [error]: No user has been logged in yet!
+2024-02-21T21:45:19.565Z [info]: Successfully logged in the account
+2024-02-21T21:45:22.348Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:45:22.519Z [info]: Successfully added the Ticket
+2024-02-21T21:45:52.879Z [info]: Incoming GET: /view/currentUser
+2024-02-21T21:45:52.880Z [info]: Displaying Current User
+2024-02-21T21:45:56.828Z [info]: Incoming POST: /users/managerRegister
+2024-02-21T21:45:56.909Z [info]: Successfully added the account
+2024-02-21T21:46:03.090Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:46:03.217Z [info]: Successfully logged in the account
+2024-02-21T21:46:07.944Z [info]: Incoming GET: /view/currentUser
+2024-02-21T21:46:07.945Z [info]: Displaying Current User
+2024-02-21T21:46:12.250Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:46:27.410Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:46:27.532Z [info]: Successfully logged in the account
+2024-02-21T21:46:36.887Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:46:37.087Z [info]: Successfully added the Ticket

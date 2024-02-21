@@ -21,7 +21,7 @@ async function postTicket(Item) {
     })
 
     try {
-        await documentClient(command);
+        await documentClient.send(command);
         return true;
     } catch(err) {
         logger.error(err);
