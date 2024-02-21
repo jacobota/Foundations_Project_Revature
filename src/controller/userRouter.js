@@ -22,7 +22,7 @@ router.post('/employeeRegister', async (req, res) => {
         if(registeredAccount) {
             res.json(`Successfully registered ${data.username}`);
         } else {
-            res.json(`Failure to register ${data.username}`);
+            res.json(`Failure to register: Username: ${data.username} is unavailable!`);
         }
     }
 });
@@ -39,13 +39,13 @@ router.post('/managerRegister', async (req, res) => {
         if(registeredAccount) {
             res.json(`Successfully registered ${data.username}`);
         } else {
-            res.json(`Failure to register ${data.username}`);
+            res.json(`Failure to register: Username: ${data.username} is unavailable!`);
         }
     }
 });
 
-//POST Request: Employee Login
-router.post('/employeeLogin', async (req, res) => {
+//PUT Request: User Login
+router.put('/userLogin', async (req, res) => {
     const data = req.body;
     //Check if user did not enter a username or password
     if(!data.username || !data.password) {
@@ -54,28 +54,15 @@ router.post('/employeeLogin', async (req, res) => {
     } else {
         let loginAccount = await loginUser(data);
         if(loginAccount) {
-            res.json(`Employee: ${data.username} successfully logged in!`);
+            res.json(`${data.username} successfully logged in!`);
         } else {
-            res.json(`Unsuccessful Login`);
+            res.json(`Unsuccessful Login. Try Again!`);
         }
     }
 })
 
-//POST Request: Manager Login
-router.post('/managerLogin', async (req, res) => {
-    const data = req.body;
-    //Check if user did not enter a username or password
-    if(!data.username || !data.password) {
-        logger.error("No username or password entered.");
-        res.json(`Please Enter a Username and/or Password`);
-    } else {
-        let loginAccount = await loginUser(data);
-        if(loginAccount) {
-            res.json(`Manager: ${data.username} successfully logged in!`);
-        } else {
-            res.json(`Unsuccessful Login`);
-        }
-    }
-})
+// OPTIONAL
+// PUT Request: User Logout
+
 
 module.exports = router;
