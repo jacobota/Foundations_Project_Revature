@@ -1,8 +1,7 @@
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { fromIni } = require('@aws-sdk/credential-provider-ini');
-const { v4 } = require('uuid');
-
 const { DynamoDBDocumentClient, PutCommand, QueryCommand, UpdateCommand } = require('@aws-sdk/lib-dynamodb');
+const { logger } = require('../util/logger');
 
 const client = new DynamoDBClient({
     region: "us-west-1",
@@ -34,10 +33,10 @@ async function checkUsername(username) {
     try {
         const data = await documentClient.send(command);
         //return true if there does exist account with same username
-        return data.Count > 0
+        return data.Count > 0;
     } catch(err) {
-        console.error(err);
-        return err;
+        logger.error(err);
+        return false;
     }
 }
 
@@ -54,6 +53,7 @@ async function registerUser(item) {
         await documentClient.send(command);
         return true;
     } catch (err) {
+        logger.error(err);
         return false;
     }
 }
@@ -83,10 +83,12 @@ async function loginUser(data) {
             console.log(currentUser);
             return true;
         } else {
+            logger.error("User not found")
             return false;
         }
     } catch(err) {
-        return err;
+        logger.error(err);
+        return false;
     }
 }
 
@@ -103,11 +105,9 @@ async function helperLogin(data) {
     })
 
     try {
-        const data = await documentClient.send(command);
-        return data;
+        await documentClient.send(command);
     } catch (err) {
-        console.log(err);
-        return err;
+        logger.error(err);
     }
 }
 

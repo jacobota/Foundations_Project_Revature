@@ -573,3 +573,17 @@
 2024-02-20T23:12:53.482Z [info]: Attempting to Login as Employee
 2024-02-20T23:12:53.521Z [info]: Successfully logged in the account
 2024-02-20T23:12:55.872Z [info]: Displaying Current User
+2024-02-21T19:03:28.107Z [info]: Started the server on Port 3000
+2024-02-21T19:03:45.029Z [info]: Incoming POST: /users/managerRegister
+2024-02-21T19:04:42.617Z [info]: Started the server on Port 3000
+2024-02-21T19:04:47.102Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T19:04:47.351Z [info]: Successfully added the account
+2024-02-21T19:04:55.358Z [info]: Incoming POST: /users/employeeLogin
+2024-02-21T19:04:55.406Z [info]: Successfully logged in the account
+2024-02-21T19:05:17.870Z [info]: Incoming POST: /users/managerRegister
+2024-02-21T19:05:17.955Z [info]: Successfully added the account
+2024-02-21T19:05:22.590Z [info]: Incoming POST: /users/managerLogin
+2024-02-21T19:05:22.629Z [error]: logger.err is not a function
+2024-02-21T19:05:22.630Z [error]: Unsuccessful Login
+2024-02-21T19:05:44.161Z [info]: Incoming POST: /users/managerLogin
+2024-02-21T19:05:44.229Z [info]: Successfully logged in the account
