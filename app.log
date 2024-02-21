@@ -1076,3 +1076,46 @@
 2024-02-21T22:24:53.522Z [info]: Successfully logged out the account
 2024-02-21T22:24:53.524Z [error]: No user has been logged in yet!
 2024-02-21T22:24:53.526Z [error]: Failed Logout
+2024-02-21T22:26:50.140Z [info]: Started the server on Port 3000
+2024-02-21T22:26:54.303Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T22:26:54.559Z [info]: Successfully added the account
+2024-02-21T22:26:57.675Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T22:26:57.715Z [error]: User not found
+2024-02-21T22:26:57.715Z [error]: Unsuccessful Login
+2024-02-21T22:27:03.527Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T22:27:03.582Z [error]: No user has been logged in yet!
+2024-02-21T22:27:03.627Z [info]: Successfully logged in the account
+2024-02-21T22:27:07.773Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T22:27:07.944Z [info]: Successfully added the Ticket
+2024-02-21T22:27:12.929Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T22:27:12.930Z [error]: No amount or description entered.
+2024-02-21T22:27:40.364Z [info]: Incoming POST: /users/managerRegister
+2024-02-21T22:27:40.454Z [info]: Successfully added the account
+2024-02-21T22:27:48.085Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T22:27:48.215Z [info]: Successfully logged in the account
+2024-02-21T22:28:10.131Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T22:28:34.632Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T22:28:34.674Z [info]: Successfully logged out the account
+2024-02-21T22:28:47.719Z [info]: Incoming GET: /view/currentUser
+2024-02-21T22:28:47.720Z [info]: Displaying Current User
+2024-02-21T22:28:50.863Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T22:30:05.260Z [info]: Started the server on Port 3000
+2024-02-21T22:30:09.312Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T22:30:09.510Z [error]: No user has been logged in yet!
+2024-02-21T22:30:09.556Z [info]: Successfully logged in the account
+2024-02-21T22:30:13.180Z [info]: Incoming GET: /view/currentUser
+2024-02-21T22:30:13.181Z [info]: Displaying Current User
+2024-02-21T22:30:16.329Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T22:30:16.330Z [error]: Need to be employee to submit ticket
+2024-02-21T22:30:36.405Z [info]: Incoming GET: /view/currentUser
+2024-02-21T22:30:36.406Z [info]: Displaying Current User
+2024-02-21T22:30:47.246Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T22:30:47.371Z [info]: Successfully logged in the account
+2024-02-21T22:30:52.366Z [info]: Incoming GET: /view/currentUser
+2024-02-21T22:30:52.366Z [info]: Displaying Current User
+2024-02-21T22:30:55.394Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T22:30:55.552Z [info]: Successfully added the Ticket
+2024-02-21T22:31:12.309Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T22:31:12.362Z [info]: Successfully logged out the account
+2024-02-21T22:31:14.649Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T22:31:14.649Z [error]: No user logged in
