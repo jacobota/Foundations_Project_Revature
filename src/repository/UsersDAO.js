@@ -78,9 +78,8 @@ async function loginUser(data) {
         //return true if there does exist account with same username
         if(data.Count == 1) {
             //Have helper function set user to logged in and push to current user
-            helperLogin(data);
-            currentUser.push(data.Items[0]);
-            console.log(currentUser);
+            await helperLogin(data);
+            currentUser.push(data.Items[0].username);
             return true;
         } else {
             logger.error("User not found")
@@ -105,7 +104,8 @@ async function helperLogin(data) {
     })
 
     try {
-        await documentClient.send(command);
+        const user = await documentClient.send(command);
+        return user;
     } catch (err) {
         logger.error(err);
     }

@@ -3,9 +3,8 @@ const express = require('express');
 const { logger } = require('./src/util/logger');
 //Routers
 const reg_logRouter = require('./src/controller/userRouter');
+const debugRouter = require('./src/controller/DebugRouter');
 //const { submitTicket } = require('./src/service/Ticket_Submit_Feature');
-//DynamoDB debugging methods
-//const { getEmployees, getManagers } = require('./src/repository/DebugDAO');
 
 //create the server on PORT 3000
 const app = express();
@@ -23,8 +22,17 @@ app.use((req, res, next) => {
 })
 
 // ========= ROUTERS =========
-// ========= Registration-Login Features =========
+// Registration and Login Feature
 app.use('/users', reg_logRouter);
+
+// Ticket Submission Feature
+
+// Ticket Review Feature
+
+// View Past Tickets Feature
+
+// Debug
+app.use('/view', debugRouter);
 
 // ========= Ticket Submission Feature =========
 
@@ -44,26 +52,4 @@ app.use('/users', reg_logRouter);
 //             res.json(`Cannot submit ticket as a Manager`);
 //         }
 //     }
-// })
-
-
-// ========= DEBUG GET REQUESTS =========
-
-//GET Request: Employee List for debugging purposes
-// app.get('/employeeList', async (req, res) => {
-//     logger.info("Displaying Employee List");
-//     res.json(await getEmployees());
-// });
-
-// //GET Request: Manager List for debugging purposes
-// app.get('/managerList', async (req, res) => {
-//     logger.info("Displaying Manager List");
-//     res.json(await getManagers());
-// });
-
-// //GET Request: Current User for debugging purposes
-// app.get('/currentUser', async (req, res) => {
-//     logger.info("Displaying Current User");
-//     //TODO: Get current User working
-//     res.json();
 // })

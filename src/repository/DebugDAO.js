@@ -1,7 +1,7 @@
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { fromIni } = require('@aws-sdk/credential-provider-ini');
-
 const { DynamoDBDocumentClient, ScanCommand } = require('@aws-sdk/lib-dynamodb');
+const { logger } = require('../util/logger');
 
 const client = new DynamoDBClient({
     region: "us-west-1",
@@ -24,8 +24,10 @@ async function getEmployees() {
 
     try {
         const data = await documentClient.send(scanCommand);
+        logger.info("Displaying Employee List");
         return data.Items;
     } catch(err) {
+        logger.error(err);
         return err;
     }
 }
@@ -43,8 +45,10 @@ async function getManagers() {
 
     try {
         const data = await documentClient.send(scanCommand);
+        logger.info("Displaying Manager List");
         return data.Items;
     } catch(err) {
+        logger.error(err);
         return err;
     }
 }

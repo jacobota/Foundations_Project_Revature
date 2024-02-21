@@ -1,6 +1,6 @@
 const dao = require('../repository/UsersDAO');
 const { v4 } = require('uuid');
-const { logger } = require('../util/logger')
+const { logger } = require('../util/logger');
 
 //function to register an employee account
 async function registerEmployeeAccount(data) {
