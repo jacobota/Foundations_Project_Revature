@@ -1,7 +1,7 @@
 const { registerEmployeeAccount, registerManagerAccount, loginUser, logoutUser } = require('../src/service/Registration_LoginService');
 
-//FIrst Test Suite that works with the Registration of Employees and Managers
-describe('Register Users', () => {
+//Test Suite that works with the Registration of Employees and Managers
+describe('Register Users Tests', () => {
     //Register an Employee
     test('Register a Employee', async () => {
         //Assign: test user
@@ -63,7 +63,7 @@ describe('Register Users', () => {
     })
 });
 
-describe('Login and Logout User', () => {
+describe('Login and Logout User Tests', () => {
     //Login with account created by above tests
     test('Login a User', async () => {
         //Assign: test user

@@ -923,3 +923,156 @@
 2024-02-21T21:46:27.532Z [info]: Successfully logged in the account
 2024-02-21T21:46:36.887Z [info]: Incoming POST: /ticketSubmit/postTicket
 2024-02-21T21:46:37.087Z [info]: Successfully added the Ticket
+2024-02-21T21:55:46.104Z [info]: Started the server on Port 3000
+2024-02-21T21:55:51.756Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:55:51.957Z [error]: Account already exists
+2024-02-21T21:56:00.736Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:56:00.819Z [info]: Successfully added the account
+2024-02-21T21:56:08.609Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:56:08.646Z [error]: No user has been logged in yet!
+2024-02-21T21:56:08.687Z [info]: Successfully logged in the account
+2024-02-21T21:56:13.359Z [info]: Incoming GET: /view/currentUser
+2024-02-21T21:56:13.360Z [info]: Displaying Current User
+2024-02-21T21:56:33.853Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:56:34.010Z [info]: Successfully added the Ticket
+2024-02-21T21:56:54.492Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:56:54.606Z [info]: Successfully logged in the account
+2024-02-21T21:57:02.081Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:57:02.123Z [info]: Successfully added the Ticket
+2024-02-21T21:57:20.916Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T21:57:20.956Z [info]: Successfully logged out the account
+2024-02-21T21:57:23.937Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:58:58.398Z [info]: Started the server on Port 3000
+2024-02-21T21:59:01.472Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:59:05.994Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:59:06.193Z [error]: No user has been logged in yet!
+2024-02-21T21:59:06.235Z [info]: Successfully logged in the account
+2024-02-21T21:59:12.637Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:59:12.819Z [info]: Successfully added the Ticket
+2024-02-21T21:59:15.438Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T21:59:15.481Z [info]: Successfully logged out the account
+2024-02-21T21:59:18.154Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T22:12:03.470Z [info]: Successfully added the account
+2024-02-21T22:12:03.516Z [error]: Account already exists
+2024-02-21T22:12:03.595Z [info]: Successfully added the account
+2024-02-21T22:12:03.632Z [error]: Account already exists
+2024-02-21T22:12:03.671Z [error]: No user has been logged in yet!
+2024-02-21T22:12:03.711Z [info]: Successfully logged in the account
+2024-02-21T22:12:03.752Z [error]: User not found
+2024-02-21T22:12:03.752Z [error]: Unsuccessful Login
+2024-02-21T22:12:03.791Z [error]: User not found
+2024-02-21T22:12:03.792Z [error]: Unsuccessful Login
+2024-02-21T22:12:03.838Z [info]: Successfully logged out the account
+2024-02-21T22:12:54.509Z [info]: Successfully added the account
+2024-02-21T22:12:54.561Z [error]: Account already exists
+2024-02-21T22:12:54.613Z [info]: Successfully added the account
+2024-02-21T22:12:54.642Z [info]: Successfully added the account
+2024-02-21T22:12:54.681Z [error]: Account already exists
+2024-02-21T22:12:54.695Z [info]: Successfully added the account
+2024-02-21T22:12:54.720Z [error]: No user has been logged in yet!
+2024-02-21T22:12:54.738Z [error]: No user has been logged in yet!
+2024-02-21T22:12:54.761Z [info]: Successfully logged in the account
+2024-02-21T22:12:54.781Z [info]: Successfully logged in the account
+2024-02-21T22:12:54.801Z [error]: User not found
+2024-02-21T22:12:54.802Z [error]: Unsuccessful Login
+2024-02-21T22:12:54.846Z [error]: User not found
+2024-02-21T22:12:54.847Z [error]: Unsuccessful Login
+2024-02-21T22:12:54.893Z [info]: Successfully logged out the account
+2024-02-21T22:12:54.927Z [info]: Successfully added the Ticket
+2024-02-21T22:12:54.968Z [info]: Successfully logged out the account
+2024-02-21T22:18:26.466Z [info]: Successfully added the account
+2024-02-21T22:18:26.516Z [error]: Account already exists
+2024-02-21T22:18:26.521Z [info]: Successfully added the account
+2024-02-21T22:18:26.597Z [info]: Successfully added the account
+2024-02-21T22:18:26.603Z [info]: Successfully added the account
+2024-02-21T22:18:26.639Z [error]: Account already exists
+2024-02-21T22:18:26.648Z [error]: No user has been logged in yet!
+2024-02-21T22:18:26.679Z [error]: No user has been logged in yet!
+2024-02-21T22:18:26.691Z [info]: Successfully logged in the account
+2024-02-21T22:18:26.722Z [info]: Successfully logged in the account
+2024-02-21T22:18:26.762Z [error]: User not found
+2024-02-21T22:18:26.762Z [error]: Unsuccessful Login
+2024-02-21T22:18:26.802Z [error]: User not found
+2024-02-21T22:18:26.803Z [error]: Unsuccessful Login
+2024-02-21T22:18:26.812Z [info]: Successfully added the Ticket
+2024-02-21T22:18:26.844Z [info]: Successfully logged out the account
+2024-02-21T22:18:26.852Z [info]: Successfully logged out the account
+2024-02-21T22:18:26.891Z [error]: No user has been logged in yet!
+2024-02-21T22:18:26.932Z [info]: Successfully logged in the account
+2024-02-21T22:18:26.975Z [info]: Successfully logged out the account
+2024-02-21T22:18:26.976Z [error]: No user has been logged in yet!
+2024-02-21T22:18:26.977Z [error]: Failed Logout
+2024-02-21T22:21:22.450Z [error]: Account already exists
+2024-02-21T22:21:22.501Z [error]: Account already exists
+2024-02-21T22:21:22.506Z [error]: Account already exists
+2024-02-21T22:21:22.543Z [error]: Account already exists
+2024-02-21T22:21:22.547Z [error]: Account already exists
+2024-02-21T22:21:22.584Z [error]: Account already exists
+2024-02-21T22:21:22.589Z [error]: No user has been logged in yet!
+2024-02-21T22:21:22.625Z [error]: No user has been logged in yet!
+2024-02-21T22:21:22.632Z [info]: Successfully logged in the account
+2024-02-21T22:21:22.670Z [info]: Successfully logged in the account
+2024-02-21T22:21:22.707Z [error]: User not found
+2024-02-21T22:21:22.708Z [error]: Unsuccessful Login
+2024-02-21T22:21:22.749Z [error]: User not found
+2024-02-21T22:21:22.765Z [info]: Successfully added the Ticket
+2024-02-21T22:21:22.750Z [error]: Unsuccessful Login
+2024-02-21T22:21:22.806Z [info]: Successfully logged out the account
+2024-02-21T22:21:22.807Z [info]: Successfully logged out the account
+2024-02-21T22:21:22.857Z [error]: No user has been logged in yet!
+2024-02-21T22:21:22.904Z [info]: Successfully logged in the account
+2024-02-21T22:21:22.946Z [info]: Successfully logged out the account
+2024-02-21T22:21:22.948Z [error]: No user has been logged in yet!
+2024-02-21T22:21:22.950Z [error]: Failed Logout
+2024-02-21T22:21:22.990Z [error]: No user has been logged in yet!
+2024-02-21T22:21:23.033Z [info]: Successfully logged in the account
+2024-02-21T22:21:23.303Z [info]: Successfully added the Ticket
+2024-02-21T22:21:23.344Z [info]: Successfully logged out the account
+2024-02-21T22:22:23.676Z [info]: Successfully added the account
+2024-02-21T22:22:23.724Z [error]: Account already exists
+2024-02-21T22:22:23.754Z [info]: Successfully added the account
+2024-02-21T22:22:23.800Z [info]: Successfully added the account
+2024-02-21T22:22:23.838Z [error]: Account already exists
+2024-02-21T22:22:23.848Z [info]: Successfully added the account
+2024-02-21T22:22:23.881Z [error]: No user has been logged in yet!
+2024-02-21T22:22:23.889Z [error]: No user has been logged in yet!
+2024-02-21T22:22:23.923Z [info]: Successfully logged in the account
+2024-02-21T22:22:23.932Z [info]: Successfully logged in the account
+2024-02-21T22:22:23.965Z [error]: User not found
+2024-02-21T22:22:23.965Z [error]: Unsuccessful Login
+2024-02-21T22:22:24.005Z [error]: User not found
+2024-02-21T22:22:24.005Z [error]: Unsuccessful Login
+2024-02-21T22:22:24.046Z [info]: Successfully logged out the account
+2024-02-21T22:22:24.061Z [info]: Successfully added the Ticket
+2024-02-21T22:22:24.108Z [info]: Successfully logged out the account
+2024-02-21T22:22:24.148Z [error]: No user has been logged in yet!
+2024-02-21T22:22:24.190Z [info]: Successfully logged in the account
+2024-02-21T22:22:24.232Z [info]: Successfully logged out the account
+2024-02-21T22:22:24.234Z [error]: No user has been logged in yet!
+2024-02-21T22:22:24.235Z [error]: Failed Logout
+2024-02-21T22:22:24.276Z [error]: No user has been logged in yet!
+2024-02-21T22:22:24.318Z [info]: Successfully logged in the account
+2024-02-21T22:22:24.363Z [info]: Successfully added the Ticket
+2024-02-21T22:22:24.434Z [info]: Successfully logged out the account
+2024-02-21T22:24:53.063Z [info]: Successfully added the account
+2024-02-21T22:24:53.069Z [info]: Successfully added the account
+2024-02-21T22:24:53.114Z [error]: Account already exists
+2024-02-21T22:24:53.153Z [info]: Successfully added the account
+2024-02-21T22:24:53.190Z [info]: Successfully added the account
+2024-02-21T22:24:53.195Z [error]: No user has been logged in yet!
+2024-02-21T22:24:53.229Z [error]: Account already exists
+2024-02-21T22:24:53.235Z [info]: Successfully logged in the account
+2024-02-21T22:24:53.269Z [error]: No user has been logged in yet!
+2024-02-21T22:24:53.312Z [info]: Successfully logged in the account
+2024-02-21T22:24:53.350Z [error]: User not found
+2024-02-21T22:24:53.352Z [error]: Unsuccessful Login
+2024-02-21T22:24:53.359Z [info]: Successfully added the Ticket
+2024-02-21T22:24:53.390Z [error]: User not found
+2024-02-21T22:24:53.390Z [error]: Unsuccessful Login
+2024-02-21T22:24:53.399Z [info]: Successfully logged out the account
+2024-02-21T22:24:53.432Z [info]: Successfully logged out the account
+2024-02-21T22:24:53.439Z [error]: No user has been logged in yet!
+2024-02-21T22:24:53.481Z [info]: Successfully logged in the account
+2024-02-21T22:24:53.522Z [info]: Successfully logged out the account
+2024-02-21T22:24:53.524Z [error]: No user has been logged in yet!
+2024-02-21T22:24:53.526Z [error]: Failed Logout
