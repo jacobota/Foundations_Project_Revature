@@ -81,7 +81,7 @@ async function loginUser(data) {
             await logoutUser();
             //Have helper function set user to logged in and push to current user
             await helperLogin(data);
-            currentUser.push(data.Items[0].user_id);
+            currentUser.push({user_id: data.Items[0].user_id, userRole: data.Items[0].userRole});
             return true;
         } else {
             logger.error("User not found")
@@ -125,7 +125,7 @@ async function logoutUser() {
         //update command to update the value of LoggedIn
         const command = new UpdateCommand({
             TableName: 'FP_Users',
-            Key: {'user_id' : currentUser[0]},
+            Key: {'user_id' : currentUser[0].user_id},
             UpdateExpression: "SET loggedIn = :val",
             ExpressionAttributeValues: {
                 ':val' : false

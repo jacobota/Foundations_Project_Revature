@@ -811,3 +811,86 @@
 2024-02-21T20:51:13.864Z [error]: User not found
 2024-02-21T20:51:13.865Z [error]: Unsuccessful Login
 2024-02-21T20:51:13.906Z [info]: Successfully logged out the account
+2024-02-21T20:55:51.372Z [info]: Started the server on Port 3000
+2024-02-21T21:14:26.493Z [info]: Started the server on Port 3000
+2024-02-21T21:14:32.935Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:14:33.220Z [info]: Successfully added the account
+2024-02-21T21:14:39.748Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:14:39.794Z [error]: No user has been logged in yet!
+2024-02-21T21:14:39.839Z [info]: Successfully logged in the account
+2024-02-21T21:14:45.499Z [info]: Incoming GET: /view/currentUser
+2024-02-21T21:14:45.499Z [info]: Displaying Current User
+2024-02-21T21:26:30.934Z [info]: Started the server on Port 3000
+2024-02-21T21:26:36.508Z [info]: Incoming POST: /submitTicket
+2024-02-21T21:27:34.910Z [info]: Started the server on Port 3000
+2024-02-21T21:27:36.439Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:28:17.013Z [info]: Started the server on Port 3000
+2024-02-21T21:28:42.120Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:28:42.385Z [info]: Successfully added the account
+2024-02-21T21:28:49.287Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:28:49.348Z [error]: No user has been logged in yet!
+2024-02-21T21:28:49.393Z [info]: Successfully logged in the account
+2024-02-21T21:28:54.263Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:30:21.531Z [info]: Started the server on Port 3000
+2024-02-21T21:30:23.094Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:30:23.333Z [info]: Successfully added the account
+2024-02-21T21:30:26.106Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:30:26.148Z [error]: No user has been logged in yet!
+2024-02-21T21:30:26.191Z [info]: Successfully logged in the account
+2024-02-21T21:30:28.465Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:31:00.856Z [info]: Started the server on Port 3000
+2024-02-21T21:31:03.931Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:31:04.184Z [info]: Successfully added the account
+2024-02-21T21:31:06.358Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:31:06.399Z [error]: No user has been logged in yet!
+2024-02-21T21:31:06.440Z [info]: Successfully logged in the account
+2024-02-21T21:31:09.515Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:31:43.542Z [info]: Incoming POST: /users/managerRegister
+2024-02-21T21:31:43.626Z [info]: Successfully added the account
+2024-02-21T21:31:52.332Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:31:52.424Z [error]: The provided key element does not match the schema
+2024-02-21T21:31:52.469Z [info]: Successfully logged in the account
+2024-02-21T21:31:55.313Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:32:18.860Z [info]: Incoming GET: /view/currentUser
+2024-02-21T21:32:18.861Z [info]: Displaying Current User
+2024-02-21T21:34:16.042Z [info]: Started the server on Port 3000
+2024-02-21T21:34:29.890Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:34:30.383Z [info]: Successfully added the account
+2024-02-21T21:34:32.316Z [info]: Incoming POST: /users/managerRegister
+2024-02-21T21:34:32.396Z [info]: Successfully added the account
+2024-02-21T21:34:34.803Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:34:34.845Z [error]: No user has been logged in yet!
+2024-02-21T21:34:34.886Z [info]: Successfully logged in the account
+2024-02-21T21:34:40.325Z [info]: Incoming GET: /view/currentUser
+2024-02-21T21:34:40.326Z [info]: Displaying Current User
+2024-02-21T21:34:43.765Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:34:53.349Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:34:53.461Z [error]: The provided key element does not match the schema
+2024-02-21T21:34:53.503Z [info]: Successfully logged in the account
+2024-02-21T21:34:59.682Z [info]: Incoming GET: /view/currentUser
+2024-02-21T21:34:59.683Z [info]: Displaying Current User
+2024-02-21T21:36:08.708Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T21:36:08.869Z [error]: The provided key element does not match the schema
+2024-02-21T21:36:08.870Z [error]: Failed Logout
+2024-02-21T21:36:25.951Z [info]: Started the server on Port 3000
+2024-02-21T21:36:28.829Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:36:29.033Z [error]: Account already exists
+2024-02-21T21:36:40.653Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T21:36:40.757Z [info]: Successfully added the account
+2024-02-21T21:36:42.772Z [info]: Incoming POST: /users/managerRegister
+2024-02-21T21:36:42.863Z [info]: Successfully added the account
+2024-02-21T21:36:45.232Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:36:45.273Z [error]: No user has been logged in yet!
+2024-02-21T21:36:45.316Z [info]: Successfully logged in the account
+2024-02-21T21:36:50.016Z [info]: Incoming GET: /view/currentUser
+2024-02-21T21:36:50.017Z [info]: Displaying Current User
+2024-02-21T21:37:00.610Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:37:00.737Z [info]: Successfully logged in the account
+2024-02-21T21:37:04.171Z [info]: Incoming GET: /view/currentUser
+2024-02-21T21:37:04.172Z [info]: Displaying Current User
+2024-02-21T21:37:07.043Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T21:37:11.986Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T21:37:12.114Z [info]: Successfully logged in the account
+2024-02-21T21:37:16.025Z [info]: Incoming GET: /view/currentUser
+2024-02-21T21:37:16.026Z [info]: Displaying Current User
+2024-02-21T21:37:18.738Z [info]: Incoming POST: /ticketSubmit/postTicket
