@@ -716,3 +716,98 @@
 2024-02-21T20:05:45.155Z [info]: Incoming POST: /users/userLogin
 2024-02-21T20:06:27.709Z [info]: Incoming PUT: /users/userLogin
 2024-02-21T20:06:27.980Z [info]: Successfully logged in the account
+2024-02-21T20:34:12.427Z [info]: Started the server on Port 3000
+2024-02-21T20:34:23.675Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T20:35:25.280Z [info]: Started the server on Port 3000
+2024-02-21T20:35:27.068Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T20:35:27.069Z [error]: No user has been logged in yet!
+2024-02-21T20:35:27.069Z [error]: Failed Logout
+2024-02-21T20:35:33.446Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T20:35:33.764Z [info]: Successfully added the account
+2024-02-21T20:35:35.387Z [info]: Incoming POST: /users/managerRegister
+2024-02-21T20:35:35.467Z [info]: Successfully added the account
+2024-02-21T20:35:38.284Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T20:35:38.368Z [info]: Successfully logged in the account
+2024-02-21T20:36:26.379Z [info]: Incoming GET: /view/currentUser
+2024-02-21T20:36:26.380Z [info]: Displaying Current User
+2024-02-21T20:36:31.774Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T20:36:31.819Z [error]: The provided key element does not match the schema
+2024-02-21T20:36:31.820Z [error]: Failed Logout
+2024-02-21T20:37:51.515Z [info]: Started the server on Port 3000
+2024-02-21T20:37:53.553Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T20:37:53.787Z [info]: Successfully added the account
+2024-02-21T20:37:55.713Z [info]: Incoming POST: /users/managerRegister
+2024-02-21T20:37:55.789Z [info]: Successfully added the account
+2024-02-21T20:37:59.209Z [info]: Incoming GET: /view/currentUser
+2024-02-21T20:37:59.209Z [info]: Displaying Current User
+2024-02-21T20:38:02.073Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T20:38:02.157Z [info]: Successfully logged in the account
+2024-02-21T20:38:04.682Z [info]: Incoming GET: /view/currentUser
+2024-02-21T20:38:04.683Z [info]: Displaying Current User
+2024-02-21T20:38:07.288Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T20:38:07.329Z [info]: Successfully logged out the account
+2024-02-21T20:38:13.298Z [info]: Incoming GET: /view/currentUser
+2024-02-21T20:38:13.299Z [info]: Displaying Current User
+2024-02-21T20:38:47.931Z [info]: Started the server on Port 3000
+2024-02-21T20:39:01.008Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T20:39:01.310Z [info]: Successfully logged in the account
+2024-02-21T20:39:07.648Z [info]: Incoming GET: /view/currentUser
+2024-02-21T20:39:07.649Z [info]: Displaying Current User
+2024-02-21T20:39:11.742Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T20:39:11.787Z [info]: Successfully logged out the account
+2024-02-21T20:39:15.311Z [info]: Incoming GET: /view/currentUser
+2024-02-21T20:39:15.312Z [info]: Displaying Current User
+2024-02-21T20:39:31.154Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T20:39:31.244Z [info]: Successfully logged in the account
+2024-02-21T20:39:41.607Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T20:39:41.654Z [info]: Successfully logged out the account
+2024-02-21T20:42:15.760Z [info]: Started the server on Port 3000
+2024-02-21T20:42:38.543Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T20:42:38.791Z [error]: No user has been logged in yet!
+2024-02-21T20:42:38.835Z [info]: Successfully logged in the account
+2024-02-21T20:42:54.867Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T20:42:55.007Z [info]: Successfully logged in the account
+2024-02-21T20:43:11.217Z [info]: Incoming PUT: /users/userLogout
+2024-02-21T20:43:11.268Z [info]: Successfully logged out the account
+2024-02-21T20:43:21.915Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T20:43:21.955Z [error]: No user has been logged in yet!
+2024-02-21T20:43:22.001Z [info]: Successfully logged in the account
+2024-02-21T20:43:42.079Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T20:43:42.128Z [error]: User not found
+2024-02-21T20:43:42.128Z [error]: Unsuccessful Login
+2024-02-21T20:43:49.725Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T20:43:49.916Z [info]: Successfully logged in the account
+2024-02-21T20:50:06.183Z [info]: Successfully added the account
+2024-02-21T20:50:06.233Z [error]: Account already exists
+2024-02-21T20:50:06.338Z [info]: Successfully added the account
+2024-02-21T20:50:06.383Z [error]: Account already exists
+2024-02-21T20:50:06.434Z [error]: No user has been logged in yet!
+2024-02-21T20:50:06.478Z [info]: Successfully logged in the account
+2024-02-21T20:50:06.523Z [error]: User not found
+2024-02-21T20:50:06.524Z [error]: Unsuccessful Login
+2024-02-21T20:50:06.582Z [error]: User not found
+2024-02-21T20:50:06.582Z [error]: Unsuccessful Login
+2024-02-21T20:50:06.646Z [info]: Successfully logged out the account
+2024-02-21T20:50:06.748Z [info]: Successfully logged out the account
+2024-02-21T20:50:54.999Z [error]: Account already exists
+2024-02-21T20:50:55.049Z [error]: Account already exists
+2024-02-21T20:50:55.093Z [error]: Account already exists
+2024-02-21T20:50:55.132Z [error]: Account already exists
+2024-02-21T20:50:55.173Z [error]: No user has been logged in yet!
+2024-02-21T20:50:55.217Z [info]: Successfully logged in the account
+2024-02-21T20:50:55.259Z [error]: User not found
+2024-02-21T20:50:55.260Z [error]: Unsuccessful Login
+2024-02-21T20:50:55.301Z [error]: User not found
+2024-02-21T20:50:55.302Z [error]: Unsuccessful Login
+2024-02-21T20:50:55.370Z [info]: Successfully logged out the account
+2024-02-21T20:51:13.509Z [info]: Successfully added the account
+2024-02-21T20:51:13.560Z [error]: Account already exists
+2024-02-21T20:51:13.641Z [info]: Successfully added the account
+2024-02-21T20:51:13.680Z [error]: Account already exists
+2024-02-21T20:51:13.719Z [error]: No user has been logged in yet!
+2024-02-21T20:51:13.764Z [info]: Successfully logged in the account
+2024-02-21T20:51:13.825Z [error]: User not found
+2024-02-21T20:51:13.826Z [error]: Unsuccessful Login
+2024-02-21T20:51:13.864Z [error]: User not found
+2024-02-21T20:51:13.865Z [error]: Unsuccessful Login
+2024-02-21T20:51:13.906Z [info]: Successfully logged out the account

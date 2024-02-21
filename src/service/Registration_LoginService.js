@@ -75,9 +75,23 @@ async function loginUser(data) {
     }
 }
 
+//OPTIONAL 
+//Logout Function
+async function logoutUser() {
+    if(await dao.logoutUser()) {
+        logger.info("Successfully logged out the account");
+        return true;
+    }
+    else {
+        logger.error("Failed Logout");
+        return false;
+    }
+}
+
 //export functions
 module.exports = {
     registerEmployeeAccount: registerEmployeeAccount,
     registerManagerAccount: registerManagerAccount,
-    loginUser: loginUser
+    loginUser: loginUser,
+    logoutUser: logoutUser
 }

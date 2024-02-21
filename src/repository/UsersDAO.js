@@ -77,9 +77,11 @@ async function loginUser(data) {
         const data = await documentClient.send(command);
         //return true if there does exist account with same username
         if(data.Count == 1) {
+            //Logout the previous account so 2 accounts cant be active at once
+            await logoutUser();
             //Have helper function set user to logged in and push to current user
             await helperLogin(data);
-            currentUser.push(data.Items[0].username);
+            currentUser.push(data.Items[0].user_id);
             return true;
         } else {
             logger.error("User not found")
@@ -111,9 +113,40 @@ async function helperLogin(data) {
     }
 }
 
+//OPTIONAL 
+//Logout the current user
+//Added this feature because I don't want two users to be logged in at the same time
+async function logoutUser() {
+    if(currentUser.length == 0) {
+        logger.error("No user has been logged in yet!");
+        return false;
+    }
+    else {
+        //update command to update the value of LoggedIn
+        const command = new UpdateCommand({
+            TableName: 'FP_Users',
+            Key: {'user_id' : currentUser[0]},
+            UpdateExpression: "SET loggedIn = :val",
+            ExpressionAttributeValues: {
+                ':val' : false
+            }
+        })
+
+        try {
+            await documentClient.send(command);
+            currentUser.pop();
+            return true;
+        } catch(err) {
+            logger.error(err);
+            return false;
+        }
+    }
+}
+
 module.exports = {
     checkUsername: checkUsername,
     registerUser: registerUser,
     loginUser: loginUser,
+    logoutUser: logoutUser,
     currentUser: currentUser
 }

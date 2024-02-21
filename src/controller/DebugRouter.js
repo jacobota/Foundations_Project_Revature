@@ -22,7 +22,6 @@ router.get('/managerList', async (req, res) => {
 router.get('/currentUser', async (req, res) => {
     logger.info("Displaying Current User");
     //TODO: Get current User working
-    console.log(currentUser);
     res.json(currentUser);
 })
 

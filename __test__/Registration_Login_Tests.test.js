@@ -1,4 +1,4 @@
-const { registerEmployeeAccount, registerManagerAccount, loginUser } = require('../src/service/Registration_LoginService');
+const { registerEmployeeAccount, registerManagerAccount, loginUser, logoutUser } = require('../src/service/Registration_LoginService');
 
 //FIrst Test Suite that works with the Registration of Employees and Managers
 describe('Register Users', () => {
@@ -63,7 +63,8 @@ describe('Register Users', () => {
     })
 });
 
-describe('Login User', () => {
+describe('Login and Logout User', () => {
+    //Login with account created by above tests
     test('Login a User', async () => {
         //Assign: test user
         const testUser = {
@@ -76,5 +77,40 @@ describe('Login User', () => {
 
         //Assert: should be true
         expect(result).toBeTruthy();
+    })
+
+    //Login with fake username
+    test('Login with Invalid Username', async () => {
+        //Assign: test user
+        const testUser = {
+            username: "JohnsonMan",
+            password: "abc"
+        }
+
+        //Act: call the loginUser method
+        let result = await loginUser(testUser);
+
+        //Assert: should be false
+        expect(result).toBeFalsy();
+    })
+
+    //Login with fake password
+    test('Login with Invalid Username', async () => {
+        //Assign: test user
+        const testUser = {
+            username: "Steve",
+            password: "a"
+        }
+
+        //Act: call the loginUser method
+        let result = await loginUser(testUser);
+
+        //Assert: should be false
+        expect(result).toBeFalsy();
+    })
+
+    //Logout account
+    test('Logout Account', () => {
+        expect(logoutUser()).toBeTruthy();
     })
 })
