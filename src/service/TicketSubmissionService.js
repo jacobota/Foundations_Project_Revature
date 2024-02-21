@@ -14,27 +14,22 @@ async function postEmployeeTicket(data) {
         logger.error("Need to be employee to submit ticket");
         return false;
     } else {
-        try {
-            //create a ticket object
-            let uuid = v4();
+        //create a ticket object
+        let uuid = v4();
 
-            let newTicket = {
-                ticket_id: uuid,
-                description: data.description,
-                amount: data.amount,
-                employee_id: currentUser[0].user_id,
-                ticket_status: "Pending"
-            };
+        let newTicket = {
+            ticket_id: uuid,
+            description: data.description,
+            amount: data.amount,
+            employee_id: currentUser[0].user_id,
+            ticket_status: "Pending"
+        };
 
-            //push that employee item
-            if(await postTicket(newTicket)) {
-                logger.info("Successfully added the Ticket");
-                return true;
-            }else {
-                return false;
-            }   
-        } catch(err) {
-            console.log(err);
+        //push that employee item
+        if(await postTicket(newTicket)) {
+            logger.info("Successfully added the Ticket");
+            return true;
+        }else {
             return false;
         }     
     }
