@@ -1119,3 +1119,27 @@
 2024-02-21T22:31:12.362Z [info]: Successfully logged out the account
 2024-02-21T22:31:14.649Z [info]: Incoming POST: /ticketSubmit/postTicket
 2024-02-21T22:31:14.649Z [error]: No user logged in
+2024-02-21T22:39:33.298Z [info]: Successfully added the account
+2024-02-21T22:39:33.345Z [error]: Account already exists
+2024-02-21T22:39:33.384Z [info]: Successfully added the account
+2024-02-21T22:39:33.426Z [info]: Successfully added the account
+2024-02-21T22:39:33.465Z [error]: Account already exists
+2024-02-21T22:39:33.470Z [info]: Successfully added the account
+2024-02-21T22:39:33.518Z [error]: No user has been logged in yet!
+2024-02-21T22:39:33.524Z [error]: No user has been logged in yet!
+2024-02-21T22:39:33.566Z [info]: Successfully logged in the account
+2024-02-21T22:39:33.566Z [info]: Successfully logged in the account
+2024-02-21T22:39:33.609Z [error]: User not found
+2024-02-21T22:39:33.610Z [error]: Unsuccessful Login
+2024-02-21T22:39:33.658Z [error]: User not found
+2024-02-21T22:39:33.659Z [error]: Unsuccessful Login
+2024-02-21T22:39:33.704Z [info]: Successfully logged out the account
+2024-02-21T22:39:33.738Z [info]: Successfully added the Ticket
+2024-02-21T22:39:33.779Z [info]: Successfully logged out the account
+2024-02-21T22:39:33.837Z [error]: No user has been logged in yet!
+2024-02-21T22:39:33.881Z [info]: Successfully logged in the account
+2024-02-21T22:39:33.882Z [error]: Need to be employee to submit ticket
+2024-02-21T22:39:33.926Z [info]: Successfully logged out the account
+2024-02-21T22:39:33.929Z [error]: No user logged in
+2024-02-21T22:39:33.932Z [error]: No user has been logged in yet!
+2024-02-21T22:39:33.933Z [error]: Failed Logout

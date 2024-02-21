@@ -22,7 +22,8 @@ async function postEmployeeTicket(data) {
             description: data.description,
             amount: data.amount,
             employee_id: currentUser[0].user_id,
-            ticket_status: "Pending"
+            ticket_status: "Pending",
+            ticket_processed: false
         };
 
         //push that employee item
