@@ -1143,3 +1143,85 @@
 2024-02-21T22:39:33.929Z [error]: No user logged in
 2024-02-21T22:39:33.932Z [error]: No user has been logged in yet!
 2024-02-21T22:39:33.933Z [error]: Failed Logout
+2024-02-21T23:02:53.541Z [info]: Started the server on Port 3000
+2024-02-21T23:02:58.822Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T23:02:59.081Z [info]: Successfully added the account
+2024-02-21T23:03:05.710Z [info]: Incoming POST: /users/employeeRegister
+2024-02-21T23:03:05.802Z [info]: Successfully added the account
+2024-02-21T23:03:08.511Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T23:03:08.558Z [error]: No user has been logged in yet!
+2024-02-21T23:03:08.610Z [info]: Successfully logged in the account
+2024-02-21T23:03:16.630Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T23:03:16.799Z [info]: Successfully added the Ticket
+2024-02-21T23:03:21.518Z [info]: Incoming PUT: /users/userLogin
+2024-02-21T23:03:21.653Z [info]: Successfully logged in the account
+2024-02-21T23:03:26.224Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-21T23:03:26.264Z [info]: Successfully added the Ticket
+2024-02-21T23:04:01.325Z [info]: Incoming GET: /ticketProcessing
+2024-02-21T23:04:39.976Z [info]: Started the server on Port 3000
+2024-02-21T23:04:44.854Z [info]: Incoming GET: /ticketProcessing
+2024-02-22T15:33:55.717Z [info]: Started the server on Port 3000
+2024-02-22T15:33:58.659Z [info]: Incoming GET: /viewMyTickets/
+2024-02-22T15:35:01.736Z [info]: Started the server on Port 3000
+2024-02-22T15:35:03.597Z [info]: Incoming GET: /viewMyTickets/
+2024-02-22T15:36:04.780Z [info]: Started the server on Port 3000
+2024-02-22T15:36:06.317Z [info]: Incoming GET: /viewMyTickets/
+2024-02-22T15:36:34.896Z [info]: Started the server on Port 3000
+2024-02-22T15:36:36.385Z [info]: Incoming GET: /viewMyTickets/
+2024-02-22T15:36:36.387Z [error]: No user logged in
+2024-02-22T15:36:43.506Z [info]: Incoming POST: /users/employeeRegister
+2024-02-22T15:36:43.828Z [info]: Successfully added the account
+2024-02-22T15:36:47.219Z [info]: Incoming POST: /users/employeeRegister
+2024-02-22T15:36:47.264Z [error]: Account already exists
+2024-02-22T15:36:51.339Z [info]: Incoming PUT: /users/userLogin
+2024-02-22T15:36:51.377Z [error]: No user has been logged in yet!
+2024-02-22T15:36:51.419Z [info]: Successfully logged in the account
+2024-02-22T15:36:58.772Z [info]: Incoming GET: /view/currentUser
+2024-02-22T15:36:58.773Z [info]: Displaying Current User
+2024-02-22T15:37:05.755Z [info]: Incoming GET: /view/employeeList
+2024-02-22T15:37:05.927Z [info]: Displaying Employee List
+2024-02-22T15:37:12.121Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-22T15:37:12.312Z [info]: Successfully added the Ticket
+2024-02-22T15:37:20.637Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-22T15:37:20.681Z [info]: Successfully added the Ticket
+2024-02-22T15:37:25.710Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-22T15:37:25.753Z [info]: Successfully added the Ticket
+2024-02-22T15:37:29.040Z [info]: Incoming GET: /viewMyTickets/
+2024-02-22T15:38:11.279Z [info]: Incoming POST: /users/employeeRegister
+2024-02-22T15:38:11.488Z [info]: Successfully added the account
+2024-02-22T15:38:17.008Z [info]: Incoming PUT: /users/userLogin
+2024-02-22T15:38:17.143Z [info]: Successfully logged in the account
+2024-02-22T15:38:20.758Z [info]: Incoming GET: /view/currentUser
+2024-02-22T15:38:20.759Z [info]: Displaying Current User
+2024-02-22T15:38:24.130Z [info]: Incoming GET: /view/employeeList
+2024-02-22T15:38:24.327Z [info]: Displaying Employee List
+2024-02-22T15:38:37.463Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-22T15:38:37.665Z [info]: Successfully added the Ticket
+2024-02-22T15:38:41.297Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-22T15:38:41.340Z [info]: Successfully added the Ticket
+2024-02-22T15:38:45.424Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-22T15:38:45.478Z [info]: Successfully added the Ticket
+2024-02-22T15:38:48.991Z [info]: Incoming GET: /viewMyTickets/
+2024-02-22T15:39:00.556Z [info]: Incoming PUT: /users/userLogin
+2024-02-22T15:39:00.683Z [info]: Successfully logged in the account
+2024-02-22T15:39:09.729Z [info]: Incoming GET: /viewMyTickets/
+2024-02-22T15:39:41.601Z [info]: Incoming POST: /users/managerRegister
+2024-02-22T15:39:41.683Z [info]: Successfully added the account
+2024-02-22T15:39:48.296Z [info]: Incoming PUT: /users/userLogin
+2024-02-22T15:39:48.424Z [info]: Successfully logged in the account
+2024-02-22T15:39:53.271Z [info]: Incoming GET: /view/currentUser
+2024-02-22T15:39:53.272Z [info]: Displaying Current User
+2024-02-22T15:39:56.349Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-22T15:39:56.350Z [error]: Need to be employee to submit ticket
+2024-02-22T15:39:59.014Z [info]: Incoming GET: /viewMyTickets/
+2024-02-22T15:39:59.014Z [error]: Need to be employee to submit ticket
+2024-02-22T15:41:26.600Z [info]: Started the server on Port 3000
+2024-02-22T15:41:44.845Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-22T15:41:44.845Z [error]: No user logged in
+2024-02-22T15:41:52.138Z [info]: Incoming GET: /view/currentUser
+2024-02-22T15:41:52.139Z [info]: Displaying Current User
+2024-02-22T15:41:56.157Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-22T15:41:56.157Z [error]: No user logged in
+2024-02-22T15:43:11.914Z [info]: Started the server on Port 3000
+2024-02-22T15:43:16.763Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-22T15:43:16.764Z [error]: No user logged in

@@ -7,7 +7,10 @@ const { currentUser } = require('../repository/UsersDAO');
 // function to post a ticket
 async function postEmployeeTicket(data) {
     //If the user is not an employee or not logged in then 
-    if(currentUser.length === 0) {
+    if(currentUser === undefined) {
+        logger.error("No user logged in");
+        return false;
+    } else if(currentUser.length === 0) {
         logger.error("No user logged in");
         return false;
     } else if(currentUser[0].userRole !== "Employee") {

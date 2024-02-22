@@ -3,6 +3,7 @@ const express = require('express');
 const { logger } = require("../util/logger");
 const { getEmployees, getManagers } = require('../service/DebugService');
 const { currentUser } = require('../repository/UsersDAO');
+const { createQueueOfTickets } = require('../repository/TicketsDAO');
 
 const router = express.Router();
 
@@ -22,6 +23,10 @@ router.get('/managerList', async (req, res) => {
 router.get('/currentUser', async (req, res) => {
     logger.info("Displaying Current User");
     res.json(currentUser);
+})
+
+router.get('/ticketList', async(req,res) => {
+    res.json(await createQueueOfTickets());
 })
 
 module.exports = router;
