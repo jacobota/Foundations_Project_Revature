@@ -11,11 +11,13 @@ const router = express.Router();
 
 //GET Request: Employee List for debugging purposes
 router.get('/employeeList', async (req, res) => {
+    logger.info("Displaying Employees");
     res.json(await getEmployees());
 });
 
 //GET Request: Manager List for debugging purposes
 router.get('/managerList', async (req, res) => {
+    logger.info("Displaying Managers");
     res.json(await getManagers());
 });
 
@@ -26,6 +28,7 @@ router.get('/currentUser', async (req, res) => {
 })
 
 router.get('/ticketList', async(req,res) => {
+    logger.info("Displaying Tickets");
     res.json(await createQueueOfTickets());
 })
 

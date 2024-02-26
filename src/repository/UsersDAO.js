@@ -1,12 +1,14 @@
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { fromIni } = require('@aws-sdk/credential-provider-ini');
-const { DynamoDBDocumentClient, PutCommand, QueryCommand, UpdateCommand, GetCommand } = require('@aws-sdk/lib-dynamodb');
+const { DynamoDBDocumentClient, PutCommand, QueryCommand, UpdateCommand } = require('@aws-sdk/lib-dynamodb');
 const { logger } = require('../util/logger');
 
 const client = new DynamoDBClient({
     region: "us-west-1",
     credentials: fromIni({profile: "user1"})
 });
+
+const currentUser = [];
 
 //getting the documentClient
 const documentClient = DynamoDBDocumentClient.from(client);
@@ -66,6 +68,7 @@ async function getUserByUsername(username) {
             ':username' : username
         }
     });
+
     try {
         const user = await documentClient.send(command);
         return user.Items[0];
@@ -88,9 +91,28 @@ async function helperLogin(data) {
     })
 
     try {
-        const user = await documentClient.send(command);
-        return user;
+        await documentClient.send(command);
+        setCurrentUser(data);
     } catch (err) {
+        logger.error(err);
+    }
+}
+
+// Helper Function to set the currentUser to the new logged in user
+async function setCurrentUser(data) {
+    await logoutUser();
+    const command = new QueryCommand({
+        TableName: 'FP_Users',
+        KeyConditionExpression: 'user_id = :user_ID',
+        ExpressionAttributeValues: {
+            ':user_ID' : data.user_id
+        }
+    });
+
+    try {
+        const result = await documentClient.send(command);
+        currentUser[0] = result.Items[0];
+    } catch(err) {
         logger.error(err);
     }
 }
@@ -98,37 +120,38 @@ async function helperLogin(data) {
 //OPTIONAL 
 //Logout the current user
 //Added this feature because I don't want two users to be logged in at the same time
-// async function logoutUser() {
-//     if(currentUser.length == 0) {
-//         logger.error("No user has been logged in yet!");
-//         return false;
-//     }
-//     else {
-//         //update command to update the value of LoggedIn
-//         const command = new UpdateCommand({
-//             TableName: 'FP_Users',
-//             Key: {'user_id' : currentUser[0].user_id},
-//             UpdateExpression: "SET loggedIn = :val",
-//             ExpressionAttributeValues: {
-//                 ':val' : false
-//             }
-//         })
+async function logoutUser() {
+    if(currentUser.length == 0) {
+        logger.error("No user has been logged in yet!");
+        return false;
+    }
+    else {
+        //update command to update the value of LoggedIn
+        const command = new UpdateCommand({
+            TableName: 'FP_Users',
+            Key: {'user_id' : currentUser[0].user_id},
+            UpdateExpression: "SET loggedIn = :val",
+            ExpressionAttributeValues: {
+                ':val' : false
+            }
+        })
 
-//         try {
-//             await documentClient.send(command);
-//             currentUser.pop();
-//             return true;
-//         } catch(err) {
-//             logger.error(err);
-//             return false;
-//         }
-//     }
-// }
+        try {
+            await documentClient.send(command);
+            currentUser.pop();
+            return true;
+        } catch(err) {
+            logger.error(err);
+            return false;
+        }
+    }
+}
 
 module.exports = {
     checkUsername: checkUsername,
     registerUser: registerUser,
     helperLogin: helperLogin,
     //logoutUser: logoutUser,
-    getUserByUsername: getUserByUsername
+    getUserByUsername: getUserByUsername,
+    currentUser: currentUser
 }

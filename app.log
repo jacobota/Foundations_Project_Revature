@@ -1651,3 +1651,53 @@
 2024-02-26T22:53:58.475Z [error]: The provided key element does not match the schema
 2024-02-26T22:54:24.813Z [info]: Started the server on Port 3000
 2024-02-26T22:54:26.291Z [info]: Incoming PUT: /user/login
+2024-02-26T22:58:42.035Z [info]: Started the server on Port 3000
+2024-02-26T22:58:44.848Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:58:45.177Z [info]: Successfully added the account
+2024-02-26T22:58:53.578Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T22:58:53.728Z [info]: Successfully added the account
+2024-02-26T22:58:58.920Z [info]: Incoming PUT: /user/login
+2024-02-26T22:59:13.834Z [info]: Incoming PUT: /user/login
+2024-02-26T23:01:42.566Z [info]: Started the server on Port 3000
+2024-02-26T23:01:45.384Z [info]: Incoming PUT: /user/login
+2024-02-26T23:05:33.590Z [info]: Started the server on Port 3000
+2024-02-26T23:05:37.312Z [info]: Incoming PUT: /user/login
+2024-02-26T23:06:00.781Z [info]: Incoming GET: /view/currentUser
+2024-02-26T23:06:00.782Z [info]: Displaying Current User
+2024-02-26T23:06:26.203Z [info]: Started the server on Port 3000
+2024-02-26T23:06:29.399Z [info]: Incoming PUT: /user/login
+2024-02-26T23:06:32.017Z [info]: Incoming GET: /view/currentUser
+2024-02-26T23:06:32.018Z [info]: Displaying Current User
+2024-02-26T23:06:56.450Z [info]: Started the server on Port 3000
+2024-02-26T23:06:59.136Z [info]: Incoming PUT: /user/login
+2024-02-26T23:06:59.522Z [error]: Either the KeyConditions or KeyConditionExpression parameter must be specified in the request.
+2024-02-26T23:08:27.219Z [info]: Started the server on Port 3000
+2024-02-26T23:08:28.811Z [info]: Incoming PUT: /user/login
+2024-02-26T23:08:29.219Z [error]: ExpressionAttributeValues must not be empty
+2024-02-26T23:08:37.778Z [info]: Incoming GET: /view/currentUser
+2024-02-26T23:08:37.779Z [info]: Displaying Current User
+2024-02-26T23:09:00.249Z [info]: Started the server on Port 3000
+2024-02-26T23:09:02.612Z [info]: Incoming PUT: /user/login
+2024-02-26T23:09:03.000Z [error]: ExpressionAttributeValues must not be empty
+2024-02-26T23:09:23.852Z [info]: Started the server on Port 3000
+2024-02-26T23:09:25.395Z [info]: Incoming PUT: /user/login
+2024-02-26T23:09:28.418Z [info]: Incoming GET: /view/currentUser
+2024-02-26T23:09:28.419Z [info]: Displaying Current User
+2024-02-26T23:10:06.836Z [info]: Started the server on Port 3000
+2024-02-26T23:10:10.078Z [info]: Incoming PUT: /user/login
+2024-02-26T23:10:12.371Z [info]: Incoming GET: /view/currentUser
+2024-02-26T23:10:12.372Z [info]: Displaying Current User
+2024-02-26T23:12:18.488Z [info]: Started the server on Port 3000
+2024-02-26T23:12:22.509Z [info]: Incoming GET: /view/currentUser
+2024-02-26T23:12:22.509Z [info]: Displaying Current User
+2024-02-26T23:12:25.056Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T23:12:25.375Z [info]: Successfully added the account
+2024-02-26T23:12:27.514Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T23:12:27.667Z [info]: Successfully added the account
+2024-02-26T23:12:29.636Z [info]: Incoming PUT: /user/login
+2024-02-26T23:12:29.797Z [error]: No user has been logged in yet!
+2024-02-26T23:12:40.156Z [info]: Incoming GET: /view/currentUser
+2024-02-26T23:12:40.157Z [info]: Displaying Current User
+2024-02-26T23:12:48.904Z [info]: Incoming PUT: /user/login
+2024-02-26T23:12:57.442Z [info]: Incoming GET: /view/currentUser
+2024-02-26T23:12:57.443Z [info]: Displaying Current User
