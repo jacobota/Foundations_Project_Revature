@@ -1557,3 +1557,97 @@
 2024-02-26T22:05:22.151Z [info]: Incoming PUT: /user/login
 2024-02-26T22:05:22.270Z [error]: User not found
 2024-02-26T22:05:22.270Z [error]: Unsuccessful Login
+2024-02-26T22:14:01.933Z [info]: Started the server on Port 3000
+2024-02-26T22:14:07.320Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:14:07.617Z [error]: Account already exists
+2024-02-26T22:14:23.130Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:14:23.189Z [error]: Unsupported type passed: [object Promise]. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.
+2024-02-26T22:15:01.859Z [info]: Started the server on Port 3000
+2024-02-26T22:15:05.362Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:15:05.573Z [error]: Unsupported type passed: [object Promise]. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.
+2024-02-26T22:15:21.130Z [info]: Started the server on Port 3000
+2024-02-26T22:15:22.623Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:15:22.888Z [error]: Unsupported type passed: [object Promise]. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.
+2024-02-26T22:15:52.343Z [info]: Started the server on Port 3000
+2024-02-26T22:15:53.593Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:15:53.951Z [error]: Unsupported type passed: [object Promise]. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.
+2024-02-26T22:16:02.792Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T22:16:02.864Z [error]: Unsupported type passed: [object Promise]. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.
+2024-02-26T22:16:10.462Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T22:16:10.523Z [error]: Unsupported type passed: [object Promise]. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.
+2024-02-26T22:16:37.325Z [info]: Started the server on Port 3000
+2024-02-26T22:16:38.614Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T22:16:38.936Z [info]: Successfully added the account
+2024-02-26T22:17:05.524Z [info]: Started the server on Port 3000
+2024-02-26T22:17:06.540Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T22:17:06.858Z [error]: Account already exists
+2024-02-26T22:17:09.924Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:17:10.063Z [info]: Successfully added the account
+2024-02-26T22:18:03.876Z [info]: Started the server on Port 3000
+2024-02-26T22:18:08.671Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:18:08.988Z [info]: Successfully added the account
+2024-02-26T22:18:15.636Z [info]: Incoming PUT: /user/login
+2024-02-26T22:18:15.845Z [error]: User not found
+2024-02-26T22:18:15.846Z [error]: Unsuccessful Login
+2024-02-26T22:18:18.922Z [info]: Incoming PUT: /user/login
+2024-02-26T22:18:19.084Z [error]: User not found
+2024-02-26T22:18:19.085Z [error]: Unsuccessful Login
+2024-02-26T22:19:36.494Z [info]: Started the server on Port 3000
+2024-02-26T22:19:39.812Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:19:40.090Z [error]: Account already exists
+2024-02-26T22:20:00.966Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:20:01.112Z [info]: Successfully added the account
+2024-02-26T22:20:08.153Z [info]: Incoming PUT: /user/login
+2024-02-26T22:20:16.209Z [info]: Started the server on Port 3000
+2024-02-26T22:20:17.570Z [info]: Incoming PUT: /user/login
+2024-02-26T22:20:17.853Z [error]: User not found
+2024-02-26T22:20:17.854Z [error]: Unsuccessful Login
+2024-02-26T22:36:30.356Z [info]: Started the server on Port 3000
+2024-02-26T22:36:34.695Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:36:35.003Z [info]: Successfully added the account
+2024-02-26T22:36:37.745Z [info]: Incoming PUT: /user/login
+2024-02-26T22:36:37.798Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T22:37:02.415Z [info]: Started the server on Port 3000
+2024-02-26T22:37:04.034Z [info]: Incoming PUT: /user/login
+2024-02-26T22:37:04.278Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T22:37:40.447Z [info]: Started the server on Port 3000
+2024-02-26T22:37:41.878Z [info]: Incoming PUT: /user/login
+2024-02-26T22:37:42.102Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T22:39:47.530Z [info]: Started the server on Port 3000
+2024-02-26T22:39:51.417Z [info]: Incoming PUT: /user/login
+2024-02-26T22:39:51.631Z [error]: The provided key element does not match the schema
+2024-02-26T22:40:08.179Z [info]: Started the server on Port 3000
+2024-02-26T22:40:09.461Z [info]: Incoming PUT: /user/login
+2024-02-26T22:40:09.682Z [error]: The provided key element does not match the schema
+2024-02-26T22:40:25.382Z [info]: Started the server on Port 3000
+2024-02-26T22:40:29.576Z [info]: Incoming PUT: /user/login
+2024-02-26T22:40:29.835Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T22:41:23.701Z [info]: Started the server on Port 3000
+2024-02-26T22:41:26.073Z [info]: Incoming PUT: /user/login
+2024-02-26T22:41:26.392Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T22:41:37.697Z [info]: Started the server on Port 3000
+2024-02-26T22:41:39.194Z [info]: Incoming PUT: /user/login
+2024-02-26T22:41:39.481Z [error]: User not found
+2024-02-26T22:41:39.481Z [error]: Unsuccessful Login
+2024-02-26T22:41:57.847Z [info]: Started the server on Port 3000
+2024-02-26T22:41:59.692Z [info]: Incoming PUT: /user/login
+2024-02-26T22:42:00.018Z [error]: User not found
+2024-02-26T22:42:00.018Z [error]: Unsuccessful Login
+2024-02-26T22:42:13.195Z [info]: Started the server on Port 3000
+2024-02-26T22:42:14.490Z [info]: Incoming PUT: /user/login
+2024-02-26T22:42:14.776Z [error]: User not found
+2024-02-26T22:42:14.776Z [error]: Unsuccessful Login
+2024-02-26T22:43:45.583Z [info]: Started the server on Port 3000
+2024-02-26T22:43:47.337Z [info]: Incoming PUT: /user/login
+2024-02-26T22:43:47.638Z [error]: User not found
+2024-02-26T22:44:29.596Z [info]: Started the server on Port 3000
+2024-02-26T22:44:31.177Z [info]: Incoming PUT: /user/login
+2024-02-26T22:44:31.498Z [error]: User not found
+2024-02-26T22:51:24.020Z [info]: Started the server on Port 3000
+2024-02-26T22:51:25.433Z [info]: Incoming PUT: /user/login
+2024-02-26T22:51:25.769Z [error]: The provided key element does not match the schema
+2024-02-26T22:53:46.531Z [info]: Started the server on Port 3000
+2024-02-26T22:53:57.827Z [info]: Incoming PUT: /user/login
+2024-02-26T22:53:58.475Z [error]: The provided key element does not match the schema
+2024-02-26T22:54:24.813Z [info]: Started the server on Port 3000
+2024-02-26T22:54:26.291Z [info]: Incoming PUT: /user/login

@@ -63,36 +63,39 @@ async function registerEmployeeAccount(data) {
 }
 
 
-//function to login a user
-async function loginUser(data) {
-    const result = await dao.loginUser(data);
+//Get User function helps get the password for the user to use in bcrypt
+async function getLoginUser(username) {
+    const result = await dao.getUserByUsername(username);
     if(result) {
-        logger.info("Successfully logged in the account");
         return result;
-    }
-    else {
-        logger.error("Unsuccessful Login");
+    }else {
         return false;
     }
 }
 
+//switch the user to loggedIn = true
+async function setLoggedIn(data) {
+    await dao.helperLogin(data);
+}
+
 //OPTIONAL 
 //Logout Function
-async function logoutUser() {
-    if(await dao.logoutUser()) {
-        logger.info("Successfully logged out the account");
-        return true;
-    }
-    else {
-        logger.error("Failed Logout");
-        return false;
-    }
-}
+// async function logoutUser() {
+//     if(await dao.logoutUser()) {
+//         logger.info("Successfully logged out the account");
+//         return true;
+//     }
+//     else {
+//         logger.error("Failed Logout");
+//         return false;
+//     }
+// }
 
 //export functions
 module.exports = {
     registerEmployeeAccount: registerEmployeeAccount,
     registerManagerAccount: registerManagerAccount,
-    loginUser: loginUser,
-    logoutUser: logoutUser
+    //logoutUser: logoutUser,
+    getLoginUser: getLoginUser,
+    setLoggedIn: setLoggedIn
 }

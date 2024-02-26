@@ -1,15 +1,12 @@
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { fromIni } = require('@aws-sdk/credential-provider-ini');
-const { DynamoDBDocumentClient, PutCommand, QueryCommand, UpdateCommand } = require('@aws-sdk/lib-dynamodb');
+const { DynamoDBDocumentClient, PutCommand, QueryCommand, UpdateCommand, GetCommand } = require('@aws-sdk/lib-dynamodb');
 const { logger } = require('../util/logger');
 
 const client = new DynamoDBClient({
     region: "us-west-1",
     credentials: fromIni({profile: "user1"})
 });
-
-//Hold the current user here
-const currentUser = [];
 
 //getting the documentClient
 const documentClient = DynamoDBDocumentClient.from(client);
@@ -58,46 +55,32 @@ async function registerUser(item) {
     }
 }
 
-// UPDATE
-// function to login a user account to Dynamo
-async function loginUser(data) {
-    //query command to get the whole table
+// GET User for the login endpoint, this will effectively get the password to
+// compare with the one entered
+async function getUserByUsername(username) {
     const command = new QueryCommand({
         TableName: 'FP_Users',
         IndexName: 'username-index',
-        KeyConditionExpression: 'username = :value',
-        FilterExpression: 'password = :pass',
+        KeyConditionExpression: 'username = :username',
         ExpressionAttributeValues: {
-            ':value': data.username,
-            ':pass' : data.password
+            ':username' : username
         }
     });
-
     try {
-        const data = await documentClient.send(command);
-        //return true if there does exist account with same username
-        if(data.Count == 1) {
-            //Logout the previous account so 2 accounts cant be active at once
-            await logoutUser();
-            //Have helper function set user to logged in and push to current user
-            await helperLogin(data);
-            return data.Items[0];
-        } else {
-            logger.error("User not found");
-            return false;
-        }
-    } catch(err) {
+        const user = await documentClient.send(command);
+        return user.Items[0];
+    }catch(err) {
         logger.error(err);
         return false;
     }
 }
 
-// UPDATE Helper Function for Login
+// UPDATE Helper Function for Login which will set user as logged in
 async function helperLogin(data) {
     //update command to update the value of LoggedIn
     const command = new UpdateCommand({
         TableName: 'FP_Users',
-        Key: {'user_id' : data.Items[0].user_id},
+        Key: {'user_id' : data.user_id},
         UpdateExpression: "SET loggedIn = :val",
         ExpressionAttributeValues: {
             ':val' : true
@@ -115,37 +98,37 @@ async function helperLogin(data) {
 //OPTIONAL 
 //Logout the current user
 //Added this feature because I don't want two users to be logged in at the same time
-async function logoutUser() {
-    if(currentUser.length == 0) {
-        logger.error("No user has been logged in yet!");
-        return false;
-    }
-    else {
-        //update command to update the value of LoggedIn
-        const command = new UpdateCommand({
-            TableName: 'FP_Users',
-            Key: {'user_id' : currentUser[0].user_id},
-            UpdateExpression: "SET loggedIn = :val",
-            ExpressionAttributeValues: {
-                ':val' : false
-            }
-        })
+// async function logoutUser() {
+//     if(currentUser.length == 0) {
+//         logger.error("No user has been logged in yet!");
+//         return false;
+//     }
+//     else {
+//         //update command to update the value of LoggedIn
+//         const command = new UpdateCommand({
+//             TableName: 'FP_Users',
+//             Key: {'user_id' : currentUser[0].user_id},
+//             UpdateExpression: "SET loggedIn = :val",
+//             ExpressionAttributeValues: {
+//                 ':val' : false
+//             }
+//         })
 
-        try {
-            await documentClient.send(command);
-            currentUser.pop();
-            return true;
-        } catch(err) {
-            logger.error(err);
-            return false;
-        }
-    }
-}
+//         try {
+//             await documentClient.send(command);
+//             currentUser.pop();
+//             return true;
+//         } catch(err) {
+//             logger.error(err);
+//             return false;
+//         }
+//     }
+// }
 
 module.exports = {
     checkUsername: checkUsername,
     registerUser: registerUser,
-    loginUser: loginUser,
-    logoutUser: logoutUser,
-    currentUser: currentUser
+    helperLogin: helperLogin,
+    //logoutUser: logoutUser,
+    getUserByUsername: getUserByUsername
 }

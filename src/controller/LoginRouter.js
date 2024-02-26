@@ -2,8 +2,8 @@
 const express = require('express');
 const { logger } = require("../util/logger");
 const jwt = require('jsonwebtoken');
-const { loginUser } = require('../service/Registration_LoginService');
-
+const bcrypt = require('bcrypt');
+const { getLoginUser, setLoggedIn } = require('../service/Registration_LoginService');
 const router = express.Router();
 
 const secretKey = 'employee-aws-secret-key';
@@ -21,34 +21,41 @@ router.put('/login', async (req, res) => {
         logger.error("No username or password entered.");
         res.json(`Please Enter a Username and/or Password`);
     } else {
-        let loginAccount = await loginUser(data);
-        let token;
-        if(loginAccount) {
-            //add the token here
-            token = jwt.sign(
+        //get the user by username
+        const getUser = await getLoginUser(data.username);
+        if(getUser) {
+            if(await bcrypt.compare(data.password, getUser.password)) {
+                //add the token here
+                token = jwt.sign(
                 {
-                    user_id: loginAccount.user_id,
-                    username: loginAccount.username,
-                    password: loginAccount.password,
-                    userRole: loginAccount.userRole
+                    user_id: getUser.user_id,
+                    username: getUser.username,
+                    password: getUser.password,
+                    userRole: getUser.userRole
                 },
                 secretKey,
                 {
                     expiresIn: "10m"
                 }
-
-            )
-            res.json(
-            {
-                message: `${data.username} successfully logged in!`,
-                role: loginAccount.userRole,
-                jwtToken: token
-            });
+                );
+                await setLoggedIn(getUser);
+                res.json(
+                {
+                    message: `${getUser.username} successfully logged in!`,
+                    role: getUser.userRole,
+                    jwtToken: token
+                });
+            } else {
+                res.json(`Unsuccessful Login. Try Again!`);
+            }
         } else {
-            res.json(`Unsuccessful Login. Try Again!`);
+            res.json(`User not in Database!`);
         }
     }
-})
+});
+
+// Functions for employee and manager authorization to work with other files and their permissions
+
 
 module.exports = {
     router

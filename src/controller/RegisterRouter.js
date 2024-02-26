@@ -1,6 +1,7 @@
 //imports
 const express = require('express');
 const { logger } = require("../util/logger");
+const bcrypt = require('bcrypt');
 const { registerEmployeeAccount, registerManagerAccount } = require('../service/Registration_LoginService');
 
 const router = express.Router();
@@ -8,6 +9,9 @@ const router = express.Router();
 // ========= HTTP REQUESTS =========
 
 // ========= Register and Login Features =========
+
+//Salt rounds for the bcrypt hash
+const saltRounds = 10;
 
 //POST Request: Employee Registration
 router.post('/employeeRegister', async (req, res) => {
@@ -18,6 +22,8 @@ router.post('/employeeRegister', async (req, res) => {
         res.json(`Please Enter a Username and/or Password`);
     }
     else {
+        data.password = await bcrypt.hash(data.password, saltRounds);
+
         let registeredAccount = await registerEmployeeAccount(data);
         if(registeredAccount) {
             res.json(`Successfully registered ${data.username}`);
@@ -35,6 +41,8 @@ router.post('/managerRegister', async (req, res) => {
         logger.error("No username or password entered.");
         res.json(`Please Enter a Username and/or Password`);
     } else {
+        data.password = await bcrypt.hash(data.password, saltRounds);
+
         let registeredAccount = await registerManagerAccount(data);
         if(registeredAccount) {
             res.json(`Successfully registered ${data.username}`);
