@@ -1315,3 +1315,245 @@
 2024-02-23T20:37:48.142Z [error]: Unsuccessful Login
 2024-02-23T20:37:48.144Z [info]: Successfully logged out the account
 2024-02-23T20:37:48.145Z [error]: Failed Logout
+2024-02-23T21:50:08.421Z [info]: Started the server on Port 3000
+2024-02-23T21:50:34.491Z [info]: Incoming POST: /register/employeeRegister
+2024-02-23T21:50:35.071Z [info]: Successfully added the account
+2024-02-23T21:51:13.261Z [info]: Incoming PUT: /user/userLogin
+2024-02-23T21:52:00.807Z [info]: Incoming PUT: /user/login
+2024-02-23T21:52:00.974Z [error]: No user has been logged in yet!
+2024-02-23T21:52:01.019Z [info]: Successfully logged in the account
+2024-02-23T21:54:57.918Z [info]: Started the server on Port 3000
+2024-02-23T21:54:59.917Z [info]: Incoming PUT: /user/login
+2024-02-23T21:54:59.920Z [info]: Successfully logged in the account
+2024-02-23T21:55:00.119Z [error]: No user has been logged in yet!
+2024-02-23T21:55:09.601Z [info]: Started the server on Port 3000
+2024-02-23T21:55:10.814Z [info]: Incoming PUT: /user/login
+2024-02-23T21:55:11.052Z [error]: No user has been logged in yet!
+2024-02-23T21:55:11.098Z [info]: Successfully logged in the account
+2024-02-23T21:55:56.984Z [info]: Started the server on Port 3000
+2024-02-23T21:55:58.510Z [info]: Incoming PUT: /user/login
+2024-02-23T21:55:58.712Z [error]: No user has been logged in yet!
+2024-02-23T21:55:58.765Z [info]: Successfully logged in the account
+2024-02-23T21:56:49.930Z [info]: Incoming PUT: /user/logout
+2024-02-23T21:56:49.931Z [error]: No user has been logged in yet!
+2024-02-23T21:56:49.932Z [error]: Failed Logout
+2024-02-23T21:56:49.932Z [error]: Unsuccessful Logout!
+2024-02-23T21:57:07.960Z [info]: Incoming PUT: /user/logout
+2024-02-23T21:57:07.961Z [error]: No user has been logged in yet!
+2024-02-23T21:57:07.961Z [error]: Failed Logout
+2024-02-23T21:57:07.961Z [error]: Unsuccessful Logout!
+2024-02-23T21:57:39.569Z [info]: Incoming PUT: /user/login
+2024-02-23T21:57:39.741Z [error]: No user has been logged in yet!
+2024-02-23T21:57:39.782Z [info]: Successfully logged in the account
+2024-02-23T22:01:58.835Z [info]: Started the server on Port 3000
+2024-02-23T22:02:02.156Z [info]: Incoming PUT: /user/login
+2024-02-23T22:02:02.363Z [error]: No user has been logged in yet!
+2024-02-23T22:02:02.405Z [info]: Successfully logged in the account
+2024-02-23T22:02:13.226Z [info]: Started the server on Port 3000
+2024-02-23T22:02:14.698Z [info]: Incoming PUT: /user/login
+2024-02-23T22:02:14.923Z [error]: No user has been logged in yet!
+2024-02-23T22:02:14.967Z [info]: Successfully logged in the account
+2024-02-23T22:05:01.619Z [info]: Started the server on Port 3000
+2024-02-23T22:05:04.800Z [info]: Incoming PUT: /user/login
+2024-02-23T22:05:05.327Z [error]: No user has been logged in yet!
+2024-02-23T22:05:05.500Z [info]: Successfully logged in the account
+2024-02-23T22:06:08.726Z [info]: Started the server on Port 3000
+2024-02-23T22:06:11.451Z [info]: Incoming PUT: /user/login
+2024-02-23T22:06:11.664Z [error]: No user has been logged in yet!
+2024-02-23T22:06:11.706Z [info]: Successfully logged in the account
+2024-02-23T22:06:35.145Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:06:35.146Z [error]: No user logged in
+2024-02-23T22:07:04.443Z [info]: Started the server on Port 3000
+2024-02-23T22:07:07.771Z [info]: Incoming PUT: /user/login
+2024-02-23T22:07:07.983Z [error]: No user has been logged in yet!
+2024-02-23T22:07:08.024Z [info]: Successfully logged in the account
+2024-02-23T22:07:10.537Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:07:10.538Z [error]: No user logged in
+2024-02-23T22:08:07.525Z [info]: Started the server on Port 3000
+2024-02-23T22:08:10.743Z [info]: Incoming PUT: /user/login
+2024-02-23T22:08:10.952Z [error]: No user has been logged in yet!
+2024-02-23T22:08:10.995Z [info]: Successfully logged in the account
+2024-02-23T22:08:13.365Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:08:13.367Z [error]: No user logged in
+2024-02-23T22:13:05.906Z [info]: Started the server on Port 3000
+2024-02-23T22:13:14.605Z [info]: Incoming POST: /register/employeeRegister
+2024-02-23T22:13:14.836Z [error]: Account already exists
+2024-02-23T22:13:18.441Z [info]: Incoming PUT: /user/login
+2024-02-23T22:13:18.507Z [error]: No user has been logged in yet!
+2024-02-23T22:13:18.574Z [info]: Successfully logged in the account
+2024-02-23T22:13:24.753Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:13:24.754Z [error]: No user logged in
+2024-02-23T22:25:33.011Z [info]: Started the server on Port 3000
+2024-02-23T22:25:37.398Z [info]: Incoming PUT: /user/login
+2024-02-23T22:25:37.623Z [error]: No user has been logged in yet!
+2024-02-23T22:25:37.676Z [info]: Successfully logged in the account
+2024-02-23T22:25:42.323Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:25:42.324Z [error]: No user logged in
+2024-02-23T22:28:55.458Z [info]: Started the server on Port 3000
+2024-02-23T22:29:01.811Z [info]: Incoming PUT: /user/login
+2024-02-23T22:29:02.052Z [error]: No user has been logged in yet!
+2024-02-23T22:29:02.095Z [info]: Successfully logged in the account
+2024-02-23T22:29:05.737Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:29:05.739Z [error]: No user logged in
+2024-02-23T22:30:09.360Z [info]: Started the server on Port 3000
+2024-02-23T22:30:13.511Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:30:13.513Z [error]: No user logged in
+2024-02-23T22:30:16.966Z [info]: Incoming PUT: /user/login
+2024-02-23T22:30:17.194Z [error]: No user has been logged in yet!
+2024-02-23T22:30:17.251Z [info]: Successfully logged in the account
+2024-02-23T22:30:18.775Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:30:18.776Z [error]: No user logged in
+2024-02-23T22:31:51.815Z [info]: Started the server on Port 3000
+2024-02-23T22:31:54.777Z [info]: Incoming PUT: /user/login
+2024-02-23T22:31:55.006Z [error]: No user has been logged in yet!
+2024-02-23T22:31:55.047Z [info]: Successfully logged in the account
+2024-02-23T22:31:57.064Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:31:57.065Z [error]: No user logged in
+2024-02-23T22:32:16.547Z [info]: Started the server on Port 3000
+2024-02-23T22:32:20.069Z [info]: Incoming PUT: /user/login
+2024-02-23T22:32:20.287Z [error]: No user has been logged in yet!
+2024-02-23T22:32:20.333Z [info]: Successfully logged in the account
+2024-02-23T22:32:21.928Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:32:21.930Z [error]: No user logged in
+2024-02-23T22:32:40.513Z [info]: Started the server on Port 3000
+2024-02-23T22:32:44.379Z [info]: Incoming PUT: /user/login
+2024-02-23T22:32:44.654Z [error]: No user has been logged in yet!
+2024-02-23T22:32:44.704Z [info]: Successfully logged in the account
+2024-02-23T22:32:46.402Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:32:46.403Z [error]: No user logged in
+2024-02-23T22:33:07.826Z [info]: Started the server on Port 3000
+2024-02-23T22:33:09.790Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:33:09.791Z [error]: No user logged in
+2024-02-23T22:33:12.667Z [info]: Incoming PUT: /user/login
+2024-02-23T22:33:12.879Z [error]: No user has been logged in yet!
+2024-02-23T22:33:12.925Z [info]: Successfully logged in the account
+2024-02-23T22:33:14.571Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:33:14.572Z [error]: No user logged in
+2024-02-23T22:33:25.312Z [info]: Started the server on Port 3000
+2024-02-23T22:33:29.274Z [info]: Incoming PUT: /user/login
+2024-02-23T22:33:29.486Z [error]: No user has been logged in yet!
+2024-02-23T22:33:29.528Z [info]: Successfully logged in the account
+2024-02-23T22:33:30.986Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:33:30.987Z [error]: No user logged in
+2024-02-23T22:40:27.714Z [info]: Started the server on Port 3000
+2024-02-23T22:40:30.157Z [info]: Incoming PUT: /user/login
+2024-02-23T22:40:30.384Z [error]: No user has been logged in yet!
+2024-02-23T22:40:30.427Z [info]: Successfully logged in the account
+2024-02-23T22:40:31.917Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:40:31.918Z [error]: No user logged in
+2024-02-23T22:44:09.892Z [info]: Started the server on Port 3000
+2024-02-23T22:44:13.308Z [info]: Incoming PUT: /user/login
+2024-02-23T22:44:13.517Z [error]: No user has been logged in yet!
+2024-02-23T22:44:13.577Z [info]: Successfully logged in the account
+2024-02-23T22:44:16.008Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:44:16.010Z [error]: No user logged in
+2024-02-23T22:49:03.002Z [info]: Started the server on Port 3000
+2024-02-23T22:49:04.801Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:49:04.804Z [error]: No user logged in
+2024-02-23T22:49:08.795Z [info]: Incoming PUT: /user/login
+2024-02-23T22:49:09.025Z [error]: No user has been logged in yet!
+2024-02-23T22:49:09.067Z [info]: Successfully logged in the account
+2024-02-23T22:49:10.734Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:49:10.735Z [error]: No user logged in
+2024-02-23T22:50:46.298Z [info]: Started the server on Port 3000
+2024-02-23T22:50:48.859Z [info]: Incoming PUT: /user/login
+2024-02-23T22:50:49.074Z [error]: No user has been logged in yet!
+2024-02-23T22:50:49.120Z [info]: Successfully logged in the account
+2024-02-23T22:50:50.306Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:50:50.308Z [error]: No user logged in
+2024-02-23T22:51:58.132Z [info]: Started the server on Port 3000
+2024-02-23T22:52:01.631Z [info]: Incoming PUT: /user/login
+2024-02-23T22:52:01.829Z [error]: No user has been logged in yet!
+2024-02-23T22:52:01.871Z [info]: Successfully logged in the account
+2024-02-23T22:52:03.424Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:52:03.426Z [error]: No user logged in
+2024-02-23T22:53:10.429Z [info]: Started the server on Port 3000
+2024-02-23T22:53:13.088Z [info]: Incoming PUT: /user/login
+2024-02-23T22:53:13.374Z [error]: No user has been logged in yet!
+2024-02-23T22:53:13.421Z [info]: Successfully logged in the account
+2024-02-23T22:53:14.874Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:53:14.875Z [error]: No user logged in
+2024-02-23T22:53:26.141Z [info]: Started the server on Port 3000
+2024-02-23T22:53:28.594Z [info]: Incoming PUT: /user/login
+2024-02-23T22:53:28.803Z [error]: No user has been logged in yet!
+2024-02-23T22:53:28.844Z [info]: Successfully logged in the account
+2024-02-23T22:53:30.227Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:53:30.230Z [error]: No user logged in
+2024-02-23T22:55:04.935Z [info]: Started the server on Port 3000
+2024-02-23T22:55:07.717Z [info]: Incoming PUT: /user/login
+2024-02-23T22:55:07.935Z [error]: No user has been logged in yet!
+2024-02-23T22:55:07.977Z [info]: Successfully logged in the account
+2024-02-23T22:55:09.691Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:55:09.694Z [error]: No user logged in
+2024-02-23T22:55:42.915Z [info]: Started the server on Port 3000
+2024-02-23T22:55:45.802Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:55:45.806Z [error]: No user logged in
+2024-02-23T22:58:28.280Z [info]: Started the server on Port 3000
+2024-02-23T22:58:31.188Z [info]: Incoming PUT: /user/login
+2024-02-23T22:58:31.392Z [error]: No user has been logged in yet!
+2024-02-23T22:58:31.439Z [info]: Successfully logged in the account
+2024-02-23T22:58:33.012Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:58:33.014Z [error]: No user logged in
+2024-02-23T22:59:51.369Z [info]: Started the server on Port 3000
+2024-02-23T22:59:53.409Z [info]: Incoming PUT: /user/login
+2024-02-23T22:59:53.619Z [error]: No user has been logged in yet!
+2024-02-23T22:59:53.660Z [info]: Successfully logged in the account
+2024-02-23T22:59:55.266Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T22:59:55.269Z [error]: No user logged in
+2024-02-23T23:00:37.099Z [info]: Started the server on Port 3000
+2024-02-23T23:00:39.584Z [info]: Incoming PUT: /user/login
+2024-02-23T23:00:39.786Z [error]: No user has been logged in yet!
+2024-02-23T23:00:39.829Z [info]: Successfully logged in the account
+2024-02-23T23:00:41.383Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T23:00:41.385Z [error]: No user logged in
+2024-02-23T23:02:30.367Z [info]: Started the server on Port 3000
+2024-02-23T23:02:43.963Z [info]: Incoming PUT: /user/login
+2024-02-23T23:02:44.171Z [error]: No user has been logged in yet!
+2024-02-23T23:02:44.223Z [info]: Successfully logged in the account
+2024-02-23T23:02:46.374Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T23:02:46.377Z [error]: No user logged in
+2024-02-23T23:04:29.888Z [info]: Started the server on Port 3000
+2024-02-23T23:04:32.387Z [info]: Incoming PUT: /user/login
+2024-02-23T23:04:32.730Z [error]: No user has been logged in yet!
+2024-02-23T23:04:32.786Z [info]: Successfully logged in the account
+2024-02-23T23:04:34.287Z [info]: Incoming GET: /viewMyTickets/
+2024-02-23T23:04:34.289Z [error]: No user logged in
+2024-02-26T21:43:55.349Z [info]: Started the server on Port 3000
+2024-02-26T21:44:01.188Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T21:44:01.486Z [info]: Successfully added the account
+2024-02-26T21:51:02.604Z [info]: Started the server on Port 3000
+2024-02-26T21:51:04.946Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T21:51:05.186Z [error]: Account already exists
+2024-02-26T21:51:08.893Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T21:51:08.983Z [info]: Successfully added the account
+2024-02-26T21:51:42.794Z [info]: Started the server on Port 3000
+2024-02-26T21:54:43.532Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T21:54:44.064Z [info]: Successfully added the account
+2024-02-26T21:54:57.230Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T21:54:57.317Z [info]: Successfully added the account
+2024-02-26T21:55:28.548Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T21:55:28.593Z [error]: Account already exists
+2024-02-26T21:55:32.573Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T21:55:32.622Z [error]: Account already exists
+2024-02-26T21:57:22.859Z [info]: Started the server on Port 3000
+2024-02-26T21:57:24.800Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T21:57:25.214Z [error]: Requested resource not found
+2024-02-26T21:57:34.590Z [info]: Started the server on Port 3000
+2024-02-26T21:57:36.465Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T21:57:36.716Z [info]: Successfully added the account
+2024-02-26T22:01:37.380Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:01:37.679Z [info]: Successfully added the account
+2024-02-26T22:04:43.573Z [info]: Started the server on Port 3000
+2024-02-26T22:04:56.682Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T22:04:56.977Z [info]: Successfully added the account
+2024-02-26T22:04:59.063Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T22:04:59.159Z [info]: Successfully added the account
+2024-02-26T22:05:06.965Z [info]: Incoming PUT: /user/login
+2024-02-26T22:05:07.010Z [error]: No user has been logged in yet!
+2024-02-26T22:05:07.054Z [info]: Successfully logged in the account
+2024-02-26T22:05:12.792Z [info]: Incoming PUT: /user/login
+2024-02-26T22:05:13.360Z [error]: No user has been logged in yet!
+2024-02-26T22:05:13.411Z [info]: Successfully logged in the account
+2024-02-26T22:05:22.151Z [info]: Incoming PUT: /user/login
+2024-02-26T22:05:22.270Z [error]: User not found
+2024-02-26T22:05:22.270Z [error]: Unsuccessful Login

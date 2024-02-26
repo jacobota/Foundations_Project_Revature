@@ -1,5 +1,5 @@
 const { postEmployeeTicket } = require('../src/service/TicketSubmissionService');
-const { registerEmployeeAccount, registerManagerAccount, loginUser, logoutUser } = require('../src/service/Registration_LoginService');
+const { currentUser } = require('../repository/UsersDAO');
 
 //Test Suite that works with the Ticket Submission of an employee
 // describe('Ticket Submission Tests', () => {

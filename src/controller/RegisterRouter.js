@@ -1,7 +1,7 @@
 //imports
 const express = require('express');
 const { logger } = require("../util/logger");
-const { registerEmployeeAccount, registerManagerAccount, loginUser, logoutUser } = require('../service/Registration_LoginService');
+const { registerEmployeeAccount, registerManagerAccount } = require('../service/Registration_LoginService');
 
 const router = express.Router();
 
@@ -43,34 +43,5 @@ router.post('/managerRegister', async (req, res) => {
         }
     }
 });
-
-//PUT Request: User Login
-router.put('/userLogin', async (req, res) => {
-    const data = req.body;
-    //Check if user did not enter a username or password
-    if(!data.username || !data.password) {
-        logger.error("No username or password entered.");
-        res.json(`Please Enter a Username and/or Password`);
-    } else {
-        let loginAccount = await loginUser(data);
-        if(loginAccount) {
-            res.json(`${data.username} successfully logged in!`);
-        } else {
-            res.json(`Unsuccessful Login. Try Again!`);
-        }
-    }
-})
-
-// OPTIONAL
-// PUT Request: User Logout
-router.put('/userLogout', async (req, res) => {
-    //Check if user did not enter a username or password
-    let logoutAccount = await logoutUser();
-    if(logoutAccount) {
-        res.json(`Successful Logout!`);
-    } else {
-        res.json(`Unsuccessful Logout!`);
-    }
-})
 
 module.exports = router;

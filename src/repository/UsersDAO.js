@@ -81,10 +81,9 @@ async function loginUser(data) {
             await logoutUser();
             //Have helper function set user to logged in and push to current user
             await helperLogin(data);
-            currentUser.push({user_id: data.Items[0].user_id, userRole: data.Items[0].userRole});
-            return true;
+            return data.Items[0];
         } else {
-            logger.error("User not found")
+            logger.error("User not found");
             return false;
         }
     } catch(err) {

@@ -65,9 +65,10 @@ async function registerEmployeeAccount(data) {
 
 //function to login a user
 async function loginUser(data) {
-    if(await dao.loginUser(data)) {
+    const result = await dao.loginUser(data);
+    if(result) {
         logger.info("Successfully logged in the account");
-        return true;
+        return result;
     }
     else {
         logger.error("Unsuccessful Login");
