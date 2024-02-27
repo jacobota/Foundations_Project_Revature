@@ -63,7 +63,7 @@ async function createQueueOfTickets() {
 
 // READ
 // function to get past employee tickets they submitted
-async function viewPrevTickets() {
+async function viewPrevTickets(user_id) {
     // command to get all tickets submitted by an employee
     const command = new ScanCommand({
         TableName,
@@ -72,15 +72,17 @@ async function viewPrevTickets() {
             '#employee_id' : 'employee_id'
         },
         ExpressionAttributeValues: {
-            ':val' : currentUser[0].user_id
+            ':val' : user_id
         }
     })
 
     try {
         const data = await documentClient.send(command);
+        logger.info("Retrieved Tickets from Dynamo")
         return data.Items;
     } catch(err) {
         logger.error(err);
+        return false;
     }
 }
 

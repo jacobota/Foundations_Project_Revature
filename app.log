@@ -1786,3 +1786,39 @@
 2024-02-27T00:22:47.354Z [info]: Incoming PUT: /user/login
 2024-02-27T00:22:57.090Z [info]: Incoming GET: /view/currentUser
 2024-02-27T00:22:57.092Z [info]: Displaying Current User
+2024-02-27T00:42:27.139Z [info]: Started the server on Port 3000
+2024-02-27T00:42:31.190Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T00:42:31.473Z [error]: Account already exists
+2024-02-27T00:42:56.831Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T00:42:57.032Z [info]: Successfully added the account
+2024-02-27T00:43:02.265Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T00:43:02.645Z [info]: Successfully added the account
+2024-02-27T00:43:07.314Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T00:43:07.539Z [info]: Successfully added the account
+2024-02-27T00:43:15.608Z [info]: Incoming PUT: /user/login
+2024-02-27T00:43:36.040Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:43:37.296Z [info]: Successfully added the Ticket
+2024-02-27T00:43:47.915Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:43:47.968Z [info]: Successfully added the Ticket
+2024-02-27T00:44:41.782Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T00:45:14.373Z [info]: Started the server on Port 3000
+2024-02-27T00:45:17.485Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T00:45:17.700Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T00:45:32.546Z [info]: Incoming PUT: /user/login
+2024-02-27T00:45:58.994Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:45:59.299Z [info]: Successfully added the Ticket
+2024-02-27T00:46:07.390Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:46:07.476Z [info]: Successfully added the Ticket
+2024-02-27T00:46:17.276Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:46:17.322Z [info]: Successfully added the Ticket
+2024-02-27T00:46:26.260Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T00:46:26.345Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T00:46:42.847Z [info]: Incoming PUT: /user/login
+2024-02-27T00:47:02.605Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:47:02.783Z [info]: Successfully added the Ticket
+2024-02-27T00:47:09.831Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T00:47:09.879Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T00:47:25.239Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T00:47:25.286Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T00:47:54.863Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T00:47:54.942Z [info]: Retrieved Tickets from Dynamo

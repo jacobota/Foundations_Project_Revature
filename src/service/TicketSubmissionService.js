@@ -2,7 +2,6 @@ const { postTicket } = require('../repository/TicketsDAO');
 const { logger } = require('../util/logger');
 const { v4 } = require('uuid');
 //get the current user to validate the user can send tickets
-const { currentUser } = require('../repository/UsersDAO');
 
 // function to post a ticket
 async function postEmployeeTicket(data) {
