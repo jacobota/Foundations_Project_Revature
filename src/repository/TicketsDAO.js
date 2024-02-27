@@ -1,6 +1,6 @@
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { fromIni } = require('@aws-sdk/credential-provider-ini');
-const { DynamoDBDocumentClient, PutCommand, ScanCommand, UpdateCommand } = require('@aws-sdk/lib-dynamodb');
+const { DynamoDBDocumentClient, PutCommand, ScanCommand, UpdateCommand, GetCommand } = require('@aws-sdk/lib-dynamodb');
 const { logger } = require('../util/logger');
 
 const client = new DynamoDBClient({
@@ -50,6 +50,7 @@ async function createQueueOfTickets() {
 
     try {
         const data = await documentClient.send(command);
+        //push the tickets and then sort them with .sort(a,b) method
         for(let item of data.Items) {
             ticketsToBeProcessed.push(item);
         }
@@ -63,10 +64,77 @@ async function createQueueOfTickets() {
 
 // UPDATE
 // function to approve the next ticket in the queue
+async function approveTicketDAO() {
+    const ticket = ticketsToBeProcessed.shift();
+    const command = new UpdateCommand({
+        TableName,
+        Key: {
+            'ticket_id': ticket.ticket_id,
+            'time_submitted': ticket.time_submitted
+        },
+        UpdateExpression: "SET  ticket_status = :statVal, ticket_processed = :procVal",
+        ExpressionAttributeValues: {
+            ':statVal' : 'Approve',
+            ':procVal' : true
+        }
+    })
+
+    try {
+        await documentClient.send(command);
+        const data = await getTicket(ticket);
+        return data;
+    }catch(err) {
+        logger.error(err);
+        return false;
+    }
+}
 
 
 // UPDATE
 // function to deny the next ticket in the queue
+async function denyTicketDAO() {
+    const ticket = ticketsToBeProcessed.shift();
+    const command = new UpdateCommand({
+        TableName,
+        Key: {
+            'ticket_id': ticket.ticket_id,
+            'time_submitted': ticket.time_submitted
+        },
+        UpdateExpression: "SET  ticket_status = :statVal, ticket_processed = :procVal",
+        ExpressionAttributeValues: {
+            ':statVal' : 'Deny',
+            ':procVal' : true
+        }
+    })
+
+    try {
+        await documentClient.send(command);
+        const data = await getTicket(ticket);
+        return data;
+    }catch(err) {
+        logger.error(err);
+        return false;
+    }
+}
+
+//helper function to get the ticket that was approved/denied
+async function getTicket(ticket) {
+    const command = new GetCommand({
+        TableName,
+        Key: {
+            'ticket_id': ticket.ticket_id,
+            'time_submitted': ticket.time_submitted
+        }
+    });
+
+    try {
+        const data = await documentClient.send(command);
+        return data.Item;
+    }catch(err) {
+        logger.error(err);
+        return false;
+    }
+}
 
 
 // READ
@@ -99,5 +167,7 @@ async function viewPrevTickets(user_id) {
 module.exports = {
     postTicket,
     createQueueOfTickets,
-    viewPrevTickets
+    viewPrevTickets,
+    approveTicketDAO,
+    denyTicketDAO
 }

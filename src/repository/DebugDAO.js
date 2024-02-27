@@ -63,6 +63,7 @@ async function getTickets() {
 
     try {
         const data = await documentClient.send(scanCommand);
+        //push the tickets and then sort them with .sort(a,b) method
         for(let item of data.Items) {
             allTickets.push(item);
         }
