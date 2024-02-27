@@ -26,8 +26,8 @@ router.get('/currentUser', authenticateToken, async (req, res) => {
     res.json(req.user);
 })
 
-//add authenticate token
-router.get('/ticketList', async(req,res) => {
+//GET Request: All tickets that have been submitted
+router.get('/ticketList', authenticateToken, async(req,res) => {
     logger.info("Displaying Tickets");
     res.json(await getAllTickets());
 })

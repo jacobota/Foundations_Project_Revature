@@ -2019,3 +2019,25 @@
 2024-02-27T23:10:13.240Z [info]: Incoming PUT: /ticketProcessing/approveTicket
 2024-02-27T23:10:19.576Z [info]: Incoming PUT: /user/login
 2024-02-27T23:10:29.201Z [info]: Incoming PUT: /ticketProcessing/denyTicket
+2024-02-27T23:12:09.689Z [info]: Started the server on Port 3000
+2024-02-27T23:12:25.935Z [info]: Incoming PUT: /user/login
+2024-02-27T23:12:39.080Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T23:12:39.273Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T23:12:59.950Z [info]: Incoming PUT: /user/login
+2024-02-27T23:13:10.154Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T23:13:10.196Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T23:13:18.544Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T23:13:28.972Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T23:13:29.040Z [info]: Successfully added the Ticket
+2024-02-27T23:13:38.763Z [info]: Incoming POST: /register/managerRegister
+2024-02-27T23:13:38.922Z [info]: Successfully added the account
+2024-02-27T23:13:54.732Z [info]: Incoming PUT: /user/login
+2024-02-27T23:13:57.390Z [info]: Incoming PUT: /user/login
+2024-02-27T23:14:10.274Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T23:14:22.407Z [info]: Incoming GET: /ticketProcessing/
+2024-02-27T23:14:22.452Z [info]: Displaying all Unprocessed Tickets
+2024-02-27T23:14:27.492Z [info]: Incoming PUT: /ticketProcessing/approveTicket
+2024-02-27T23:14:30.740Z [info]: Incoming PUT: /ticketProcessing/approveTicket
+2024-02-27T23:14:39.678Z [info]: Incoming PUT: /user/login
+2024-02-27T23:14:50.084Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T23:14:50.126Z [info]: Retrieved Tickets from Dynamo
