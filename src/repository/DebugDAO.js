@@ -11,6 +11,8 @@ const client = new DynamoDBClient({
 //getting the documentClient
 const documentClient = DynamoDBDocumentClient.from(client);
 
+let allTickets = [];
+
 //Get all the employee from DB (Useful for Debugging Purposes)
 async function getEmployees() {
     //scan command to get the whole table
@@ -24,7 +26,6 @@ async function getEmployees() {
 
     try {
         const data = await documentClient.send(scanCommand);
-        logger.info("Displaying Employee List");
         return data.Items;
     } catch(err) {
         logger.error(err);
@@ -45,7 +46,6 @@ async function getManagers() {
 
     try {
         const data = await documentClient.send(scanCommand);
-        logger.info("Displaying Manager List");
         return data.Items;
     } catch(err) {
         logger.error(err);
@@ -53,7 +53,29 @@ async function getManagers() {
     }
 }
 
+//Get all the tickets from the DB (Useful for Debugging Purposes)
+async function getTickets() {
+    allTickets = [];
+
+    const scanCommand = new ScanCommand({
+        TableName: 'FP_Ticket'
+    })
+
+    try {
+        const data = await documentClient.send(scanCommand);
+        for(let item of data.Items) {
+            allTickets.push(item);
+        }
+        allTickets.sort((a, b) => a.time_submitted.localeCompare(b.time_submitted));
+        return allTickets;
+    } catch(err) {
+        logger.error(err);
+        return false;
+    }
+}
+
 module.exports = {
     getEmployees: getEmployees,
-    getManagers: getManagers
+    getManagers: getManagers,
+    getTickets: getTickets
 }

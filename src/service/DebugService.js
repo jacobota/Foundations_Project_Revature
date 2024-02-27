@@ -8,7 +8,12 @@ async function getManagers() {
     return await dao.getManagers();
 }
 
+async function getAllTickets() {
+    return await dao.getTickets();
+}
+
 module.exports = {
     getEmployees,
-    getManagers
+    getManagers,
+    getAllTickets
 }

@@ -9,12 +9,34 @@ async function postEmployeeTicket(data) {
     //create a ticket object
     let uuid = v4();
 
+    //get the current time
+    const date = new Date();
+    let seconds, minutes, hours;
+    //check if there needs to be a 0 infront of a single digit
+    if(date.getSeconds() < 10) {
+        seconds = `0${date.getSeconds()}`
+    } else {
+        seconds = date.getSeconds();
+    }
+    if(date.getMinutes() < 10) {
+        minutes = `0${date.getMinutes()}`
+    } else {
+        minutes = date.getMinutes();
+    }
+    if(date.getHours() < 10) {
+        hours = `0${date.getHours()}`
+    } else {
+        hours = date.getHours();
+    }
+    const time = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${hours}:${minutes}:${seconds}`
+
     let newTicket = {
         ticket_id: uuid,
         description: data.description,
         amount: data.amount,
         employee_id: data.user_id,
         ticket_status: "Pending",
+        time_submitted: time,
         ticket_processed: false
     };
 
@@ -24,7 +46,7 @@ async function postEmployeeTicket(data) {
         return newTicket;
     }else {
         return false;
-    }     
+    } 
 }
 
 module.exports = {

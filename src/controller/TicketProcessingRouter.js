@@ -5,7 +5,7 @@ const { logger } = require("../util/logger");
 const router = express.Router();
 
 router.get('/', async(req,res) => {
-    res.json(await createQueueOfTickets());
+    //TODO
 })
 
 module.exports = router;

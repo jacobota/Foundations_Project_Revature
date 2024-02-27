@@ -1822,3 +1822,146 @@
 2024-02-27T00:47:25.286Z [info]: Retrieved Tickets from Dynamo
 2024-02-27T00:47:54.863Z [info]: Incoming GET: /viewMyTickets/
 2024-02-27T00:47:54.942Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T21:27:58.837Z [info]: Started the server on Port 3000
+2024-02-27T21:28:00.870Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T21:28:00.871Z [error]: No username or password entered.
+2024-02-27T21:28:08.167Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T21:28:08.981Z [error]: Account already exists
+2024-02-27T21:28:40.400Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T21:28:40.546Z [info]: Successfully added the account
+2024-02-27T21:28:48.556Z [info]: Incoming PUT: /user/login
+2024-02-27T21:29:16.427Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:29:16.606Z [info]: Successfully added the Ticket
+2024-02-27T21:29:26.173Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T21:29:29.539Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T21:29:29.586Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T21:39:22.408Z [info]: Started the server on Port 3000
+2024-02-27T21:39:27.408Z [info]: Incoming PUT: /user/login
+2024-02-27T21:39:31.100Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:39:44.611Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:39:44.782Z [info]: Successfully added the Ticket
+2024-02-27T21:40:06.944Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:40:06.993Z [info]: Successfully added the Ticket
+2024-02-27T21:40:26.046Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T21:40:26.190Z [info]: Successfully added the account
+2024-02-27T21:40:34.276Z [info]: Incoming PUT: /user/login
+2024-02-27T21:40:53.830Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:40:53.873Z [info]: Successfully added the Ticket
+2024-02-27T21:41:31.973Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:41:32.012Z [info]: Successfully added the Ticket
+2024-02-27T21:42:20.323Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:42:20.363Z [info]: Successfully added the Ticket
+2024-02-27T21:43:01.375Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:43:01.415Z [info]: Successfully added the Ticket
+2024-02-27T21:45:32.255Z [info]: Started the server on Port 3000
+2024-02-27T21:45:35.306Z [info]: Incoming PUT: /user/login
+2024-02-27T21:45:49.543Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:45:49.845Z [info]: Successfully added the Ticket
+2024-02-27T21:46:00.653Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:46:01.277Z [info]: Successfully added the Ticket
+2024-02-27T21:46:38.127Z [info]: Started the server on Port 3000
+2024-02-27T21:46:41.859Z [info]: Incoming PUT: /user/login
+2024-02-27T21:47:04.245Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:47:04.436Z [info]: Successfully added the Ticket
+2024-02-27T21:47:18.925Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:47:18.978Z [info]: Successfully added the Ticket
+2024-02-27T21:47:38.398Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:47:38.446Z [info]: Successfully added the Ticket
+2024-02-27T21:49:56.508Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:49:56.686Z [info]: Successfully added the Ticket
+2024-02-27T21:49:57.768Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:49:57.810Z [info]: Successfully added the Ticket
+2024-02-27T21:49:58.520Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T21:49:58.566Z [info]: Successfully added the Ticket
+2024-02-27T21:57:56.776Z [info]: Started the server on Port 3000
+2024-02-27T21:58:02.208Z [info]: Incoming PUT: /user/login
+2024-02-27T21:58:15.017Z [info]: Incoming PUT: /user/login
+2024-02-27T21:58:32.287Z [info]: Incoming GET: /view/ticketProcessing
+2024-02-27T21:59:26.476Z [info]: Started the server on Port 3000
+2024-02-27T21:59:29.206Z [info]: Incoming GET: /view/ticketProcessing
+2024-02-27T21:59:44.564Z [info]: Incoming PUT: /user/login
+2024-02-27T21:59:55.654Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T21:59:55.869Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T22:00:13.428Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:00:13.473Z [info]: Successfully added the Ticket
+2024-02-27T22:00:16.559Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T22:00:16.608Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T22:02:41.764Z [info]: Started the server on Port 3000
+2024-02-27T22:02:53.614Z [info]: Incoming PUT: /user/login
+2024-02-27T22:03:05.536Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:03:05.729Z [info]: Successfully added the Ticket
+2024-02-27T22:03:13.106Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:03:13.158Z [info]: Successfully added the Ticket
+2024-02-27T22:03:22.125Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T22:03:22.169Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T22:03:37.603Z [info]: Incoming GET: /view/ticketProcessing
+2024-02-27T22:06:12.225Z [info]: Incoming GET: /ticketList
+2024-02-27T22:06:41.723Z [info]: Incoming GET: /viewMyTickets/
+2024-02-27T22:06:42.697Z [info]: Retrieved Tickets from Dynamo
+2024-02-27T22:06:53.817Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:06:53.819Z [info]: Displaying Tickets
+2024-02-27T22:06:53.822Z [error]: data.Items is not iterable
+2024-02-27T22:07:18.604Z [info]: Started the server on Port 3000
+2024-02-27T22:07:21.515Z [info]: Incoming PUT: /user/login
+2024-02-27T22:07:33.525Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:07:33.528Z [info]: Displaying Tickets
+2024-02-27T22:09:37.774Z [info]: Started the server on Port 3000
+2024-02-27T22:09:45.005Z [info]: Incoming PUT: /user/login
+2024-02-27T22:09:54.226Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:09:54.229Z [info]: Displaying Tickets
+2024-02-27T22:10:58.154Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:10:58.156Z [info]: Displaying Tickets
+2024-02-27T22:11:37.826Z [info]: Started the server on Port 3000
+2024-02-27T22:11:40.455Z [info]: Incoming PUT: /user/login
+2024-02-27T22:11:49.759Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:12:17.977Z [info]: Started the server on Port 3000
+2024-02-27T22:12:20.495Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:12:20.498Z [info]: Displaying Tickets
+2024-02-27T22:12:44.227Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:12:44.229Z [info]: Displaying Tickets
+2024-02-27T22:13:21.339Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:13:21.390Z [info]: Successfully added the Ticket
+2024-02-27T22:13:24.883Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:13:24.884Z [info]: Displaying Tickets
+2024-02-27T22:13:35.375Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:13:35.415Z [info]: Successfully added the Ticket
+2024-02-27T22:13:37.334Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:13:37.335Z [info]: Displaying Tickets
+2024-02-27T22:13:56.771Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:13:56.773Z [info]: Displaying Tickets
+2024-02-27T22:15:28.232Z [info]: Started the server on Port 3000
+2024-02-27T22:15:32.221Z [info]: Incoming PUT: /user/login
+2024-02-27T22:15:45.723Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:15:45.728Z [info]: Displaying Tickets
+2024-02-27T22:15:59.087Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:15:59.137Z [info]: Successfully added the Ticket
+2024-02-27T22:16:02.380Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:16:02.381Z [info]: Displaying Tickets
+2024-02-27T22:16:18.295Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:16:18.342Z [info]: Successfully added the Ticket
+2024-02-27T22:16:20.585Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:16:20.587Z [info]: Displaying Tickets
+2024-02-27T22:16:25.905Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:16:25.950Z [info]: Successfully added the Ticket
+2024-02-27T22:16:27.917Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:16:27.918Z [info]: Displaying Tickets
+2024-02-27T22:16:45.379Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:16:45.464Z [info]: Successfully added the Ticket
+2024-02-27T22:16:47.630Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:16:47.631Z [info]: Displaying Tickets
+2024-02-27T22:17:01.344Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:17:01.397Z [info]: Successfully added the Ticket
+2024-02-27T22:17:05.211Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:17:05.212Z [info]: Displaying Tickets
+2024-02-27T22:17:32.350Z [info]: Started the server on Port 3000
+2024-02-27T22:17:36.940Z [info]: Incoming PUT: /user/login
+2024-02-27T22:17:47.298Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:17:47.301Z [info]: Displaying Tickets
+2024-02-27T22:23:47.728Z [info]: Started the server on Port 3000
+2024-02-27T22:23:50.320Z [info]: Incoming PUT: /user/login
+2024-02-27T22:24:00.201Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:24:00.204Z [info]: Displaying Tickets
+2024-02-27T22:24:15.850Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T22:24:16.038Z [info]: Successfully added the Ticket
+2024-02-27T22:24:18.562Z [info]: Incoming GET: /view/ticketList
+2024-02-27T22:24:18.564Z [info]: Displaying Tickets

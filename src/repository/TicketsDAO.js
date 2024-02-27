@@ -2,7 +2,6 @@ const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { fromIni } = require('@aws-sdk/credential-provider-ini');
 const { DynamoDBDocumentClient, PutCommand, ScanCommand, UpdateCommand } = require('@aws-sdk/lib-dynamodb');
 const { logger } = require('../util/logger');
-const { currentUser } = require('./UsersDAO');
 
 const client = new DynamoDBClient({
     region: "us-west-1",
@@ -12,6 +11,9 @@ const client = new DynamoDBClient({
 const documentClient = DynamoDBDocumentClient.from(client);
 
 const TableName = "FP_Ticket";
+
+//array to hold the list of tickets
+let ticketsToBeProcessed = [];
 
 // CREATE
 // function to post a ticket to the FP_Ticket table
@@ -33,6 +35,7 @@ async function postTicket(Item) {
 // READ 
 // function to get all tickets that have yet to be processed and put them in a queue
 async function createQueueOfTickets() {
+    ticketsToBeProcessed = [];
     // this scan command gets every ticket that has not been processed yet
     const command = new ScanCommand({
         TableName,
@@ -46,10 +49,15 @@ async function createQueueOfTickets() {
     })
 
     try {
-        const data = documentClient.send(command);
-        return data;
+        const data = await documentClient.send(command);
+        for(let item of data.Items) {
+            ticketsToBeProcessed.push(item);
+        }
+        ticketsToBeProcessed.sort((a, b) => a.time_submitted.localeCompare(b.time_submitted));
+        return ticketsToBeProcessed;
     } catch(err) {
-        return err;
+        logger.error(err);
+        return false;
     }
 }
 
