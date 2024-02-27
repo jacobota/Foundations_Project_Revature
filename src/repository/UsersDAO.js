@@ -8,8 +8,6 @@ const client = new DynamoDBClient({
     credentials: fromIni({profile: "user1"})
 });
 
-const currentUser = [];
-
 //getting the documentClient
 const documentClient = DynamoDBDocumentClient.from(client);
 
@@ -78,80 +76,39 @@ async function getUserByUsername(username) {
     }
 }
 
-// UPDATE Helper Function for Login which will set user as logged in
-async function helperLogin(data) {
-    //update command to update the value of LoggedIn
-    const command = new UpdateCommand({
-        TableName: 'FP_Users',
-        Key: {'user_id' : data.user_id},
-        UpdateExpression: "SET loggedIn = :val",
-        ExpressionAttributeValues: {
-            ':val' : true
-        }
-    })
-
-    try {
-        await documentClient.send(command);
-        setCurrentUser(data);
-    } catch (err) {
-        logger.error(err);
-    }
-}
-
-// Helper Function to set the currentUser to the new logged in user
-async function setCurrentUser(data) {
-    await logoutUser();
-    const command = new QueryCommand({
-        TableName: 'FP_Users',
-        KeyConditionExpression: 'user_id = :user_ID',
-        ExpressionAttributeValues: {
-            ':user_ID' : data.user_id
-        }
-    });
-
-    try {
-        const result = await documentClient.send(command);
-        currentUser[0] = result.Items[0];
-    } catch(err) {
-        logger.error(err);
-    }
-}
-
 //OPTIONAL 
 //Logout the current user
 //Added this feature because I don't want two users to be logged in at the same time
-async function logoutUser() {
-    if(currentUser.length == 0) {
-        logger.error("No user has been logged in yet!");
-        return false;
-    }
-    else {
-        //update command to update the value of LoggedIn
-        const command = new UpdateCommand({
-            TableName: 'FP_Users',
-            Key: {'user_id' : currentUser[0].user_id},
-            UpdateExpression: "SET loggedIn = :val",
-            ExpressionAttributeValues: {
-                ':val' : false
-            }
-        })
+// async function logoutUser() {
+//     if(currentUser.length == 0) {
+//         logger.error("No user has been logged in yet!");
+//         return false;
+//     }
+//     else {
+//         //update command to update the value of LoggedIn
+//         const command = new UpdateCommand({
+//             TableName: 'FP_Users',
+//             Key: {'user_id' : currentUser[0].user_id},
+//             UpdateExpression: "SET loggedIn = :val",
+//             ExpressionAttributeValues: {
+//                 ':val' : false
+//             }
+//         })
 
-        try {
-            await documentClient.send(command);
-            currentUser.pop();
-            return true;
-        } catch(err) {
-            logger.error(err);
-            return false;
-        }
-    }
-}
+//         try {
+//             await documentClient.send(command);
+//             currentUser.pop();
+//             return true;
+//         } catch(err) {
+//             logger.error(err);
+//             return false;
+//         }
+//     }
+// }
 
 module.exports = {
     checkUsername: checkUsername,
     registerUser: registerUser,
-    helperLogin: helperLogin,
     //logoutUser: logoutUser,
     getUserByUsername: getUserByUsername,
-    currentUser: currentUser
 }

@@ -3,7 +3,7 @@ const express = require('express');
 const { logger } = require("../util/logger");
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const { getLoginUser, setLoggedIn } = require('../service/Registration_LoginService');
+const { getLoginUser } = require('../service/Registration_LoginService');
 const router = express.Router();
 
 const secretKey = 'employee-aws-secret-key';
@@ -38,7 +38,6 @@ router.put('/login', async (req, res) => {
                     expiresIn: "10m"
                 }
                 );
-                await setLoggedIn(getUser);
                 res.json(
                 {
                     message: `${getUser.username} successfully logged in!`,
@@ -55,8 +54,64 @@ router.put('/login', async (req, res) => {
 });
 
 // Functions for employee and manager authorization to work with other files and their permissions
+function authenticateEmployeeToken(req, res, next) {
+    const authHeader = req.headers["authorization"];
+    const token = authHeader && authHeader.split(" ")[1];
 
+    if(!token) {
+        res.status(401).json({message: "Unauthorized Access"});
+    }
+
+    jwt.verify(token, secretKey, (err,user) => {
+        if(err || user.userRole !== "Employee") {
+            res.status(403).json({message: "User needs to be an Employee to access"});
+            return;
+        }
+        req.user = user;
+        next();
+    })
+}
+
+function authenticateManagerToken(req, res, next) {
+    const authHeader = req.headers["authorization"];
+    const token = authHeader && authHeader.split(" ")[1];
+
+    if(!token) {
+        res.status(401).json({message: "Unauthorized Access"});
+    }
+
+    jwt.verify(token, secretKey, (err,user) => {
+        if(err || user.userRole !== "Manager") {
+            res.status(403).json({message: "User needs to be a Manager to Access"});
+            return;
+        }
+        req.user = user;
+        next();
+    })
+}
+
+//This function is mainly for the logout function so any user can logout
+function authenticateToken(req, res, next) {
+    const authHeader = req.headers["authorization"];
+    const token = authHeader && authHeader.split(" ")[1];
+
+    if(!token) {
+        res.status(401).json({message: "Please Login to Access"});
+    }
+
+    jwt.verify(token, secretKey, (err,user) => {
+        if(err) {
+            res.status(403).json({message: "Please Login to Access"});
+            return;
+        }
+        req.user = user;
+        next();
+    })
+}
 
 module.exports = {
-    router
+    router,
+    authenticateEmployeeToken,
+    authenticateManagerToken,
+    authenticateToken
 };

@@ -2,6 +2,7 @@
 const express = require('express');
 const { logger } = require("../util/logger");
 const { postEmployeeTicket } = require('../service/TicketSubmissionService');
+const { authenticateEmployeeToken } = require('./LoginRouter');
 
 const router = express.Router();
 
@@ -10,8 +11,10 @@ const router = express.Router();
 // ========= Ticket Submission Feature =========
 
 //POST Request: Ticket Submission
-router.post('/postTicket', async (req, res) => {
+router.post('/postTicket', authenticateEmployeeToken, async (req, res) => {
     const data = req.body;
+    const user = req.user;
+    data.user_id = user.user_id;
     //Check if user did not enter a username or password
     if(!data.amount || !data.description) {
         logger.error("No amount or description entered.");
@@ -20,7 +23,11 @@ router.post('/postTicket', async (req, res) => {
     else {
         let postTicket = await postEmployeeTicket(data);
         if(postTicket) {
-            res.json(`Successfully posted your Ticket`);
+            res.json({
+                message: "Successfully Posted Reimbursement Ticket",
+                user: `Sent By: ${user.username}`,
+                ticket: postTicket
+            });
         } else {
             res.json(`Failure to post your Ticket`);
         }

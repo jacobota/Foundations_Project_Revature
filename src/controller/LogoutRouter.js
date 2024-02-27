@@ -9,6 +9,8 @@ const router = express.Router();
 
 // ========= Logout Feature =========
 
+//TODO verify they are logged in to logout
+
 // OPTIONAL
 // PUT Request: User Logout
 router.put('/logout', async (req, res) => {

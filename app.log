@@ -1701,3 +1701,88 @@
 2024-02-26T23:12:48.904Z [info]: Incoming PUT: /user/login
 2024-02-26T23:12:57.442Z [info]: Incoming GET: /view/currentUser
 2024-02-26T23:12:57.443Z [info]: Displaying Current User
+2024-02-26T23:43:16.625Z [info]: Started the server on Port 3000
+2024-02-26T23:43:22.726Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T23:43:23.048Z [error]: Account already exists
+2024-02-26T23:43:57.150Z [info]: Incoming POST: /register/employeeRegister
+2024-02-26T23:43:57.359Z [info]: Successfully added the account
+2024-02-26T23:43:59.605Z [info]: Incoming POST: /register/managerRegister
+2024-02-26T23:43:59.749Z [info]: Successfully added the account
+2024-02-26T23:44:05.377Z [info]: Incoming PUT: /user/login
+2024-02-26T23:44:05.656Z [error]: No user has been logged in yet!
+2024-02-26T23:44:27.924Z [info]: Incoming GET: /view/currentUser
+2024-02-26T23:44:27.925Z [info]: Displaying Current User
+2024-02-26T23:44:43.945Z [info]: Incoming PUT: /user/login
+2024-02-26T23:45:03.279Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-26T23:45:03.479Z [info]: Successfully added the Ticket
+2024-02-26T23:45:22.744Z [info]: Incoming PUT: /user/login
+2024-02-26T23:45:39.194Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-26T23:45:46.749Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-26T23:47:50.975Z [info]: Started the server on Port 3000
+2024-02-26T23:47:56.106Z [info]: Incoming PUT: /user/login
+2024-02-26T23:47:56.473Z [error]: No user has been logged in yet!
+2024-02-26T23:48:05.602Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-26T23:48:13.983Z [info]: Incoming PUT: /user/login
+2024-02-26T23:48:25.876Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-26T23:48:26.086Z [info]: Successfully added the Ticket
+2024-02-26T23:56:37.079Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-26T23:56:37.459Z [info]: Successfully added the Ticket
+2024-02-26T23:56:46.583Z [info]: Incoming GET: /view/ticketProcessing
+2024-02-26T23:57:31.746Z [info]: Incoming GET: /view/employeeList
+2024-02-26T23:57:31.746Z [info]: Displaying Employees
+2024-02-26T23:57:32.521Z [info]: Displaying Employee List
+2024-02-26T23:57:36.672Z [info]: Incoming GET: /view/ticketProcessing
+2024-02-27T00:01:00.728Z [info]: Started the server on Port 3000
+2024-02-27T00:01:05.026Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:01:10.770Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T00:01:11.139Z [info]: Successfully added the account
+2024-02-27T00:01:13.790Z [info]: Incoming PUT: /user/login
+2024-02-27T00:01:13.949Z [error]: No user has been logged in yet!
+2024-02-27T00:01:25.086Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:01:25.625Z [info]: Successfully added the Ticket
+2024-02-27T00:02:01.122Z [info]: Started the server on Port 3000
+2024-02-27T00:02:02.497Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:04:01.279Z [info]: Started the server on Port 3000
+2024-02-27T00:04:05.454Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:04:43.969Z [info]: Started the server on Port 3000
+2024-02-27T00:04:45.504Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:04:45.991Z [info]: Successfully added the Ticket
+2024-02-27T00:05:45.680Z [info]: Started the server on Port 3000
+2024-02-27T00:05:47.181Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:05:48.691Z [info]: Successfully added the Ticket
+2024-02-27T00:16:24.132Z [info]: Started the server on Port 3000
+2024-02-27T00:16:26.700Z [info]: Incoming GET: /view/ticketProcessing
+2024-02-27T00:16:47.899Z [info]: Incoming GET: /view/employeeList
+2024-02-27T00:17:17.329Z [info]: Incoming GET: /view/employeeList?Authorization=Bearer
+2024-02-27T00:17:28.223Z [info]: Started the server on Port 3000
+2024-02-27T00:17:30.218Z [info]: Incoming GET: /view/employeeList?Authorization=Bearer
+2024-02-27T00:17:42.872Z [info]: Incoming PUT: /user/login
+2024-02-27T00:17:50.220Z [info]: Started the server on Port 3000
+2024-02-27T00:18:04.147Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T00:18:04.487Z [info]: Successfully added the account
+2024-02-27T00:18:12.322Z [info]: Incoming POST: /register/managerRegister
+2024-02-27T00:18:12.461Z [info]: Successfully added the account
+2024-02-27T00:18:15.350Z [info]: Incoming PUT: /user/login
+2024-02-27T00:19:18.119Z [info]: Started the server on Port 3000
+2024-02-27T00:19:22.918Z [info]: Incoming PUT: /user/login
+2024-02-27T00:19:34.996Z [info]: Incoming GET: /view/employeeList?Authorization=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTJhMjcxNWYtZDFkMi00NjM5LTg0MWEtNTgyZjFjMGRjYjBkIiwidXNlcm5hbWUiOiJKYWNvYiIsInBhc3N3b3JkIjoiJDJiJDEwJDRVM2xuM0V6Y3FEcWxNRnR0LlBrdmUzMXk3RW82bnlwamh5WUFDTm50TWcxYmVNcUlZc1EyIiwidXNlclJvbGUiOiJFbXBsb3llZSIsImlhdCI6MTcwODk5MzE2MywiZXhwIjoxNzA4OTkzNzYzfQ.yDyl9bdTSdzimieeCFULHQ5cmch-05_FZ7CgpZ-Og_M
+2024-02-27T00:20:18.802Z [info]: Incoming GET: /view/employeeList
+2024-02-27T00:20:18.805Z [info]: Displaying Employees
+2024-02-27T00:20:19.016Z [info]: Displaying Employee List
+2024-02-27T00:20:29.611Z [info]: Incoming POST: /register/employeeRegister
+2024-02-27T00:20:29.970Z [info]: Successfully added the account
+2024-02-27T00:20:33.316Z [info]: Incoming GET: /view/employeeList
+2024-02-27T00:20:33.318Z [info]: Displaying Employees
+2024-02-27T00:20:33.515Z [info]: Displaying Employee List
+2024-02-27T00:20:42.569Z [info]: Incoming PUT: /user/login
+2024-02-27T00:20:59.059Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-27T00:20:59.248Z [info]: Successfully added the Ticket
+2024-02-27T00:21:06.083Z [info]: Incoming GET: /view/employeeList
+2024-02-27T00:21:06.085Z [info]: Displaying Employees
+2024-02-27T00:21:06.136Z [info]: Displaying Employee List
+2024-02-27T00:22:14.584Z [info]: Started the server on Port 3000
+2024-02-27T00:22:33.014Z [info]: Incoming GET: /view/currentUser
+2024-02-27T00:22:33.018Z [info]: Displaying Current User
+2024-02-27T00:22:47.354Z [info]: Incoming PUT: /user/login
+2024-02-27T00:22:57.090Z [info]: Incoming GET: /view/currentUser
+2024-02-27T00:22:57.092Z [info]: Displaying Current User

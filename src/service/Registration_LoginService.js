@@ -18,8 +18,7 @@ async function registerEmployeeAccount(data) {
             user_id: uuid,
             username: data.username,
             password: data.password,
-            userRole: "Employee",
-            loggedIn: false
+            userRole: "Employee"
         };
 
         //push that employee item
@@ -48,8 +47,7 @@ async function registerEmployeeAccount(data) {
             user_id: uuid,
             username: data.username,
             password: data.password,
-            userRole: "Manager",
-            loggedIn: false
+            userRole: "Manager"
         };
 
         //push that manager item
@@ -73,11 +71,6 @@ async function getLoginUser(username) {
     }
 }
 
-//switch the user to loggedIn = true
-async function setLoggedIn(data) {
-    await dao.helperLogin(data);
-}
-
 //OPTIONAL 
 //Logout Function
 // async function logoutUser() {
@@ -96,6 +89,5 @@ module.exports = {
     registerEmployeeAccount: registerEmployeeAccount,
     registerManagerAccount: registerManagerAccount,
     //logoutUser: logoutUser,
-    getLoginUser: getLoginUser,
-    setLoggedIn: setLoggedIn
+    getLoginUser: getLoginUser
 }
