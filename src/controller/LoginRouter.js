@@ -35,7 +35,7 @@ router.put('/login', async (req, res) => {
                 },
                 secretKey,
                 {
-                    expiresIn: "10m"
+                    expiresIn: "30m"
                 }
                 );
                 res.status(200).json(

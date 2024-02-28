@@ -145,6 +145,7 @@ async function getTicket(ticket) {
 // READ
 // function to get past employee tickets they submitted
 async function viewPrevTickets(user_id) {
+    let userTickets = [];
     // command to get all tickets submitted by an employee
     const command = new ScanCommand({
         TableName,
@@ -161,11 +162,11 @@ async function viewPrevTickets(user_id) {
         const data = await documentClient.send(command);
         //push the tickets and then sort them with .sort(a,b) method
         for(let item of data.Items) {
-            ticketsToBeProcessed.push(item);
+            userTickets.push(item);
         }
-        ticketsToBeProcessed.sort((a, b) => a.time_submitted.localeCompare(b.time_submitted));
+        userTickets.sort((a, b) => a.time_submitted.localeCompare(b.time_submitted));
         logger.info("Retrieved Tickets from Dynamo");
-        return data.Items;
+        return userTickets;
     } catch(err) {
         logger.error(err);
         return false;

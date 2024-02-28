@@ -10,6 +10,7 @@ const mockTicket = {
 
 //Test suite to test employees posting tickets
 describe('Post a Ticket Test', () => {
+    //test to see if the ticket was passed successfully
     test('Successfully Post a Ticket', async () => {
         //Assign: Mock the dao postTicket method to return the mockTicket
         dao.postTicket.mockResolvedValue(mockTicket);
@@ -26,6 +27,7 @@ describe('Post a Ticket Test', () => {
         expect(result.ticket_status).toBe("Pending");
     })
 
+    //test to see if the post in the dao returned false
     test('Failure to Post a Ticket', async () => {
         //Assign: Mock the dao postTicket method to return false
         dao.postTicket.mockResolvedValue(false);
