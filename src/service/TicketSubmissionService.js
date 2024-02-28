@@ -1,5 +1,4 @@
 const { postTicket } = require('../repository/TicketsDAO');
-const { logger } = require('../util/logger');
 const { v4 } = require('uuid');
 //get the current user to validate the user can send tickets
 
@@ -42,7 +41,6 @@ async function postEmployeeTicket(data) {
 
     //push that employee item
     if(await postTicket(newTicket)) {
-        logger.info("Successfully added the Ticket");
         return newTicket;
     }else {
         return false;

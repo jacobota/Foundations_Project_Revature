@@ -1,6 +1,6 @@
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { fromIni } = require('@aws-sdk/credential-provider-ini');
-const { DynamoDBDocumentClient, PutCommand, QueryCommand, UpdateCommand } = require('@aws-sdk/lib-dynamodb');
+const { DynamoDBDocumentClient, PutCommand, QueryCommand } = require('@aws-sdk/lib-dynamodb');
 const { logger } = require('../util/logger');
 
 const client = new DynamoDBClient({
@@ -29,8 +29,15 @@ async function checkUsername(username) {
 
     try {
         const data = await documentClient.send(command);
+        logger.info('Queried for username');
         //return true if there does exist account with same username
-        return data.Count > 0;
+        if(data.Count > 0) {
+            logger.warn("Username Already Exists");
+            return true;
+        }else {
+            logger.info("Username does not Exist in DB");
+            return false;
+        }
     } catch(err) {
         logger.error(err);
         return false;
@@ -48,6 +55,7 @@ async function registerUser(item) {
 
     try {
         await documentClient.send(command);
+        logger.info("Successfully registered User");
         return true;
     } catch (err) {
         logger.error(err);
@@ -69,6 +77,7 @@ async function getUserByUsername(username) {
 
     try {
         const user = await documentClient.send(command);
+        logger.info("Retrived User by Username");
         return user.Items[0];
     }catch(err) {
         logger.error(err);

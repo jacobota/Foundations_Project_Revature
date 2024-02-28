@@ -25,6 +25,7 @@ async function postTicket(Item) {
 
     try {
         await documentClient.send(command);
+        logger.info("Successfully added the Ticket");
         return true;
     } catch(err) {
         logger.error(err);
@@ -55,6 +56,7 @@ async function createQueueOfTickets() {
             ticketsToBeProcessed.push(item);
         }
         ticketsToBeProcessed.sort((a, b) => a.time_submitted.localeCompare(b.time_submitted));
+        logger.info("Tickets Received and Sorted by Time");
         return ticketsToBeProcessed;
     } catch(err) {
         logger.error(err);
@@ -81,6 +83,7 @@ async function approveTicketDAO() {
 
     try {
         await documentClient.send(command);
+        logger.info('Approved Ticket!');
         const data = await getTicket(ticket);
         return data;
     }catch(err) {
@@ -109,6 +112,7 @@ async function denyTicketDAO() {
 
     try {
         await documentClient.send(command);
+        logger.info("Denied Ticket!");
         const data = await getTicket(ticket);
         return data;
     }catch(err) {
@@ -129,6 +133,7 @@ async function getTicket(ticket) {
 
     try {
         const data = await documentClient.send(command);
+        logger.info("Get ticket");
         return data.Item;
     }catch(err) {
         logger.error(err);
@@ -154,7 +159,7 @@ async function viewPrevTickets(user_id) {
 
     try {
         const data = await documentClient.send(command);
-        logger.info("Retrieved Tickets from Dynamo")
+        logger.info("Retrieved Tickets from Dynamo");
         return data.Items;
     } catch(err) {
         logger.error(err);

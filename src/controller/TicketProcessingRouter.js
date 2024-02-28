@@ -1,6 +1,5 @@
 //imports
 const express = require('express');
-const { logger } = require("../util/logger");
 const service = require('../service/TicketProcessingService');
 const { authenticateManagerToken } = require('./LoginRouter');
 
@@ -10,7 +9,6 @@ const router = express.Router();
 router.get('/', authenticateManagerToken,  async(req,res) => {
     const data = await service.getAllUnprocTickets();
     if(data) {
-        logger.info('Displaying all Unprocessed Tickets');
         res.json({
             message: "Here are all the unprocessed tickets",
             tickets: data
@@ -22,6 +20,7 @@ router.get('/', authenticateManagerToken,  async(req,res) => {
 
 //Approve a ticket
 router.put('/approveTicket', authenticateManagerToken, async(req,res) => {
+    const manager = req.user;
     //call the getallUnprocTickets to get most updated list
     await service.getAllUnprocTickets();
     //call the approve function in order to approve the first message in the array
@@ -29,6 +28,7 @@ router.put('/approveTicket', authenticateManagerToken, async(req,res) => {
     //call the getAllUnprocTickets again to get the new list
     const ticketsLeft = await service.getAllUnprocTickets();
     res.json({
+        approved_by: manager.username,
         ticket_approved: data,
         tickets_in_queue: ticketsLeft
     })
@@ -36,6 +36,7 @@ router.put('/approveTicket', authenticateManagerToken, async(req,res) => {
 
 //Deny a ticket
 router.put('/denyTicket', authenticateManagerToken, async(req,res) => {
+    const manager = req.user;
     //call the getallUnprocTickets to get most updated list
     await service.getAllUnprocTickets();
     //call the approve function in order to approve the first message in the array
@@ -43,6 +44,7 @@ router.put('/denyTicket', authenticateManagerToken, async(req,res) => {
     //call the getAllUnprocTickets again to get the new list
     const ticketsLeft = await service.getAllUnprocTickets();
     res.json({
+        denied_by: manager.username,
         ticket_approved: data,
         tickets_in_queue: ticketsLeft
     })

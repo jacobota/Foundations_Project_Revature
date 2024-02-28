@@ -1,5 +1,4 @@
 const { createQueueOfTickets, approveTicketDAO, denyTicketDAO } = require('../repository/TicketsDAO');
-const { logger } = require('../util/logger');
 
 //Function to get all unprocessed tickets
 //Will call this function before and after approve/deny calls to get most updated list

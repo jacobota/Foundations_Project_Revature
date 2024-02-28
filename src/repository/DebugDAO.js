@@ -26,6 +26,7 @@ async function getEmployees() {
 
     try {
         const data = await documentClient.send(scanCommand);
+        logger.info("Retrieved all Employees in DB");
         return data.Items;
     } catch(err) {
         logger.error(err);
@@ -46,6 +47,7 @@ async function getManagers() {
 
     try {
         const data = await documentClient.send(scanCommand);
+        logger.info("Retrieved all Managers in DB");
         return data.Items;
     } catch(err) {
         logger.error(err);
@@ -68,6 +70,7 @@ async function getTickets() {
             allTickets.push(item);
         }
         allTickets.sort((a, b) => a.time_submitted.localeCompare(b.time_submitted));
+        logger.info("Tickets Received and Sorted by Time");
         return allTickets;
     } catch(err) {
         logger.error(err);
