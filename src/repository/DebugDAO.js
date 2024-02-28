@@ -30,7 +30,7 @@ async function getEmployees() {
         return data.Items;
     } catch(err) {
         logger.error(err);
-        return err;
+        return false;
     }
 }
 
@@ -51,7 +51,7 @@ async function getManagers() {
         return data.Items;
     } catch(err) {
         logger.error(err);
-        return err;
+        return false;
     }
 }
 

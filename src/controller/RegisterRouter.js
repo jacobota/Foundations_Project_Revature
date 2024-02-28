@@ -19,16 +19,16 @@ router.post('/employeeRegister', async (req, res) => {
     //Check if user did not enter a username or password
     if(!data.username || !data.password) {
         logger.error("No username or password entered.");
-        res.json(`Please Enter a Username and/or Password`);
+        res.status(400).json({message: `Please Enter a Username and/or Password`});
     }
     else {
         data.password = await bcrypt.hash(data.password, saltRounds);
 
         let registeredAccount = await registerEmployeeAccount(data);
         if(registeredAccount) {
-            res.json(`Successfully registered ${data.username}`);
+            res.status(201).json({message: `Successfully registered ${data.username}`});
         } else {
-            res.json(`Failure to register: Username: ${data.username} is unavailable!`);
+            res.status(404).json({message: `Failure to register: Username: ${data.username} is unavailable!`});
         }
     }
 });
@@ -39,15 +39,15 @@ router.post('/managerRegister', async (req, res) => {
     //Check if user did not enter a username or password
     if(!data.username || !data.password) {
         logger.error("No username or password entered.");
-        res.json(`Please Enter a Username and/or Password`);
+        res.status(400).json({message: `Please Enter a Username and/or Password`});
     } else {
         data.password = await bcrypt.hash(data.password, saltRounds);
 
         let registeredAccount = await registerManagerAccount(data);
         if(registeredAccount) {
-            res.json(`Successfully registered ${data.username}`);
+            res.status(201).json({message: `Successfully registered ${data.username}`});
         } else {
-            res.json(`Failure to register: Username: ${data.username} is unavailable!`);
+            res.status(404).json({message: `Failure to register: Username: ${data.username} is unavailable!`});
         }
     }
 });

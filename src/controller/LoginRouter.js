@@ -19,7 +19,7 @@ router.put('/login', async (req, res) => {
     //Check if user did not enter a username or password
     if(!data.username || !data.password) {
         logger.error("No username or password entered.");
-        res.json(`Please Enter a Username and/or Password`);
+        res.status(400).json({message: `Please Enter a Username and/or Password`});
     } else {
         //get the user by username
         const getUser = await getLoginUser(data.username);
@@ -38,17 +38,17 @@ router.put('/login', async (req, res) => {
                     expiresIn: "10m"
                 }
                 );
-                res.json(
+                res.status(200).json(
                 {
                     message: `${getUser.username} successfully logged in!`,
                     role: getUser.userRole,
                     jwtToken: token
                 });
             } else {
-                res.json(`Unsuccessful Login. Try Again!`);
+                res.status(404).json({message: `Unsuccessful Login. Try Again!`});
             }
         } else {
-            res.json(`User not in Database!`);
+            res.status(404).json({message: `User not in Database!`});
         }
     }
 });

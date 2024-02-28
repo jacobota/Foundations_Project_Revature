@@ -9,12 +9,12 @@ const router = express.Router();
 router.get('/', authenticateManagerToken,  async(req,res) => {
     const data = await service.getAllUnprocTickets();
     if(data) {
-        res.json({
+        res.status(200).json({
             message: "Here are all the unprocessed tickets",
             tickets: data
         })
     } else {
-        res.json({message: "Unable to get tickets"})
+        res.status(404).json({message: "Unable to get tickets"})
     }
 })
 
@@ -25,13 +25,17 @@ router.put('/approveTicket', authenticateManagerToken, async(req,res) => {
     await service.getAllUnprocTickets();
     //call the approve function in order to approve the first message in the array
     const data = await service.approveTicket();
-    //call the getAllUnprocTickets again to get the new list
-    const ticketsLeft = await service.getAllUnprocTickets();
-    res.json({
-        approved_by: manager.username,
-        ticket_approved: data,
-        tickets_in_queue: ticketsLeft
-    })
+    if(data) {
+        //call the getAllUnprocTickets again to get the new list
+        const ticketsLeft = await service.getAllUnprocTickets();
+        res.status(200).json({
+            approved_by: manager.username,
+            ticket_approved: data,
+            tickets_in_queue: ticketsLeft
+        })
+    } else {
+        res.status(404).json({message: "Unable to approve next ticket"});
+    }
 })
 
 //Deny a ticket
@@ -41,13 +45,17 @@ router.put('/denyTicket', authenticateManagerToken, async(req,res) => {
     await service.getAllUnprocTickets();
     //call the approve function in order to approve the first message in the array
     const data = await service.denyTicket();
-    //call the getAllUnprocTickets again to get the new list
-    const ticketsLeft = await service.getAllUnprocTickets();
-    res.json({
-        denied_by: manager.username,
-        ticket_approved: data,
-        tickets_in_queue: ticketsLeft
-    })
+    if(data) {
+        //call the getAllUnprocTickets again to get the new list
+        const ticketsLeft = await service.getAllUnprocTickets();
+        res.status(200).json({
+            denied_by: manager.username,
+            ticket_approved: data,
+            tickets_in_queue: ticketsLeft
+        })
+    } else {
+        res.status(404).json({message: "Unable to deny next ticket"});
+    }
 })
 
 module.exports = router;
