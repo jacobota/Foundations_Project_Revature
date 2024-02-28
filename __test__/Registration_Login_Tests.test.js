@@ -1,4 +1,4 @@
-const { registerEmployeeAccount, registerManagerAccount, loginUser, logoutUser } = require('../src/service/Registration_LoginService');
+const { registerEmployeeAccount, registerManagerAccount, getLoginUser } = require('../src/service/Registration_LoginService');
 const dao = require('../src/repository/UsersDAO');
 
 jest.mock('../src/repository/UsersDAO');
@@ -93,23 +93,23 @@ describe('Register Users Tests', () => {
 describe('Login User Tests', () => {
     //Login with account created by above tests
     test('Login a User', async () => {
-        //Assign: Mock the login feature to return true
-        dao.loginUser.mockResolvedValue(true);
+        //Assign: Mock the login feature to return a mocked user account
+        dao.getUserByUsername.mockResolvedValue(testData);
 
         //Act: Call the loginUser function
-        const result = await loginUser(testData);
+        const result = await getLoginUser(testData);
 
         //Assert: Should return true since mock value of login user indicates it passed
-        expect(result).toBeTruthy();
+        expect(result).toBe(testData);
     });
 
     //Failure to login a user
     test('Failure to Login a User', async () => {
         //Assign: Mock the login feature to return false
-        dao.loginUser.mockResolvedValue(false);
+        dao.getUserByUsername.mockResolvedValue(false);
 
         //Act: Call the loginUser function
-        const result = await loginUser(testData);
+        const result = await getLoginUser(testData);
 
         //Assert: Should return false since mock of login user indicates false
         expect(result).toBeFalsy();
