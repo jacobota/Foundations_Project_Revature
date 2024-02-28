@@ -76,39 +76,8 @@ async function getUserByUsername(username) {
     }
 }
 
-//OPTIONAL 
-//Logout the current user
-//Added this feature because I don't want two users to be logged in at the same time
-// async function logoutUser() {
-//     if(currentUser.length == 0) {
-//         logger.error("No user has been logged in yet!");
-//         return false;
-//     }
-//     else {
-//         //update command to update the value of LoggedIn
-//         const command = new UpdateCommand({
-//             TableName: 'FP_Users',
-//             Key: {'user_id' : currentUser[0].user_id},
-//             UpdateExpression: "SET loggedIn = :val",
-//             ExpressionAttributeValues: {
-//                 ':val' : false
-//             }
-//         })
-
-//         try {
-//             await documentClient.send(command);
-//             currentUser.pop();
-//             return true;
-//         } catch(err) {
-//             logger.error(err);
-//             return false;
-//         }
-//     }
-// }
-
 module.exports = {
     checkUsername: checkUsername,
     registerUser: registerUser,
-    //logoutUser: logoutUser,
     getUserByUsername: getUserByUsername,
 }

@@ -7,7 +7,6 @@ const { router: loginRouter } = require('./src/controller/LoginRouter');
 const ticketSubmit = require('./src/controller/TicketSubmitRouter');
 const ticketProcess = require('./src/controller/TicketProcessingRouter');
 const viewPrevTickets = require('./src/controller/ViewPrevTicketsRouter');
-const logoutRouter = require('./src/controller/LogoutRouter');
 const debugRouter = require('./src/controller/DebugRouter');
 
 //create the server on PORT 3000
@@ -31,9 +30,6 @@ app.use('/register', regRouter);
 
 // Login Feature
 app.use('/user', loginRouter);
-
-//Logout Feature
-app.use('/user', logoutRouter);
 
 // Ticket Submission Feature
 app.use('/ticketSubmit', ticketSubmit);
