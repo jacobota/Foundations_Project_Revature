@@ -2041,3 +2041,152 @@
 2024-02-27T23:14:39.678Z [info]: Incoming PUT: /user/login
 2024-02-27T23:14:50.084Z [info]: Incoming GET: /viewMyTickets/
 2024-02-27T23:14:50.126Z [info]: Retrieved Tickets from Dynamo
+2024-02-28T20:58:07.904Z [info]: Started the server on Port 3000
+2024-02-28T20:58:21.205Z [info]: Incoming POST: /register/employeeRegister
+2024-02-28T20:58:21.544Z [info]: Queried for username
+2024-02-28T20:58:21.544Z [info]: Username does not Exist in DB
+2024-02-28T20:58:21.600Z [info]: Successfully registered User
+2024-02-28T20:58:24.525Z [info]: Incoming POST: /register/employeeRegister
+2024-02-28T20:58:24.657Z [info]: Queried for username
+2024-02-28T20:58:24.658Z [warn]: Username Already Exists
+2024-02-28T20:58:31.109Z [info]: Incoming POST: /register/employeeRegister
+2024-02-28T20:58:31.212Z [info]: Queried for username
+2024-02-28T20:58:31.212Z [info]: Username does not Exist in DB
+2024-02-28T20:58:31.257Z [info]: Successfully registered User
+2024-02-28T20:58:36.491Z [info]: Incoming POST: /register/employeeRegister
+2024-02-28T20:58:36.592Z [info]: Queried for username
+2024-02-28T20:58:36.593Z [info]: Username does not Exist in DB
+2024-02-28T20:58:36.645Z [info]: Successfully registered User
+2024-02-28T20:58:43.546Z [info]: Incoming POST: /register/managerRegister
+2024-02-28T20:58:43.652Z [info]: Queried for username
+2024-02-28T20:58:43.653Z [warn]: Username Already Exists
+2024-02-28T20:59:00.033Z [info]: Incoming POST: /register/managerRegister
+2024-02-28T20:59:00.143Z [info]: Queried for username
+2024-02-28T20:59:00.143Z [info]: Username does not Exist in DB
+2024-02-28T20:59:00.186Z [info]: Successfully registered User
+2024-02-28T20:59:07.615Z [info]: Incoming POST: /register/managerRegister
+2024-02-28T20:59:07.719Z [info]: Queried for username
+2024-02-28T20:59:07.720Z [info]: Username does not Exist in DB
+2024-02-28T20:59:07.767Z [info]: Successfully registered User
+2024-02-28T20:59:24.935Z [info]: Incoming POST: /register/employeeRegister
+2024-02-28T20:59:24.936Z [error]: No username or password entered.
+2024-02-28T20:59:31.268Z [info]: Incoming POST: /register/employeeRegister
+2024-02-28T20:59:31.268Z [error]: No username or password entered.
+2024-02-28T21:00:52.523Z [info]: Incoming PUT: /user/login
+2024-02-28T21:00:52.728Z [info]: Retrived User by Username
+2024-02-28T21:01:13.203Z [info]: Incoming PUT: /user/login
+2024-02-28T21:01:13.245Z [info]: Retrived User by Username
+2024-02-28T21:01:30.603Z [info]: Incoming PUT: /user/login
+2024-02-28T21:01:30.648Z [info]: Retrived User by Username
+2024-02-28T21:01:45.373Z [info]: Incoming PUT: /user/login
+2024-02-28T21:01:45.424Z [info]: Retrived User by Username
+2024-02-28T21:01:58.138Z [info]: Incoming PUT: /user/login
+2024-02-28T21:01:58.185Z [info]: Retrived User by Username
+2024-02-28T21:02:15.089Z [info]: Incoming PUT: /user/login
+2024-02-28T21:02:15.131Z [info]: Retrived User by Username
+2024-02-28T21:02:53.997Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-28T21:02:54.224Z [info]: Successfully added the Ticket
+2024-02-28T21:03:09.715Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-28T21:03:09.757Z [info]: Successfully added the Ticket
+2024-02-28T21:03:40.607Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-28T21:03:40.653Z [info]: Successfully added the Ticket
+2024-02-28T21:03:54.093Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-28T21:03:54.141Z [info]: Successfully added the Ticket
+2024-02-28T21:04:25.344Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-28T21:04:25.388Z [info]: Successfully added the Ticket
+2024-02-28T21:04:29.563Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-28T21:04:29.614Z [info]: Successfully added the Ticket
+2024-02-28T21:04:36.717Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-28T21:04:36.762Z [info]: Successfully added the Ticket
+2024-02-28T21:04:49.047Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-28T21:04:49.049Z [error]: No amount or description entered.
+2024-02-28T21:05:27.540Z [info]: Incoming POST: /ticketSubmit/postTicket
+2024-02-28T21:06:07.164Z [info]: Incoming GET: /viewMyTickets/
+2024-02-28T21:06:07.352Z [info]: Retrieved Tickets from Dynamo
+2024-02-28T21:06:37.280Z [info]: Incoming GET: /viewMyTickets/
+2024-02-28T21:06:37.340Z [info]: Retrieved Tickets from Dynamo
+2024-02-28T21:06:52.423Z [info]: Incoming GET: /viewMyTickets/
+2024-02-28T21:06:52.471Z [info]: Retrieved Tickets from Dynamo
+2024-02-28T21:07:08.797Z [info]: Incoming GET: /viewMyTickets/
+2024-02-28T21:07:08.840Z [info]: Retrieved Tickets from Dynamo
+2024-02-28T21:07:33.521Z [info]: Incoming GET: /viewMyTickets/
+2024-02-28T21:07:55.827Z [info]: Incoming GET: /ticketProcessing/
+2024-02-28T21:07:55.895Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:08:25.029Z [info]: Incoming GET: /ticketProcessing/
+2024-02-28T21:08:36.617Z [info]: Incoming PUT: /ticketProcessing/approveTicket
+2024-02-28T21:08:44.748Z [info]: Incoming PUT: /ticketProcessing/denyTicket
+2024-02-28T21:09:04.380Z [info]: Incoming PUT: /ticketProcessing/approveTicket
+2024-02-28T21:09:04.583Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:04.640Z [info]: Approved Ticket!
+2024-02-28T21:09:04.686Z [info]: Get ticket
+2024-02-28T21:09:04.733Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:20.814Z [info]: Incoming PUT: /ticketProcessing/denyTicket
+2024-02-28T21:09:20.859Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:20.905Z [info]: Denied Ticket!
+2024-02-28T21:09:20.955Z [info]: Get ticket
+2024-02-28T21:09:20.999Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:36.502Z [info]: Incoming PUT: /ticketProcessing/denyTicket
+2024-02-28T21:09:36.565Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:36.609Z [info]: Denied Ticket!
+2024-02-28T21:09:36.660Z [info]: Get ticket
+2024-02-28T21:09:36.705Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:37.503Z [info]: Incoming PUT: /ticketProcessing/denyTicket
+2024-02-28T21:09:37.555Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:37.599Z [info]: Denied Ticket!
+2024-02-28T21:09:37.649Z [info]: Get ticket
+2024-02-28T21:09:37.693Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:39.339Z [info]: Incoming PUT: /ticketProcessing/approveTicket
+2024-02-28T21:09:39.398Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:39.448Z [info]: Approved Ticket!
+2024-02-28T21:09:39.497Z [info]: Get ticket
+2024-02-28T21:09:39.548Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:40.168Z [info]: Incoming PUT: /ticketProcessing/approveTicket
+2024-02-28T21:09:40.217Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:40.265Z [info]: Approved Ticket!
+2024-02-28T21:09:40.319Z [info]: Get ticket
+2024-02-28T21:09:40.370Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:41.748Z [info]: Incoming PUT: /ticketProcessing/denyTicket
+2024-02-28T21:09:41.799Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:41.848Z [info]: Denied Ticket!
+2024-02-28T21:09:41.898Z [info]: Get ticket
+2024-02-28T21:09:41.948Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:09:42.679Z [info]: Incoming PUT: /ticketProcessing/denyTicket
+2024-02-28T21:09:42.725Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:10:18.770Z [info]: Started the server on Port 3000
+2024-02-28T21:10:34.620Z [info]: Incoming GET: /viewMyTickets/
+2024-02-28T21:10:34.937Z [info]: Retrieved Tickets from Dynamo
+2024-02-28T21:10:42.384Z [info]: Incoming GET: /viewMyTickets/
+2024-02-28T21:10:42.435Z [info]: Retrieved Tickets from Dynamo
+2024-02-28T21:10:50.123Z [info]: Incoming GET: /viewMyTickets/
+2024-02-28T21:10:50.169Z [info]: Retrieved Tickets from Dynamo
+2024-02-28T21:11:10.261Z [info]: Incoming GET: /view/currentUser
+2024-02-28T21:11:31.018Z [info]: Incoming GET: /view/currentUser
+2024-02-28T21:11:36.286Z [info]: Incoming PUT: /user/login
+2024-02-28T21:11:36.540Z [info]: Retrived User by Username
+2024-02-28T21:11:46.848Z [info]: Incoming GET: /view/currentUser
+2024-02-28T21:11:52.500Z [info]: Incoming GET: /view/employeeList
+2024-02-28T21:11:52.710Z [info]: Retrieved all Employees in DB
+2024-02-28T21:12:06.584Z [info]: Incoming GET: /view/employeeList
+2024-02-28T21:12:09.078Z [info]: Incoming PUT: /user/login
+2024-02-28T21:12:09.119Z [info]: Retrived User by Username
+2024-02-28T21:12:18.917Z [info]: Incoming GET: /view/employeeList
+2024-02-28T21:12:18.984Z [info]: Retrieved all Employees in DB
+2024-02-28T21:12:30.180Z [info]: Incoming GET: /view/managerList
+2024-02-28T21:12:30.235Z [info]: Retrieved all Managers in DB
+2024-02-28T21:12:46.152Z [info]: Incoming GET: /view/managerList
+2024-02-28T21:12:46.205Z [info]: Retrieved all Managers in DB
+2024-02-28T21:12:54.511Z [info]: Incoming GET: /view/ticketList
+2024-02-28T21:12:54.584Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:19:53.936Z [info]: Started the server on Port 3000
+2024-02-28T21:20:15.249Z [info]: Incoming POST: /register/managerRegister
+2024-02-28T21:20:15.656Z [info]: Queried for username
+2024-02-28T21:20:15.657Z [info]: Username does not Exist in DB
+2024-02-28T21:20:15.708Z [info]: Successfully registered User
+2024-02-28T21:20:21.155Z [info]: Incoming PUT: /user/login
+2024-02-28T21:20:21.198Z [info]: Retrived User by Username
+2024-02-28T21:20:44.638Z [info]: Incoming GET: /ticketProcessing/
+2024-02-28T21:20:44.824Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:20:53.532Z [info]: Incoming PUT: /ticketProcessing/approveTicket
+2024-02-28T21:20:53.588Z [info]: Tickets Received and Sorted by Time
+2024-02-28T21:21:00.104Z [info]: Incoming GET: /ticketProcessing/
+2024-02-28T21:21:00.150Z [info]: Tickets Received and Sorted by Time

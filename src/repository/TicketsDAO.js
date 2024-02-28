@@ -159,6 +159,11 @@ async function viewPrevTickets(user_id) {
 
     try {
         const data = await documentClient.send(command);
+        //push the tickets and then sort them with .sort(a,b) method
+        for(let item of data.Items) {
+            ticketsToBeProcessed.push(item);
+        }
+        ticketsToBeProcessed.sort((a, b) => a.time_submitted.localeCompare(b.time_submitted));
         logger.info("Retrieved Tickets from Dynamo");
         return data.Items;
     } catch(err) {

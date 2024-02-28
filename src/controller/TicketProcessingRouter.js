@@ -22,19 +22,23 @@ router.get('/', authenticateManagerToken,  async(req,res) => {
 router.put('/approveTicket', authenticateManagerToken, async(req,res) => {
     const manager = req.user;
     //call the getallUnprocTickets to get most updated list
-    await service.getAllUnprocTickets();
-    //call the approve function in order to approve the first message in the array
-    const data = await service.approveTicket();
-    if(data) {
-        //call the getAllUnprocTickets again to get the new list
-        const ticketsLeft = await service.getAllUnprocTickets();
-        res.status(200).json({
-            approved_by: manager.username,
-            ticket_approved: data,
-            tickets_in_queue: ticketsLeft
-        })
+    const tickets = await service.getAllUnprocTickets();
+    if(tickets.length === 0) {
+        res.status(404).json({message: "No more messages in queue"});
     } else {
-        res.status(404).json({message: "Unable to approve next ticket"});
+        //call the approve function in order to approve the first message in the array
+        const data = await service.approveTicket();
+        if(data) {
+            //call the getAllUnprocTickets again to get the new list
+            const ticketsLeft = await service.getAllUnprocTickets();
+            res.status(200).json({
+                approved_by: manager.username,
+                ticket_approved: data,
+                tickets_in_queue: ticketsLeft
+            })
+        } else {
+            res.status(404).json({message: "Unable to approve next ticket"});
+        }
     }
 })
 
@@ -42,19 +46,23 @@ router.put('/approveTicket', authenticateManagerToken, async(req,res) => {
 router.put('/denyTicket', authenticateManagerToken, async(req,res) => {
     const manager = req.user;
     //call the getallUnprocTickets to get most updated list
-    await service.getAllUnprocTickets();
-    //call the approve function in order to approve the first message in the array
-    const data = await service.denyTicket();
-    if(data) {
-        //call the getAllUnprocTickets again to get the new list
-        const ticketsLeft = await service.getAllUnprocTickets();
-        res.status(200).json({
-            denied_by: manager.username,
-            ticket_approved: data,
-            tickets_in_queue: ticketsLeft
-        })
+    const ticket = await service.getAllUnprocTickets();
+    if(ticket.length === 0) {
+        res.status(404).json({message: "No more messages in queue"});
     } else {
-        res.status(404).json({message: "Unable to deny next ticket"});
+        //call the approve function in order to approve the first message in the array
+        const data = await service.denyTicket();
+        if(data) {
+            //call the getAllUnprocTickets again to get the new list
+            const ticketsLeft = await service.getAllUnprocTickets();
+            res.status(200).json({
+                denied_by: manager.username,
+                ticket_approved: data,
+                tickets_in_queue: ticketsLeft
+            })
+        } else {
+            res.status(404).json({message: "Unable to deny next ticket"});
+        }
     }
 })
 

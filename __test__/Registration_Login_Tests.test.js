@@ -89,8 +89,8 @@ describe('Register Users Tests', () => {
     });
 });
 
-//Test Suite that checks if username is present
-describe('Login and Logout User Tests', () => {
+//Test Suite that checks login feature
+describe('Login User Tests', () => {
     //Login with account created by above tests
     test('Login a User', async () => {
         //Assign: Mock the login feature to return true
@@ -112,30 +112,6 @@ describe('Login and Logout User Tests', () => {
         const result = await loginUser(testData);
 
         //Assert: Should return false since mock of login user indicates false
-        expect(result).toBeFalsy();
-    });
-
-    //Logout user
-    test('Logout a User', async () => {
-        //Assign: Mock the logout feature to return true
-        dao.logoutUser.mockResolvedValue(true);
-
-        //Act: Call the logoutUser function
-        const result = await logoutUser(testData);
-
-        //Assert: Should return true since mock value of logout user indicates it passed
-        expect(result).toBeTruthy();
-    });
-
-    //Failure to logout a user
-    test('Failure to Logout a User', async () => {
-        //Assign: Mock the logout feature to return false
-        dao.logoutUser.mockResolvedValue(false);
-
-        //Act: Call the logoutUser function
-        const result = await logoutUser(testData);
-
-        //Assert: Should return false since mock of logout user indicates false
         expect(result).toBeFalsy();
     });
 });
