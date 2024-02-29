@@ -7,13 +7,13 @@ async function getAllUnprocTickets() {
 }
 
 // Function to approve a ticket
-async function approveTicket() {
-    return await approveTicketDAO();
+async function approveTicket(username) {
+    return await approveTicketDAO(username);
 }
 
 //Function to deny a ticket
-async function denyTicket() {
-    return await denyTicketDAO();
+async function denyTicket(username) {
+    return await denyTicketDAO(username);
 }
 
 module.exports = {

@@ -29,7 +29,7 @@ router.put('/approveTicket', authenticateManagerToken, async(req,res) => {
         res.status(404).json({message: "No more messages in queue"});
     } else {
         //call the approve function in order to approve the first message in the array
-        const data = await service.approveTicket();
+        const data = await service.approveTicket(manager.username);
         if(data) {
             //call the getAllUnprocTickets again to get the new list
             const ticketsLeft = await service.getAllUnprocTickets();
@@ -54,7 +54,7 @@ router.put('/denyTicket', authenticateManagerToken, async(req,res) => {
         res.status(404).json({message: "No more messages in queue"});
     } else {
         //call the approve function in order to approve the first message in the array
-        const data = await service.denyTicket();
+        const data = await service.denyTicket(manager.username);
         if(data) {
             //call the getAllUnprocTickets again to get the new list
             const ticketsLeft = await service.getAllUnprocTickets();

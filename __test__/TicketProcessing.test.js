@@ -59,10 +59,10 @@ describe('Ticket Processing Feature Tests', () => {
     //Test the approve ticket feature
     test('Approve Ticket Test', async() => {
         //Assign: Assign the dao object to return the approved ticket
-        dao.approveTicketDAO.mockResolvedValue(approveTicket);
+        dao.approveTicketDAO.mockResolvedValue(approvedTicket);
 
         //Act: Call the approveTicket method
-        const result = await approveTicket();
+        const result = await approveTicket("John");
 
         //Assert: Expect the result to be the approvedTicket
         expect(result).toBe(approveTicket);
@@ -74,7 +74,7 @@ describe('Ticket Processing Feature Tests', () => {
         dao.approveTicketDAO.mockResolvedValue(false);
 
         //Act: Call the approveTicket method
-        const result = await approveTicket();
+        const result = await approveTicket("John");
 
         //Assert: Expect the result to be false
         expect(result).toBeFalsy();
@@ -86,7 +86,7 @@ describe('Ticket Processing Feature Tests', () => {
         dao.denyTicketDAO.mockResolvedValue(deniedTicket);
 
         //Act: Call the deniedTicket method
-        const result = await denyTicket();
+        const result = await denyTicket("John");
 
         //Assert: Expect the result to be the deniedTicket
         expect(result).toBe(deniedTicket);
@@ -98,7 +98,7 @@ describe('Ticket Processing Feature Tests', () => {
         dao.denyTicketDAO.mockResolvedValue(false);
 
         //Act: Call the deniedTicket method
-        const result = await denyTicket();
+        const result = await denyTicket("John");
 
         //Assert: Expect the result to be false
         expect(result).toBeFalsy();

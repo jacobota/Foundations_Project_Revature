@@ -66,7 +66,7 @@ async function createQueueOfTickets() {
 
 // UPDATE
 // function to approve the next ticket in the queue
-async function approveTicketDAO() {
+async function approveTicketDAO(username) {
     const ticket = ticketsToBeProcessed.shift();
     const command = new UpdateCommand({
         TableName,
@@ -81,9 +81,23 @@ async function approveTicketDAO() {
         }
     })
 
+    const addManagerNameCommand = new UpdateCommand({
+        TableName,
+        Key: {
+            'ticket_id': ticket.ticket_id,
+            'time_submitted': ticket.time_submitted
+        },
+        UpdateExpression: "SET  manager_processed = :val",
+        ExpressionAttributeValues: {
+            ':val' : username,
+        }
+    })
+
+
     try {
         await documentClient.send(command);
         logger.info('Approved Ticket!');
+        await documentClient.send(addManagerNameCommand);
         const data = await getTicket(ticket);
         return data;
     }catch(err) {
@@ -95,7 +109,7 @@ async function approveTicketDAO() {
 
 // UPDATE
 // function to deny the next ticket in the queue
-async function denyTicketDAO() {
+async function denyTicketDAO(username) {
     const ticket = ticketsToBeProcessed.shift();
     const command = new UpdateCommand({
         TableName,
@@ -110,9 +124,23 @@ async function denyTicketDAO() {
         }
     })
 
+    const addManagerNameCommand = new UpdateCommand({
+        TableName,
+        Key: {
+            'ticket_id': ticket.ticket_id,
+            'time_submitted': ticket.time_submitted
+        },
+        UpdateExpression: "SET  manager_processed = :val",
+        ExpressionAttributeValues: {
+            ':val' : username,
+        }
+    })
+
+
     try {
         await documentClient.send(command);
-        logger.info("Denied Ticket!");
+        logger.info('Denied Ticket!');
+        await documentClient.send(addManagerNameCommand);
         const data = await getTicket(ticket);
         return data;
     }catch(err) {
