@@ -65,7 +65,7 @@ describe('Ticket Processing Feature Tests', () => {
         const result = await approveTicket("John");
 
         //Assert: Expect the result to be the approvedTicket
-        expect(result).toBe(approveTicket);
+        expect(result).toBe(approvedTicket);
     })
 
     //If the dao failed to return the approved ticket
